@@ -1,0 +1,116 @@
+# See https://www.netlifycms.org/docs/configuration-options/#backend
+backend:
+  name: git-gateway
+  branch: main
+  repo: danielmoessner/gatsby-netlifycms.tortuga-webdesign.de
+
+# See https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
+local_backend: true
+
+# See https://www.netlifycms.org/docs/configuration-options/#locale
+locale: de
+
+# See https://www.netlifycms.org/docs/configuration-options/#display-url
+display_url: https://gatsby-netlifycms.tortuga-webdesign.de
+
+# See https://www.netlifycms.org/docs/configuration-options/#site-url
+site_url: https://gatsby-netlifycms.tortuga-webdesign.de
+
+# See https://www.netlifycms.org/docs/configuration-options/#media-folder
+media_folder: /content/media
+
+# See https://www.netlifycms.org/docs/configuration-options/#public-folder
+public_folder: ../media
+
+# See https://www.netlifycms.org/docs/collection-types/
+collections:
+  - name: page
+    label: Seiten
+    label_singular: Seite
+    delete: false
+    editor:
+      preview: false
+    files:
+      - file: content/pages/home.md
+        label: Startseite
+        name: home
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: home }
+          - label: 'Meta'
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - label: Beschreibung
+                name: description
+                widget: text
+              - { label: Bild, name: image, widget: image }
+
+  - name: animal
+    label: Wildtiere
+    label_singular: Wildtier
+    editor:
+      preview: true
+    folder: content/animals
+    slug: '{{fields.slug}}'
+    create: true
+    preview_path: wildtiere/{{fields.slug}}
+    fields:
+      - { label: Sammlung, name: collection, widget: hidden, default: animal }
+      - { label: Titel, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Bild, name: image, widget: image }
+      - { label: Auszug, name: excerpt, widget: text }
+      - { label: Inhalt, name: body, widget: markdown }
+      - label: 'Kategorie'
+        name: 'category'
+        widget: 'relation'
+        collection: 'category'
+        searchFields: ['title']
+        valueField: 'title'
+
+  - name: category
+    label: Kategorien
+    label_singular: Kategorie
+    editor:
+      preview: false
+    folder: content/categories
+    slug: '{{slug}}'
+    create: true
+    fields:
+      - { label: Sammlung, name: collection, widget: hidden, default: category }
+      - { label: Titel, name: title, widget: string }
+
+  - name: 'setting'
+    label: Einstellungen
+    label_singular: Einstellung
+    delete: false
+    editor:
+      preview: false
+    files:
+      - file: 'content/settings/global.yml'
+        label: Global
+        name: 'global-settings'
+        preview: false
+        fields:
+          - {
+              label: Sammlung,
+              name: collection,
+              widget: hidden,
+              default: setting
+            }
+          - { label: Slug, name: slug, widget: hidden, default: global }
+          - {
+              label: Titel in der Navigation,
+              name: navigationTitle,
+              widget: string,
+              default: Wildtiere
+            }
+          - {
+              label: URL der Seite,
+              name: siteUrl,
+              widget: string,
+              required: false
+            }
+          - { label: Favicon, name: favicon, widget: image }

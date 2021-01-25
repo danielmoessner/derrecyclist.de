@@ -1,0 +1,10 @@
+---
+collection: animal
+title: Wolf
+slug: wolf
+image: ../media/wolf.jpg
+excerpt: " Im Jahr 2000 wurde im sächsischen Teil der Lausitz erstmals wieder
+  eine erfolgreiche Reproduktion des Wolfes in Deutschland nachgewiesen."
+category: Säugetiere
+---
+[Deutschland](https://de.wikipedia.org/wiki/Deutschland "Deutschland") liegt inmitten des ursprünglichen Verbreitungsgebiets [Eurasischer Wölfe](https://de.wikipedia.org/wiki/Eurasischer_Wolf "Eurasischer Wolf"). Im 18. Jahrhundert war der [Wolf](https://de.wikipedia.org/wiki/Wolf "Wolf") in den meisten Regionen des heutigen Deutschland ausgerottet.[](https://de.wikipedia.org/wiki/W%C3%B6lfe_in_Deutschland#cite_note-wolf-sachsen-2) Spätestens die ab der zweiten Hälfte des 19. Jahrhunderts bis zum Ende des 20. Jahrhunderts in Deutschland angetroffenen Wölfe waren sehr wahrscheinlich Zuwanderer.[](https://de.wikipedia.org/wiki/W%C3%B6lfe_in_Deutschland#cite_note-3) Im Jahr 2000 wurde im [sächsischen](https://de.wikipedia.org/wiki/Sachsen "Sachsen") Teil der [Lausitz](https://de.wikipedia.org/wiki/Lausitz "Lausitz") erstmals wieder eine erfolgreiche Reproduktion (Welpenaufzucht) des **Wolfes in Deutschland** nachgewiesen. Seitdem hat der Bestand an Wölfen kontinuierlich zugenommen; das Verbreitungsgebiet hat sich beständig vergrößert und auf große Teile der Bundesrepublik ausgedehnt. Im Erfassungszeitraum (Monitoringjahr) 2018/19 gab es in elf Bundesländern insgesamt 105 Rudel, 25 Paare und 13 territoriale Einzeltiere; die Geburt von 393 Welpen wurde registriert.[](https://de.wikipedia.org/wiki/W%C3%B6lfe_in_Deutschland#cite_note-dbb-4) 2019 wurden laut [Bundesamt für Naturschutz](https://de.wikipedia.org/wiki/Bundesamt_f%C3%BCr_Naturschutz "Bundesamt für Naturschutz") nach den Monitoringdaten der DBBW in Deutschland mindestens 275 bis 301 erwachsene Wölfe erfasst. Nach Hochrechnungen des [Deutschen Jagdverbands (DJV)](https://de.wikipedia.org/wiki/Deutscher_Jagdverband "Deutscher Jagdverband") leben seit dem Frühsommer 2019 insgesamt rund 1300 Wölfe in Deutschland, erwachsene und Jungtiere, andere Autoren schätzen die Zahl der Individuen für 2020 auf 1200 bis 1500 Tiere.
