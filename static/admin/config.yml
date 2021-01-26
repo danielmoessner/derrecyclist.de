@@ -2,7 +2,7 @@
 backend:
   name: git-gateway
   branch: main
-  repo: danielmoessner/gatsby-netlifycms.tortuga-webdesign.de
+  repo: danielmoessner/recyclist.de
 
 # See https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
 local_backend: true
@@ -11,10 +11,10 @@ local_backend: true
 locale: de
 
 # See https://www.netlifycms.org/docs/configuration-options/#display-url
-display_url: https://gatsby-netlifycms.tortuga-webdesign.de
+display_url: https://recyclist.de
 
 # See https://www.netlifycms.org/docs/configuration-options/#site-url
-site_url: https://gatsby-netlifycms.tortuga-webdesign.de
+site_url: https://recyclist.de
 
 # See https://www.netlifycms.org/docs/configuration-options/#media-folder
 media_folder: /content/media
@@ -47,28 +47,35 @@ collections:
                 widget: text
               - { label: Bild, name: image, widget: image }
 
-  - name: animal
-    label: Wildtiere
-    label_singular: Wildtier
+  - name: bike
+    label: Fahräder
+    label_singular: Fahrrad
     editor:
       preview: true
-    folder: content/animals
+    folder: content/bikes
     slug: '{{fields.slug}}'
     create: true
-    preview_path: wildtiere/{{fields.slug}}
+    preview_path: bikes/{{fields.slug}}
     fields:
-      - { label: Sammlung, name: collection, widget: hidden, default: animal }
+      - { label: Sammlung, name: collection, widget: hidden, default: bike }
       - { label: Titel, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
-      - { label: Bild, name: image, widget: image }
-      - { label: Auszug, name: excerpt, widget: text }
-      - { label: Inhalt, name: body, widget: markdown }
       - label: 'Kategorie'
         name: 'category'
         widget: 'relation'
         collection: 'category'
         searchFields: ['title']
         valueField: 'title'
+      - { label: Bild, name: image, widget: image }
+      - { label: Preis, name: price, widget: number }
+      - label: Größe
+        name: size
+        widget: select
+        options:
+          - { label: S, value: small }
+          - { label: M, value: medium }
+          - { label: L, value: large }
+      - { label: Eckdaten, name: information, widget: text }
 
   - name: category
     label: Kategorien
@@ -76,11 +83,26 @@ collections:
     editor:
       preview: false
     folder: content/categories
-    slug: '{{slug}}'
+    slug: '{{ fields.slug }}'
     create: true
     fields:
       - { label: Sammlung, name: collection, widget: hidden, default: category }
       - { label: Titel, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+
+  - name: review
+    label: Kundenrezensionen
+    label_singular: Kundenrezension
+    editor:
+      preview: true
+    folder: content/reviews
+    slug: '{{ fields.slug }}'
+    create: true
+    fields:
+      - { label: Sammlung, name: collection, widget: hidden, default: review }
+      - { label: Titel, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Rezension, name: review, widget: text }
 
   - name: 'setting'
     label: Einstellungen
@@ -94,23 +116,13 @@ collections:
         name: 'global-settings'
         preview: false
         fields:
-          - {
-              label: Sammlung,
-              name: collection,
-              widget: hidden,
-              default: setting
-            }
+          - { label: Sammlung, name: collection, widget: hidden, default: setting }
           - { label: Slug, name: slug, widget: hidden, default: global }
           - {
               label: Titel in der Navigation,
               name: navigationTitle,
               widget: string,
-              default: Wildtiere
+              default: Wildtiere,
             }
-          - {
-              label: URL der Seite,
-              name: siteUrl,
-              widget: string,
-              required: false
-            }
+          - { label: URL der Seite, name: siteUrl, widget: string, required: false }
           - { label: Favicon, name: favicon, widget: image }
