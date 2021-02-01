@@ -116,13 +116,20 @@ collections:
         name: 'global-settings'
         preview: false
         fields:
-          - { label: Sammlung, name: collection, widget: hidden, default: setting }
-          - { label: Slug, name: slug, widget: hidden, default: global }
-          - {
-              label: Titel in der Navigation,
-              name: navigationTitle,
-              widget: string,
-              default: Wildtiere,
-            }
           - { label: URL der Seite, name: siteUrl, widget: string, required: false }
           - { label: Favicon, name: favicon, widget: image }
+          - { label: Telefon, name: phone, widget: string }
+          - { label: Adresse, name: address, widget: text }
+      - file: 'content/settings/navigation.yml'
+        label: Navigation
+        name: navigation-settings
+        preview: false
+        fields:
+          - { label: Link 1 Name, name: link1, widget: string }
+          - { label: Link 2 Name, name: link2, widget: string }
+          - { label: Link 3 Name, name: link3, widget: string }
+          - { label: Link 4 Name, name: link4, widget: string }
+          - { label: Link 5 Name, name: link5, widget: string }
+          - { label: Link 6 Name, name: link6, widget: string }
+          - { label: Telefon Label, name: phoneLabel, widget: string }
+          - { label: Adresse Label, name: addressLabel, widget: string }

@@ -1,99 +1,59 @@
 import React from 'react';
-// import { graphql } from 'gatsby';
-// import PropTypes from 'prop-types';
-// import Layout from '../components/layout';
-// import Animal from '../components/animal';
-// import Seo from '../components/seo';
+import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+import Layout from '../components/layout';
+import Seo from '../components/seo';
 import Section from '../components/Section';
 import SectionWrapper from '../components/SectionWrapper';
+import Navigation from '../components/Navigation';
 
-function Index() {
-  // const homePage = data.pagesYaml;
-  // const animals = data.allMarkdownRemark.edges.map((node) => node.node);
+function Index({ data }) {
+  const homePage = data.pagesYaml;
 
   return (
-    <SectionWrapper>
-      <Section>
-        <div className="bg-green-800 flex-1" />
-      </Section>
-      <Section>
-        <div className="flex-1" />
-      </Section>
-      <Section>
-        <div />
-      </Section>
-    </SectionWrapper>
-    // <Layout>
-    //   <>
-    //     <Seo
-    //       title={homePage.meta.title}
-    //       description={homePage.meta.description}
-    //       image={homePage.meta.image.childImageSharp.resize.src}
-    //     />
-    //     <div className="">
-    //       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-4 md:grid-cols-3 lg:gap-6">
-    //         {animals.map((animal) => (
-    //           <Animal
-    //             key={animal.id}
-    //             slug={animal.frontmatter.slug}
-    //             excerpt={animal.frontmatter.excerpt}
-    //             category={animal.frontmatter.category}
-    //             title={animal.frontmatter.title}
-    //             image={animal.frontmatter.image.childImageSharp.fluid}
-    //           />
-    //         ))}
-    //       </div>
-    //     </div>
-    //   </>
-    // </Layout>
+    <Layout>
+      <Seo
+        title={homePage.meta.title}
+        description={homePage.meta.description}
+        image={homePage.meta.image.childImageSharp.resize.src}
+      />
+      <Navigation />
+      <SectionWrapper>
+        <Section>
+          <div className="bg-blue-100 flex-1" />
+        </Section>
+        <Section>
+          <div className="flex-1" />
+        </Section>
+        <Section>
+          <div />
+        </Section>
+      </SectionWrapper>
+    </Layout>
   );
 }
 
-// Index.propTypes = {
-//   // eslint-disable-next-line react/forbid-prop-types
-//   // data: PropTypes.object.isRequired,
-// };
+Index.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  data: PropTypes.object.isRequired,
+};
 
 export default Index;
 
-// export const query = graphql`
-//   {
-//     allMarkdownRemark(filter: { frontmatter: { collection: { eq: "animal" } } }) {
-//       edges {
-//         node {
-//           frontmatter {
-//             slug
-//             excerpt
-//             category
-//             title
-//             image {
-//               childImageSharp {
-//                 fluid {
-//                   aspectRatio
-//                   base64
-//                   sizes
-//                   src
-//                   srcSet
-//                 }
-//               }
-//             }
-//           }
-//           id
-//         }
-//       }
-//     }
-//     pagesYaml(slug: { eq: "home" }) {
-//       meta {
-//         image {
-//           childImageSharp {
-//             resize(width: 1200) {
-//               src
-//             }
-//           }
-//         }
-//         description
-//         title
-//       }
-//     }
-//   }
-// `;
+export const query = graphql`
+  {
+    pagesYaml(slug: { eq: "home" }) {
+      meta {
+        image {
+          childImageSharp {
+            resize(width: 1200) {
+              src
+            }
+          }
+        }
+        description
+        title
+      }
+    }
+  }
+`;

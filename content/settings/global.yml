@@ -1,4 +1,9 @@
 slug: global
 navigationTitle: Wildtiere in Deutschland
-siteUrl: gatsby-netlifycms.tortuga-webdesign.de
+collection: settings
+siteUrl: recyclist.netlify.app
 favicon: ../media/ravi-singh-rn3dqzdrhdk-unsplash.jpg
+phone: 1234 87454 878454
+address: |-
+  Straße 123
+  1223 Stadt

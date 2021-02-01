@@ -29,3 +29,9 @@ const AnimalPreview = ({ entry, widgetFor }) => (
 );
 
 CMS.registerPreviewTemplate('animal', AnimalPreview);
+
+//
+CMS.registerEventListener({
+  name: 'preSave',
+  handler: ({ author, entry }) => console.log(JSON.stringify({ author, data: entry.get('data') })),
+});
