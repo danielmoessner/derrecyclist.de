@@ -11,6 +11,7 @@ import Container from '../components/Container';
 
 function Index({ data }) {
   const homePage = data.pagesYaml;
+  const categories = data.allCategoriesYaml;
 
   return (
     <Layout>
@@ -37,7 +38,7 @@ function Index({ data }) {
                   <div className="grid grid-cols-5">
                     <div className="col-span-2">
                       <div className="uppercase font-light text-sm text-gray-700">Konzept</div>
-                      <h2 className="text-2xl font-medium mb-4 text-gray-800">
+                      <h2 className="text-2xl font-medium mb-8 text-gray-800">
                         Gebrauchte Rennräder Neu
                       </h2>
                       <Link
@@ -75,28 +76,21 @@ function Index({ data }) {
                     <div className="uppercase font-light text-sm text-gray-700">
                       Produktkategorien
                     </div>
-                    <h2 className="text-2xl font-medium mb-4 text-gray-800 leading-tight">
+                    <h2 className="text-2xl font-medium mb-12 text-gray-800 leading-tight">
                       Unsere 3 Kollektionen
                     </h2>
-                    <div className="prose prose-sm">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores vitae sed
-                        veniam aut explicabo optio, esse suscipit facere doloribus, enim tenetur,
-                        asperiores amet culpa hic rem molestiae cum nam facilis?
-                      </p>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque placeat
-                        blanditiis veniam perferendis vero voluptatem a.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="">
-                    <Link
-                      to="/"
-                      className="rounded border-2 border-gray-800 px-2.5 py-1.5 text-gray-800 hover:text-white hover:bg-gray-800 transition-all duration-300 ease"
-                    >
-                      Fahrräder ansehen
-                    </Link>
+                    {categories.nodes.map((category) => (
+                      <div className="mb-20">
+                        <Link to="/" className="group">
+                          <Img
+                            className="mx-auto mb-6 w-1/2 group-hover:scale-125 transform transition duration-150"
+                            fluid={category.image.childImageSharp.fluid}
+                            alt={category.title}
+                          />
+                        </Link>
+                        <p className="mb-8 text-gray-800 leading-snug">{category.description}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -140,6 +134,25 @@ export const query = graphql`
             aspectRatio
           }
         }
+      }
+    }
+    allCategoriesYaml(sort: { fields: order }) {
+      nodes {
+        title
+        image {
+          childImageSharp {
+            fluid(maxWidth: 400) {
+              src
+              sizes
+              base64
+              aspectRatio
+              srcSet
+              tracedSVG
+            }
+          }
+        }
+        order
+        description
       }
     }
   }

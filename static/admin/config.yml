@@ -84,12 +84,19 @@ collections:
     editor:
       preview: false
     folder: content/categories
+    extension: yml
     slug: '{{ fields.slug }}'
     create: true
     fields:
       - { label: Sammlung, name: collection, widget: hidden, default: category }
       - { label: Titel, name: title, widget: string }
       - { label: Slug, name: slug, widget: string }
+      - { label: Bild, name: image, widget: image }
+      - { label: Beschreibung, name: description, widget: text }
+      - label: Sortierung,
+        name: order
+        widget: number
+        hint: Sortiert wird von klein zu groß also 1 vor 2.
 
   - name: review
     label: Kundenrezensionen

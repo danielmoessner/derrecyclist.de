@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Section({ children }) {
   return (
     <section
-      className="h-screen w-full flex-none bg-gray-50 odd:bg-gray-100 flex"
+      className="h-screen w-full flex-none bg-gray-100 odd:bg-gray-100 flex"
       style={{ scrollSnapAlign: 'center' }}
     >
       {children}
