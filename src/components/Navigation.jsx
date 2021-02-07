@@ -8,6 +8,17 @@ function Navigation() {
   const data = useStaticQuery(graphql`
     {
       navigation: settingsYaml(slug: { eq: "navigation" }) {
+        logo {
+          childImageSharp {
+            fluid(maxWidth: 120) {
+              srcSet
+              src
+              sizes
+              base64
+              aspectRatio
+            }
+          }
+        }
         link1
         link2
         link3
@@ -30,7 +41,7 @@ function Navigation() {
   return (
     <nav className="fixed top-0 w-full h-12 pr-5 pl-4">
       <div className="flex justify-between items-center h-full">
-        <div className="w-32">ReCyclist</div>
+        <div className="w-32" />
         <div className="md:flex items-center justify-center hidden">
           <NavigationLinkTop>
             <div>{navigation.link1}</div>

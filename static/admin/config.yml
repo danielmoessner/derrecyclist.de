@@ -31,7 +31,7 @@ collections:
     editor:
       preview: false
     files:
-      - file: content/pages/home.md
+      - file: content/pages/home.yml
         label: Startseite
         name: home
         fields:
@@ -46,6 +46,7 @@ collections:
                 name: description
                 widget: text
               - { label: Bild, name: image, widget: image }
+          - { label: Logo, name: logo, widget: image }
 
   - name: bike
     label: Fahräder
@@ -125,6 +126,7 @@ collections:
         name: navigation-settings
         preview: false
         fields:
+          - { label: Logo, name: logo, widget: image }
           - { label: Link 1 Name, name: link1, widget: string }
           - { label: Link 2 Name, name: link2, widget: string }
           - { label: Link 3 Name, name: link3, widget: string }
