@@ -15,6 +15,7 @@ module.exports = {
     extend: {
       backgroundColor: ['odd'],
       scale: ['group-hover'],
+      margin: ['last'],
     },
   },
   plugins: [typography],

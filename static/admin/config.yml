@@ -104,12 +104,12 @@ collections:
     editor:
       preview: true
     folder: content/reviews
-    slug: '{{ fields.slug }}'
     create: true
+    extension: yml
+    identifier_field: customer
     fields:
       - { label: Sammlung, name: collection, widget: hidden, default: review }
-      - { label: Titel, name: title, widget: string }
-      - { label: Slug, name: slug, widget: string }
+      - { label: Kunde, name: customer, widget: string }
       - { label: Rezension, name: review, widget: text }
 
   - name: 'setting'

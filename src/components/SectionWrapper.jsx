@@ -3,10 +3,7 @@ import PropTypes from 'prop-types';
 
 function SectionWrapper({ children }) {
   return (
-    <main
-      className="flex flex-none w-full flex-col flex-nowrap h-screen overflow-auto"
-      style={{ scrollSnapType: 'y mandatory' }}
-    >
+    <main className="flex flex-none w-full flex-col flex-nowrap h-screen overflow-auto md:scroll-snap-type-y-mandatory">
       {children}
     </main>
   );
