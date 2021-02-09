@@ -47,6 +47,36 @@ collections:
                 widget: text
               - { label: Bild, name: image, widget: image }
           - { label: Logo, name: logo, widget: image }
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Hintergrundbild, name: backgroundImage, widget: image }
+          - label: Konzept
+            name: concept
+            widget: object
+            fields:
+              - { label: Hintergrundbild, name: backgroundImage, widget: image }
+          - label: Kategorien
+            name: categories
+            widget: object
+            fields:
+              - { label: Hintergrundbild, name: backgroundImage, widget: image }
+          - label: Öffnungszeiten
+            name: openingHours
+            widget: object
+            fields:
+              - { label: Hintergrundbild, name: backgroundImage, widget: image }
+          - label: Kundenstimmen
+            name: reviews
+            widget: object
+            fields:
+              - { label: Hintergrundbild, name: backgroundImage, widget: image }
+          - label: Kontakt
+            name: contact
+            widget: object
+            fields:
+              - { label: Hintergrundbild, name: backgroundImage, widget: image }
 
   - name: bike
     label: Fahräder

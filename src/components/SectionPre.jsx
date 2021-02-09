@@ -6,7 +6,7 @@ function SectionPre({ children }) {
 }
 
 SectionPre.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
 };
 
 export default SectionPre;

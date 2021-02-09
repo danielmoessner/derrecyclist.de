@@ -5,3 +5,15 @@ meta:
   title: Der ReCyclist
   image: ../media/recyclist_logo_black.png
 logo: ../media/recyclist_logo_black.png
+header:
+  backgroundImage: ../media/bild_7.jpg
+concept:
+  backgroundImage: ../media/bild_3.jpg
+categories:
+  backgroundImage: ../media/bild_9.jpg
+openingHours:
+  backgroundImage: ../media/bild_14.jpg
+reviews:
+  backgroundImage: ../media/bild_1.jpg
+contact:
+  backgroundImage: ../media/bild_13.jpg

@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 import Container from './Container';
+import ImageFluid from '../types/ImageFluid';
 
-function InnerSection({ position, children }) {
+function InnerSection({ position, children, backgroundImage }) {
   const wrapperStyles = () => {
     if (position === 'left') return 'md:flex-row-reverse flex flex-col';
     if (position === 'bottom') return 'flex flex-col';
@@ -30,7 +32,9 @@ function InnerSection({ position, children }) {
 
   return (
     <div className={`flex-1 ${wrapperStyles()}`}>
-      <div className={`bg-green-600 h-96 md:h-auto ${imageStyles()}`} />
+      <div className={`bg-green-600 h-96 md:h-auto ${imageStyles()}`}>
+        <Img className="w-full h-full" fluid={backgroundImage.childImageSharp.fluid} />
+      </div>
       <div className={contentStyles()}>
         <div className={paddingStyles()}>
           <Container>{children}</Container>
@@ -47,6 +51,7 @@ InnerSection.defaultProps = {
 InnerSection.propTypes = {
   children: PropTypes.element.isRequired,
   position: PropTypes.oneOf(['left', 'bottom']),
+  backgroundImage: ImageFluid.isRequired,
 };
 
 export default InnerSection;

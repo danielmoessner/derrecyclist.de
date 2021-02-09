@@ -27,14 +27,20 @@ function Index({ data }) {
       <Navigation />
       <SectionWrapper>
         <Section>
-          <div className="bg-blue-100 flex-1">
-            <div className="w-full h-full flex justify-center items-center">
+          <div className="h-screen-80 md:h-auto flex-1 relative">
+            <div className="absolute w-full h-full">
+              <Img
+                className="absolute w-full h-full"
+                fluid={homePage.header.backgroundImage.childImageSharp.fluid}
+              />
+            </div>
+            <div className="absolute w-full h-full flex justify-center items-center">
               <Img className="w-48" fluid={homePage.logo.childImageSharp.fluid} />
             </div>
           </div>
         </Section>
         <Section>
-          <InnerSection position="bottom">
+          <InnerSection position="bottom" backgroundImage={homePage.concept.backgroundImage}>
             <div className="grid grid-cols-5">
               <div className="col-span-5 sm:col-span-2 gap-4">
                 <SectionPre>Konzept</SectionPre>
@@ -63,14 +69,14 @@ function Index({ data }) {
           </InnerSection>
         </Section>
         <Section>
-          <InnerSection position="left">
+          <InnerSection position="left" backgroundImage={homePage.categories.backgroundImage}>
             <div className="grid grid-cols-3 gap-x-4">
               <div className="col-span-3">
                 <SectionPre>Produktkategorien</SectionPre>
                 <SectionHeading>Unsere 3 Kollektionen</SectionHeading>
               </div>
               {categories.map((category) => (
-                <div className="col-span-3 sm:col-span-1 md:col-span-3 mb-16">
+                <div key={category.id} className="col-span-3 sm:col-span-1 md:col-span-3 mb-16">
                   <Link to="/" className="group">
                     <Img
                       className="mx-auto mb-6 w-1/2 group-hover:scale-125 transform transition duration-150"
@@ -85,7 +91,7 @@ function Index({ data }) {
           </InnerSection>
         </Section>
         <Section>
-          <InnerSection position="bottom">
+          <InnerSection position="bottom" backgroundImage={homePage.openingHours.backgroundImage}>
             <div className="grid grid-cols-1 md:grid-cols-3 md:gap-4 gap-y-12">
               <div className="col-span-1">
                 <SectionPre>Öffnungszeiten</SectionPre>
@@ -114,14 +120,14 @@ function Index({ data }) {
           </InnerSection>
         </Section>
         <Section>
-          <InnerSection position="left">
+          <InnerSection position="left" backgroundImage={homePage.reviews.backgroundImage}>
             <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-1 gap-y-8 gap-x-6 md:gap-0">
               <div className="col-span-1">
                 <SectionPre>Kundenrezensionen</SectionPre>
                 <SectionHeading>Was sagen unsere Kunden?</SectionHeading>
               </div>
               {reviews.map((review) => (
-                <div className="col-span-1 md:mb-16 last:mb-0">
+                <div key={review.id} className="col-span-1 md:mb-16 last:mb-0">
                   <div className="prose prose-sm mb-2">
                     <p>{review.review}</p>
                   </div>
@@ -134,7 +140,7 @@ function Index({ data }) {
           </InnerSection>
         </Section>
         <Section>
-          <InnerSection position="bottom">
+          <InnerSection position="bottom" backgroundImage={homePage.contact.backgroundImage}>
             <div className="grid grid-cols-3">
               <div className="col-span-1">
                 <SectionPre>Kontakt &amp; Standort</SectionPre>
@@ -180,9 +186,88 @@ export const query = graphql`
           }
         }
       }
+      header {
+        backgroundImage {
+          childImageSharp {
+            fluid(maxWidth: 4000) {
+              srcSet
+              src
+              sizes
+              base64
+              aspectRatio
+            }
+          }
+        }
+      }
+      concept {
+        backgroundImage {
+          childImageSharp {
+            fluid(maxWidth: 4000) {
+              srcSet
+              src
+              sizes
+              base64
+              aspectRatio
+            }
+          }
+        }
+      }
+      categories {
+        backgroundImage {
+          childImageSharp {
+            fluid(maxWidth: 4000) {
+              srcSet
+              src
+              sizes
+              base64
+              aspectRatio
+            }
+          }
+        }
+      }
+      openingHours {
+        backgroundImage {
+          childImageSharp {
+            fluid(maxWidth: 4000) {
+              srcSet
+              src
+              sizes
+              base64
+              aspectRatio
+            }
+          }
+        }
+      }
+      reviews {
+        backgroundImage {
+          childImageSharp {
+            fluid(maxWidth: 4000) {
+              srcSet
+              src
+              sizes
+              base64
+              aspectRatio
+            }
+          }
+        }
+      }
+      contact {
+        backgroundImage {
+          childImageSharp {
+            fluid(maxWidth: 4000) {
+              srcSet
+              src
+              sizes
+              base64
+              aspectRatio
+            }
+          }
+        }
+      }
     }
     allCategoriesYaml(sort: { fields: order }) {
       nodes {
+        id
         title
         image {
           childImageSharp {
@@ -202,6 +287,7 @@ export const query = graphql`
     }
     allReviewsYaml {
       nodes {
+        id
         review
         customer
       }

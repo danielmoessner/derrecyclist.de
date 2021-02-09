@@ -4,21 +4,32 @@
 
 @layer utilities {
   @responsive {
+    /* SCROLL SNAP */
+    /* align */
     .scroll-snap-align-center {
       scroll-snap-align: center;
     }
+    /* type */
     .scroll-snap-type-y-mandatory {
       scroll-snap-type: y mandatory;
     }
+
+    /* HEIGHT */
+    /* screen */
+    .h-screen-80 {
+      height: 80vh;
+    }
   }
 
+  /* SCROLLBAR */
+  /* none */
   .scrollbar-none {
     scrollbar-width: none;
   }
   .scrollbar-none::-webkit-scrollbar {
     display: none;
   }
-
+  /* small */
   .scrollbar-small::-webkit-scrollbar {
     width: 5px;
   }

@@ -6,7 +6,7 @@ function SectionHeading({ children }) {
 }
 
 SectionHeading.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
 };
 
 export default SectionHeading;

@@ -39,7 +39,7 @@ function Navigation() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full h-12 pr-5 pl-4">
+    <nav className="fixed top-0 w-full h-12 pr-5 pl-4 z-40">
       <div className="flex justify-between items-center h-full">
         <div className="w-32" />
         <div className="md:flex items-center justify-center hidden">
