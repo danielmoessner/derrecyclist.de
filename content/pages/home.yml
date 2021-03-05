@@ -4,8 +4,8 @@ meta:
   description: Beschreibung
   title: Der ReCyclist
   image: ../media/recyclist_logo_black.png
-logo: ../media/recyclist_logo_black.png
 header:
+  logo: ../media/recyclist_logo_black.png
   backgroundImage: ../media/bild_7.jpg
 concept:
   backgroundImage: ../media/bild_3.jpg

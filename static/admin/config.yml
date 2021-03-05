@@ -28,9 +28,25 @@ collections:
     label: Seiten
     label_singular: Seite
     delete: false
+    create: false
     editor:
       preview: false
     files:
+      - file: content/pages/bikes.yml
+        label: Rennräder
+        name: bikes
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: bikes }
+          - label: 'Meta'
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - label: Beschreibung
+                name: description
+                widget: text
+              - { label: Bild, name: image, widget: image }
       - file: content/pages/home.yml
         label: Startseite
         name: home
@@ -46,11 +62,11 @@ collections:
                 name: description
                 widget: text
               - { label: Bild, name: image, widget: image }
-          - { label: Logo, name: logo, widget: image }
           - label: Header
             name: header
             widget: object
             fields:
+              - { label: Logo, name: logo, widget: image }
               - { label: Hintergrundbild, name: backgroundImage, widget: image }
           - label: Konzept
             name: concept
@@ -85,6 +101,7 @@ collections:
       preview: true
     folder: content/bikes
     slug: '{{fields.slug}}'
+    extension: yml
     create: true
     preview_path: bikes/{{fields.slug}}
     fields:
@@ -97,15 +114,21 @@ collections:
         collection: 'category'
         searchFields: ['title']
         valueField: 'title'
-      - { label: Bild, name: image, widget: image }
-      - { label: Preis, name: price, widget: number }
+      - { label: Bild 1, name: image1, widget: image }
+      - { label: Bild 2, name: image2, widget: image }
+      - { label: Bild 3, name: image3, widget: image }
+      - { label: Bild 4, name: image4, widget: image }
+      - { label: Bild 5, name: image5, widget: image }
+      - { label: Preis, name: price, widget: number, step: 0.01, value_type: float }
       - label: Größe
         name: size
         widget: select
         options:
-          - { label: S, value: small }
-          - { label: M, value: medium }
-          - { label: L, value: large }
+          - { label: Sehr klein, value: xs }
+          - { label: Klein, value: sm }
+          - { label: Mittel, value: md }
+          - { label: Groß, value: lg }
+          - { label: Sehr groß, value: xl }
       - { label: Eckdaten, name: information, widget: text }
 
   - name: category

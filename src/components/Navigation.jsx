@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 import MenuButton from './MenuButton';
 import NavigationLink from './NavigationLink';
 import NavigationLinkTop from './NavigationLinkTop';
 
-function Navigation() {
+function Navigation({ inverted }) {
   const data = useStaticQuery(graphql`
     {
       navigation: settingsYaml(slug: { eq: "navigation" }) {
@@ -39,14 +40,14 @@ function Navigation() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full h-12 pr-5 pl-4 z-40">
-      <div className="flex justify-between items-center h-full">
+    <nav className={`fixed top-0 w-full h-12 pr-5 pl-4 z-40 ${inverted ? 'bg-gray-900' : ''}`}>
+      <div className={`flex justify-between items-center h-full ${inverted ? 'text-white' : ''}`}>
         <div className="w-32" />
         <div className="md:flex items-center justify-center hidden">
-          <NavigationLinkTop>
+          <NavigationLinkTop to="/">
             <div>{navigation.link1}</div>
           </NavigationLinkTop>
-          <NavigationLinkTop>
+          <NavigationLinkTop to="/rennraeder/">
             <div>{navigation.link2}</div>
           </NavigationLinkTop>
           <NavigationLinkTop>
@@ -69,10 +70,10 @@ function Navigation() {
       >
         <div className="pt-16 px-3 pb-16">
           <div className="flex flex-col divide-y divide-gray-200">
-            <NavigationLink>
+            <NavigationLink to="/">
               <div>{navigation.link1}</div>
             </NavigationLink>
-            <NavigationLink>
+            <NavigationLink to="/rennraeder/">
               <div>{navigation.link2}</div>
             </NavigationLink>
             <NavigationLink>
@@ -106,5 +107,13 @@ function Navigation() {
     </nav>
   );
 }
+
+Navigation.defaultProps = {
+  inverted: false,
+};
+
+Navigation.propTypes = {
+  inverted: PropTypes.bool,
+};
 
 export default Navigation;

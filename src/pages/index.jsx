@@ -13,16 +13,16 @@ import SectionPre from '../components/SectionPre';
 import Button from '../components/Button';
 
 function Index({ data }) {
-  const homePage = data.pagesYaml;
+  const page = data.pagesYaml;
   const categories = data.allCategoriesYaml.nodes;
   const reviews = data.allReviewsYaml.nodes;
 
   return (
     <Layout>
       <Seo
-        title={homePage.meta.title}
-        description={homePage.meta.description}
-        image={homePage.meta.image.childImageSharp.resize.src}
+        title={page.meta.title}
+        description={page.meta.description}
+        image={page.meta.image.childImageSharp.resize.src}
       />
       <Navigation />
       <SectionWrapper>
@@ -31,16 +31,16 @@ function Index({ data }) {
             <div className="absolute w-full h-full">
               <Img
                 className="absolute w-full h-full"
-                fluid={homePage.header.backgroundImage.childImageSharp.fluid}
+                fluid={page.header.backgroundImage.childImageSharp.fluid}
               />
             </div>
             <div className="absolute w-full h-full flex justify-center items-center">
-              <Img className="w-48" fluid={homePage.logo.childImageSharp.fluid} />
+              <Img className="w-48" fluid={page.header.logo.childImageSharp.fluid} />
             </div>
           </div>
         </Section>
         <Section>
-          <InnerSection position="bottom" backgroundImage={homePage.concept.backgroundImage}>
+          <InnerSection position="bottom" backgroundImage={page.concept.backgroundImage}>
             <div className="grid grid-cols-5">
               <div className="col-span-5 sm:col-span-2 gap-4">
                 <SectionPre>Konzept</SectionPre>
@@ -69,7 +69,7 @@ function Index({ data }) {
           </InnerSection>
         </Section>
         <Section>
-          <InnerSection position="left" backgroundImage={homePage.categories.backgroundImage}>
+          <InnerSection position="left" backgroundImage={page.categories.backgroundImage}>
             <div className="grid grid-cols-3 gap-x-4">
               <div className="col-span-3">
                 <SectionPre>Produktkategorien</SectionPre>
@@ -91,7 +91,7 @@ function Index({ data }) {
           </InnerSection>
         </Section>
         <Section>
-          <InnerSection position="bottom" backgroundImage={homePage.openingHours.backgroundImage}>
+          <InnerSection position="bottom" backgroundImage={page.openingHours.backgroundImage}>
             <div className="grid grid-cols-1 md:grid-cols-3 md:gap-4 gap-y-12">
               <div className="col-span-1">
                 <SectionPre>Öffnungszeiten</SectionPre>
@@ -120,7 +120,7 @@ function Index({ data }) {
           </InnerSection>
         </Section>
         <Section>
-          <InnerSection position="left" backgroundImage={homePage.reviews.backgroundImage}>
+          <InnerSection position="left" backgroundImage={page.reviews.backgroundImage}>
             <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-1 gap-y-8 gap-x-6 md:gap-0">
               <div className="col-span-1">
                 <SectionPre>Kundenrezensionen</SectionPre>
@@ -140,7 +140,7 @@ function Index({ data }) {
           </InnerSection>
         </Section>
         <Section>
-          <InnerSection position="bottom" backgroundImage={homePage.contact.backgroundImage}>
+          <InnerSection position="bottom" backgroundImage={page.contact.backgroundImage}>
             <div className="grid grid-cols-3">
               <div className="col-span-1">
                 <SectionPre>Kontakt &amp; Standort</SectionPre>
@@ -175,18 +175,18 @@ export const query = graphql`
         description
         title
       }
-      logo {
-        childImageSharp {
-          fluid(maxWidth: 400) {
-            srcSet
-            src
-            sizes
-            base64
-            aspectRatio
+      header {
+        logo {
+          childImageSharp {
+            fluid(maxWidth: 400) {
+              srcSet
+              src
+              sizes
+              base64
+              aspectRatio
+            }
           }
         }
-      }
-      header {
         backgroundImage {
           childImageSharp {
             fluid(maxWidth: 4000) {
