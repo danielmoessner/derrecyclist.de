@@ -1,5 +1,6 @@
 const typography = require('@tailwindcss/typography');
 const colors = require('tailwindcss/colors');
+const aspectRatio = require('@tailwindcss/aspect-ratio');
 
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
@@ -18,5 +19,5 @@ module.exports = {
       margin: ['last'],
     },
   },
-  plugins: [typography],
+  plugins: [typography, aspectRatio],
 };

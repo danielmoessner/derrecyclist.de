@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import DOMPurify from 'dompurify';
@@ -6,15 +6,25 @@ import Layout from '../components/layout';
 import Seo from '../components/seo';
 import Navigation from '../components/Navigation';
 import Container from '../components/Container';
+import ImageSlider from '../components/ImageSlider';
 
 function Bikes({ data }) {
-  const bikes = data.allBikesYaml.nodes;
+  const allBikes = data.allBikesYaml.nodes;
+  const [bikes, setBikes] = useState(allBikes);
   const page = data.pagesYaml;
 
-  function getBikeInformation(text) {
+  const getBikeInformation = (text) => {
     const clean = DOMPurify.sanitize(text);
     return clean.replaceAll('\n', '<br>');
-  }
+  };
+
+  const changeSize = (newSize) => {
+    if (newSize === '--') {
+      setBikes(allBikes);
+    } else {
+      setBikes(allBikes.filter((bike) => bike.size === newSize));
+    }
+  };
 
   return (
     <Layout>
@@ -55,11 +65,13 @@ function Bikes({ data }) {
                   Körpergröße
                   <div className="mt-1.5 relative">
                     <select
+                      onChange={(event) => changeSize(event.target.value)}
                       id="size"
                       name="size"
-                      defaultValue="md"
+                      defaultValue="--"
                       className="shadow-sm appearance-none block w-full bg-none bg-white border border-gray-300 rounded-md pl-3 pr-10 py-2 text-base text-gray-900 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm"
                     >
+                      <option value="--">------</option>
                       <option value="xs">155cm - 165cm</option>
                       <option value="sm">165cm - 175cm</option>
                       <option value="md">175cm - 185cm</option>
@@ -89,18 +101,20 @@ function Bikes({ data }) {
         </Container>
       </div>
 
-      <div className="bg-gray-200">
+      <div className="bg-gray-200" style={{ minHeight: '50vh' }}>
         <Container>
           <div className="pt-16 pb-32 px-8">
+            {bikes.length === 0 ? <p>Leider keine Fahrräder für diese Größe auf Lager.</p> : ''}
             <ul className="space-y-3">
               {bikes.map((bike) => (
-                <li className="bg-white shadow overflow-hidden rounded-md px-6 py-4" key={bike.id}>
+                <li
+                  className="bg-white shadow overflow-hidden rounded-md pr-6 pl-4 py-4"
+                  key={bike.id}
+                >
                   <div className="flex flex-row">
-                    <div className="w-5/12">
-                      <img
-                        className="max-w-full h-auto"
-                        src="https://www.radon-bikes.de/fileadmin/_processed_/csm_499430_f0b28bc0b2.jpg"
-                        alt=""
+                    <div className="w-5/12 relative">
+                      <ImageSlider
+                        images={[bike.image1, bike.image2, bike.image3, bike.image4, bike.image5]}
                       />
                     </div>
                     <div className="w-7/12 flex flex-col pl-4 justify-between">
@@ -118,28 +132,28 @@ function Bikes({ data }) {
                             <div className="text-xs text-gray-500">
                               <span>Kategorie</span>
                             </div>
-                            <p className="text-base font-medium text-gray-800">
+                            <div className="text-base font-medium text-gray-800">
                               <div className="">{bike.category}</div>
-                            </p>
+                            </div>
                           </div>
                           <div>
                             <div className="text-xs text-gray-500">
                               <span>Größe</span>
                             </div>
-                            <p className="text-base font-medium text-gray-800">
+                            <div className="text-base font-medium text-gray-800">
                               <div className="">Mittel</div>
-                            </p>
+                            </div>
                           </div>
                           <div>
                             <div className="text-xs text-gray-500">
                               <span>Preis</span>
                             </div>
-                            <p className="text-base font-medium text-gray-800">
+                            <div className="text-base font-medium text-gray-800">
                               <div className="">
-                                {bike.price}
+                                {bike.price.toString().replace('.', ',')}
                                 <span> €</span>
                               </div>
-                            </p>
+                            </div>
                           </div>
                         </div>
                         <div className="font-semibold cursor-pointer self-end text-gray-900">
@@ -176,6 +190,41 @@ export const query = graphql`
         title
         information
         id
+        image1 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        image2 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        image3 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        image4 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        image5 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
     pagesYaml(slug: { eq: "bikes" }) {
