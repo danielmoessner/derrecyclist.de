@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import DOMPurify from 'dompurify';
+// import DOMPurify from 'dompurify';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import Navigation from '../components/Navigation';
@@ -13,10 +13,12 @@ function Bikes({ data }) {
   const [bikes, setBikes] = useState(allBikes);
   const page = data.pagesYaml;
 
-  const getBikeInformation = (text) => {
-    const clean = DOMPurify.sanitize(text);
-    return clean.replaceAll('\n', '<br>');
-  };
+  // const DOMPurify = createDOMPurify(window);
+
+  const getBikeInformation = (text) =>
+    // const clean = text.toString();
+    // const clean = DOMPurify.sanitize(text);
+    text.replace(/\n/g, '<br />');
 
   const changeSize = (newSize) => {
     if (newSize === '--') {
