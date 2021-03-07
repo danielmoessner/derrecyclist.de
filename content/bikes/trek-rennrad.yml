@@ -8,7 +8,7 @@ image3: ../media/bike3.jpeg
 image4: ../media/bike2.jpeg
 image5: ../media/bike1.jpeg
 price: 999.99
-size:
+sizes:
   - md
   - sm
 information: >-

@@ -121,7 +121,7 @@ collections:
       - { label: Bild 5, name: image5, widget: image }
       - { label: Preis, name: price, widget: number, step: 0.01, value_type: float }
       - label: Größe
-        name: size
+        name: sizes
         widget: select
         multiple: true
         options:

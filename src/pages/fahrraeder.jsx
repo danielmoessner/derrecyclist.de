@@ -19,6 +19,14 @@ function Bikes({ data }) {
   const getBikeInformation = (text) => sanitizeHtml(text.replace(/\n/g, '<br />'));
   const getBikeCategory = (categoryText) =>
     categories.find((category) => category.title === categoryText);
+  const getBikeSizes = (sizes) =>
+    sizes
+      .join(', ')
+      .replace('xs', 'Sehr klein')
+      .replace('sm', 'Klein')
+      .replace('md', 'Mittel')
+      .replace('lg', 'Groß')
+      .replace('xl', 'Sehr groß');
 
   const filteredBikes = () => {
     let bikes = allBikes;
@@ -234,7 +242,7 @@ function Bikes({ data }) {
                               <span>Größe</span>
                             </div>
                             <div className="text-base font-medium text-gray-800">
-                              <div className="">Mittel</div>
+                              <div className="">{getBikeSizes(bike.sizes)}</div>
                             </div>
                           </div>
                           <div>
@@ -278,7 +286,7 @@ export const query = graphql`
       nodes {
         category
         price
-        size
+        sizes
         slug
         title
         information
