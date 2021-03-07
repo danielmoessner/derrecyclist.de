@@ -47,7 +47,7 @@ function Navigation({ inverted }) {
           <NavigationLinkTop to="/">
             <div>{navigation.link1}</div>
           </NavigationLinkTop>
-          <NavigationLinkTop to="/rennraeder/">
+          <NavigationLinkTop to="/fahrraeder/">
             <div>{navigation.link2}</div>
           </NavigationLinkTop>
           <NavigationLinkTop>
@@ -73,7 +73,7 @@ function Navigation({ inverted }) {
             <NavigationLink to="/">
               <div>{navigation.link1}</div>
             </NavigationLink>
-            <NavigationLink to="/rennraeder/">
+            <NavigationLink to="/fahrraeder/">
               <div>{navigation.link2}</div>
             </NavigationLink>
             <NavigationLink>

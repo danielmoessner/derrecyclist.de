@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import sanitizeHtml from 'sanitize-html';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import Navigation from '../components/Navigation';
@@ -10,16 +11,46 @@ import ImageSlider from '../components/ImageSlider';
 
 function Bikes({ data }) {
   const allBikes = data.allBikesYaml.nodes;
-  const [bikes, setBikes] = useState(allBikes);
   const page = data.pagesYaml;
+  const categories = data.allCategoriesYaml.nodes;
+  const [activeCategory, setActiveCategory] = useState('--');
+  const [activeSize, setActiveSize] = useState('--');
 
   const getBikeInformation = (text) => sanitizeHtml(text.replace(/\n/g, '<br />'));
+  const getBikeCategory = (categoryText) =>
+    categories.find((category) => category.title === categoryText);
 
-  const changeSize = (newSize) => {
-    if (newSize === '--') {
-      setBikes(allBikes);
+  const filteredBikes = () => {
+    let bikes = allBikes;
+    if (activeSize !== '--') bikes = bikes.filter((bike) => bike.size.includes(activeSize));
+    if (activeCategory !== '--') bikes = bikes.filter((bike) => bike.category === activeCategory);
+    return bikes;
+  };
+
+  const updateCategory = (newCategory) => {
+    if (activeCategory === newCategory) {
+      setActiveCategory('--');
     } else {
-      setBikes(allBikes.filter((bike) => bike.size === newSize));
+      setActiveCategory(newCategory);
+    }
+  };
+
+  const updateActiveSize = (newSize) => {
+    const size = Number(newSize);
+    if (size >= 155 && size <= 165) {
+      setActiveSize('xs');
+    } else if (size >= 165 && size <= 175) {
+      setActiveSize('sm');
+    } else if (size >= 175 && size <= 185) {
+      setActiveSize('md');
+    } else if (size >= 185 && size <= 190) {
+      setActiveSize('lg');
+    } else if (size >= 190 && size <= 205) {
+      setActiveSize('xl');
+    } else if (newSize === '') {
+      setActiveSize('--');
+    } else {
+      setActiveSize('-/-');
     }
   };
 
@@ -46,29 +77,38 @@ function Bikes({ data }) {
           <div className="flex-1 bg-gray-200 w-full" />
         </div>
         <Container>
-          <div className="py-12 bg-gray-100 rounded shadow px-10 relative z-30">
+          <div className="pt-12 pb-6 bg-gray-100 rounded shadow px-10 relative z-30">
             <div className="lg:flex lg:justify-between">
               <div className="max-w-xl">
-                <h2 className="text-2xl font-extrabold text-gray-900 sm:text-3xl sm:tracking-tight lg:text-4xl">
+                <h1 className="text-2xl font-extrabold text-gray-900 sm:text-3xl sm:tracking-tight lg:text-4xl">
                   Unsere Rennräder
-                </h2>
+                </h1>
                 <p className="mt-5 text-base lg:text-lg text-gray-500">
                   Wähle ganz einfach deine entsprechende Körpergröße aus und reserviere Dir ein
-                  Fahrrad zum Besichtigen.
+                  Fahrrad zum Besichtigen oder frage an für Versand.
                 </p>
               </div>
-              <div className="mt-10 w-full max-w-xs">
+              <div className="w-full max-w-xs mt-6">
                 <label htmlFor="size" className="block text-base text-gray-500">
                   Körpergröße
                   <div className="mt-1.5 relative">
-                    <select
-                      onChange={(event) => changeSize(event.target.value)}
+                    <input
+                      onChange={(event) => updateActiveSize(event.target.value)}
                       id="size"
                       name="size"
                       defaultValue="--"
+                      type="number"
+                      placeholder="z.B. 175"
+                      min="155"
+                      max="205"
                       className="shadow-sm appearance-none block w-full bg-none bg-white border border-gray-300 rounded-md pl-3 pr-10 py-2 text-base text-gray-900 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm"
-                    >
-                      <option value="--">------</option>
+                    />
+                    <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                      <span className="text-gray-500 sm:text-sm" id="size-unit">
+                        cm
+                      </span>
+                    </div>
+                    {/* <option value="--">------</option>
                       <option value="xs">155cm - 165cm</option>
                       <option value="sm">165cm - 175cm</option>
                       <option value="md">175cm - 185cm</option>
@@ -89,9 +129,48 @@ function Bikes({ data }) {
                           clipRule="evenodd"
                         />
                       </svg>
+                    </div> */}
+                  </div>
+                  <p className="mt-2 text-sm text-gray-500" id="email-description">
+                    Bitte eine Größe zwischen 155 und 205 cm angeben.
+                  </p>
+                </label>
+              </div>
+            </div>
+            <div className="mt-12">
+              <div className="grid grid-cols-3 gap-6">
+                <div className="col-span-3">
+                  <div className="max-w-xl">
+                    <h2 className="text-xl font-extrabold text-gray-900 sm:text-2xl sm:tracking-tight lg:text-3xl">
+                      Unsere Kategorien
+                    </h2>
+                    <p className="mt-3 text-base lg:text-lg text-gray-500">
+                      Klicke auf eine der Kategorien um diese auszuwählen.
+                    </p>
+                  </div>
+                </div>
+                {categories.map((category) => (
+                  <div key={category.id} className="col-span-1 group">
+                    <div className="flex items-center justify-center">
+                      <button
+                        onClick={() => updateCategory(category.title)}
+                        type="button"
+                        className="group focus:outline-none"
+                      >
+                        <GatsbyImage
+                          className={`scale-75 transform transition duration-150 ${
+                            activeCategory === category.title
+                              ? 'scale-95 group-hover:scale-100'
+                              : 'group-hover:scale-90'
+                          }`}
+                          objectPosition="50% 50%"
+                          image={category.image.childImageSharp.gatsbyImageData}
+                          alt={category.title}
+                        />
+                      </button>
                     </div>
                   </div>
-                </label>
+                ))}
               </div>
             </div>
           </div>
@@ -101,9 +180,13 @@ function Bikes({ data }) {
       <div className="bg-gray-200" style={{ minHeight: '50vh' }}>
         <Container>
           <div className="pt-16 pb-32 px-8">
-            {bikes.length === 0 ? <p>Leider keine Fahrräder für diese Größe auf Lager.</p> : ''}
+            {filteredBikes().length === 0 ? (
+              <p>Leider keine Fahrräder in der gewählten Kategorie und Größe auf Lager.</p>
+            ) : (
+              ''
+            )}
             <ul className="space-y-3">
-              {bikes.map((bike) => (
+              {filteredBikes().map((bike) => (
                 <li
                   className="bg-white shadow overflow-hidden rounded-md pr-6 pl-4 py-4"
                   key={bike.id}
@@ -115,13 +198,26 @@ function Bikes({ data }) {
                       />
                     </div>
                     <div className="w-7/12 flex flex-col pl-4 justify-between">
-                      <div>
-                        <h2 className="text-2xl font-bold">{bike.title}</h2>
-                        <p
-                          className="mt-2"
-                          // eslint-disable-next-line react/no-danger
-                          dangerouslySetInnerHTML={{ __html: getBikeInformation(bike.information) }}
+                      <div className="flex flex-col">
+                        <GatsbyImage
+                          className="w-40"
+                          alt={bike.category}
+                          objectFit="contain"
+                          objectPosition="50% 0%"
+                          image={
+                            getBikeCategory(bike.category).image.childImageSharp.gatsbyImageData
+                          }
                         />
+                        <div className="flex-1">
+                          <h2 className="text-2xl font-bold">{bike.title}</h2>
+                          <p
+                            className="mt-2"
+                            // eslint-disable-next-line react/no-danger
+                            dangerouslySetInnerHTML={{
+                              __html: getBikeInformation(bike.information),
+                            }}
+                          />
+                        </div>
                       </div>
                       <div className="flex flex-row justify-between">
                         <div className="mt-6 flex flex-row space-x-6">
@@ -220,6 +316,19 @@ export const query = graphql`
             fluid {
               ...GatsbyImageSharpFluid
             }
+          }
+        }
+      }
+    }
+    allCategoriesYaml {
+      nodes {
+        id
+        title
+        slug
+        description
+        image {
+          childImageSharp {
+            gatsbyImageData(width: 200)
           }
         }
       }

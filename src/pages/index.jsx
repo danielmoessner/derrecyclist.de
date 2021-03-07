@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import Section from '../components/Section';
@@ -34,9 +35,15 @@ function Index({ data }) {
                 fluid={page.header.backgroundImage.childImageSharp.fluid}
               />
             </div>
-            <div className="absolute w-full h-full flex justify-center items-center">
-              <Img className="w-48" fluid={page.header.logo.childImageSharp.fluid} />
-            </div>
+            {/* <div className=""> */}
+            <GatsbyImage
+              className="absolute w-full h-full flex justify-center items-center"
+              image={page.header.logo.childImageSharp.gatsbyImageData}
+              objectFit="none"
+              objectPosition="50% 30%"
+              alt={page.meta.title}
+            />
+            {/* </div> */}
           </div>
         </Section>
         <Section>
@@ -46,7 +53,7 @@ function Index({ data }) {
                 <SectionPre>Konzept</SectionPre>
                 <SectionHeading>Gebrauchte Rennräder Neu</SectionHeading>
                 <div className="hidden sm:inline">
-                  <Button>Fahrräder ansehen</Button>
+                  <Button to="/fahrraeder/">Fahrräder ansehen</Button>
                 </div>
               </div>
               <div className="col-span-5 sm:col-span-3">
@@ -77,9 +84,9 @@ function Index({ data }) {
               </div>
               {categories.map((category) => (
                 <div key={category.id} className="col-span-3 sm:col-span-1 md:col-span-3 mb-16">
-                  <Link to="/" className="group">
+                  <Link to="/fahrraeder/" className="group">
                     <Img
-                      className="mx-auto mb-6 w-1/2 group-hover:scale-125 transform transition duration-150"
+                      className="mx-auto mb-6 w-3/4 group-hover:scale-110 transform transition duration-150"
                       fluid={category.image.childImageSharp.fluid}
                       alt={category.title}
                     />
@@ -178,13 +185,7 @@ export const query = graphql`
       header {
         logo {
           childImageSharp {
-            fluid(maxWidth: 400) {
-              srcSet
-              src
-              sizes
-              base64
-              aspectRatio
-            }
+            gatsbyImageData(width: 200, placeholder: BLURRED, layout: CONSTRAINED)
           }
         }
         backgroundImage {
