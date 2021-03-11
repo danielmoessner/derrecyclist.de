@@ -1,19 +1,51 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { Transition } from '@headlessui/react';
-import ImageFluid from '../types/ImageFluid';
+import GatsbyImageData from '../types/GatsbyImageData';
 
 function ImageSlider({ images }) {
   const [activeSlide, setActiveSlide] = useState(1);
+  const [imageOpen, setImageOpen] = useState(false);
   const slideNumbersArray = Array.from(Array(images.length).keys());
 
   return (
     <div className="relative">
+      <Transition show={imageOpen} className="fixed inset-10 bg-gray-50 bg-opacity-50 z-40 rounded">
+        <button
+          onClick={() => setImageOpen(false)}
+          type="button"
+          className="z-10 absolute text-gray-100 top-0 right-0 w-12 h-12 bg-gray-900 rounded flex items-center justify-center hover:bg-gray-800 hover:text-white"
+        >
+          <svg
+            className="w-7 h-7"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+        {images.map((image, index) => (
+          <GatsbyImage
+            key={image.childImageSharp.id}
+            className={`rounded w-full h-full ${index !== activeSlide ? 'hidden' : ''}`}
+            style={{ position: 'absolute' }}
+            alt={`Slider Bild ${index}`}
+            image={image.childImageSharp.gatsbyImageData}
+          />
+        ))}
+      </Transition>
       {images.map((image, index) => (
         <Transition
           className="absolute inset-0"
-          key={image.childImageSharp.fluid.src}
+          key={image.childImageSharp.gatsbyImageData.images.fallback.src}
           show={activeSlide === index}
           enter="transition-opacity duration-75"
           enterFrom="opacity-0"
@@ -23,10 +55,12 @@ function ImageSlider({ images }) {
           leaveTo="opacity-0"
         >
           <div className="aspect-w-4 aspect-h-3">
-            <Img
-              className="rounded"
+            <GatsbyImage
+              onClick={() => setImageOpen(true)}
+              className="rounded cursor-pointer z-10"
               style={{ position: 'absolute' }}
-              fluid={image.childImageSharp.fluid}
+              alt={`Slider Bild ${index}`}
+              image={image.childImageSharp.gatsbyImageData}
             />
           </div>
         </Transition>
@@ -58,7 +92,14 @@ function ImageSlider({ images }) {
 }
 
 ImageSlider.propTypes = {
-  images: PropTypes.arrayOf(ImageFluid).isRequired,
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      childImageSharp: PropTypes.shape({
+        gatsbyImageData: GatsbyImageData.isRequired,
+        id: PropTypes.string.isRequired,
+      }),
+    })
+  ).isRequired,
 };
 
 export default ImageSlider;
