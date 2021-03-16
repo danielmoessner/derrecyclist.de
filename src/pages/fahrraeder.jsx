@@ -17,8 +17,6 @@ function Bikes({ data }) {
   const [activeSize, setActiveSize] = useState('--');
 
   const getBikeInformation = (text) => sanitizeHtml(text.replace(/\n/g, '<br />'));
-  const getBikeCategory = (categoryText) =>
-    categories.find((category) => category.title === categoryText);
   const getBikeSizes = (sizes) =>
     sizes
       .join(', ')
@@ -72,7 +70,7 @@ function Bikes({ data }) {
       <Navigation />
 
       <div
-        className="pt-96 pb-96 bg-cover"
+        className="aspect-w-16 aspect-h-9 lg:aspect-h-6 bg-cover"
         style={{
           backgroundImage:
             'url(https://www.radon-bikes.de/fileadmin/_processed_/csm_499430_f0b28bc0b2.jpg)',
@@ -85,20 +83,17 @@ function Bikes({ data }) {
           <div className="flex-1 bg-gray-200 w-full" />
         </div>
         <Container>
-          <div className="pt-12 pb-6 bg-gray-100 rounded shadow px-10 relative z-30">
+          <div className="px-4 py-3 lg:pt-12 lg:pb-6 bg-gray-100 rounded shadow lg:px-10 relative z-30">
             <div className="lg:flex lg:justify-between">
               <div className="max-w-xl">
                 <h1 className="text-2xl font-extrabold text-gray-900 sm:text-3xl sm:tracking-tight lg:text-4xl">
-                  Unsere Rennräder
+                  {page.form.heading}
                 </h1>
-                <p className="mt-5 text-base lg:text-lg text-gray-500">
-                  Wähle ganz einfach deine entsprechende Körpergröße aus und reserviere Dir ein
-                  Fahrrad zum Besichtigen oder frage an für Versand.
-                </p>
+                <p className="mt-5 text-base lg:text-lg text-gray-500">{page.form.headingText}</p>
               </div>
               <div className="w-full max-w-xs mt-6">
                 <label htmlFor="size" className="block text-base text-gray-500">
-                  Körpergröße
+                  {page.form.inputLabel}
                   <div className="mt-1.5 relative">
                     <input
                       onChange={(event) => updateActiveSize(event.target.value)}
@@ -106,7 +101,7 @@ function Bikes({ data }) {
                       name="size"
                       defaultValue="--"
                       type="number"
-                      placeholder="z.B. 175"
+                      placeholder={page.form.inputPlaceholder}
                       min="155"
                       max="205"
                       className="shadow-sm appearance-none block w-full bg-none bg-white border border-gray-300 rounded-md pl-3 pr-10 py-2 text-base text-gray-900 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm"
@@ -140,7 +135,7 @@ function Bikes({ data }) {
                     </div> */}
                   </div>
                   <p className="mt-2 text-sm text-gray-500" id="email-description">
-                    Bitte eine Größe zwischen 155 und 205 cm angeben.
+                    {page.form.inputHelptext}
                   </p>
                 </label>
               </div>
@@ -150,15 +145,15 @@ function Bikes({ data }) {
                 <div className="col-span-3">
                   <div className="max-w-xl">
                     <h2 className="text-xl font-extrabold text-gray-900 sm:text-2xl sm:tracking-tight lg:text-3xl">
-                      Unsere Kategorien
+                      {page.form.categoryHeading}
                     </h2>
                     <p className="mt-3 text-base lg:text-lg text-gray-500">
-                      Klicke auf eine der Kategorien um diese auszuwählen.
+                      {page.form.categoryText}
                     </p>
                   </div>
                 </div>
                 {categories.map((category) => (
-                  <div key={category.id} className="col-span-1 group">
+                  <div key={category.id} className="col-span-3 sm:col-span-1 group">
                     <div className="flex items-center justify-center">
                       <button
                         onClick={() => updateCategory(category.title)}
@@ -187,51 +182,34 @@ function Bikes({ data }) {
 
       <div className="bg-gray-200" style={{ minHeight: '50vh' }}>
         <Container>
-          <div className="pt-16 pb-32 px-8">
-            {filteredBikes().length === 0 ? (
-              <p>Leider keine Fahrräder in der gewählten Kategorie und Größe auf Lager.</p>
-            ) : (
-              ''
-            )}
+          <div className="px-0 pt-16 pb-32 lg:px-8">
+            {filteredBikes().length === 0 ? <p>{page.bikes.noBikesText}</p> : ''}
             <ul className="space-y-3">
               {filteredBikes().map((bike) => (
                 <li
-                  className="bg-white shadow overflow-hidden rounded-md pr-6 pl-4 py-4"
+                  className="bg-white shadow overflow-hidden rounded-md p-3 lg:pr-6 lg:pl-4 lg:pt-4 lg:pb-3"
                   key={bike.id}
                 >
-                  <div className="flex flex-row">
-                    <div className="w-5/12 relative">
+                  <div className="flex flex-col lg:flex-row">
+                    <div className="w-full lg:w-5/12 relative">
                       <ImageSlider
                         images={[bike.image1, bike.image2, bike.image3, bike.image4, bike.image5]}
                       />
                     </div>
-                    <div className="w-7/12 flex flex-col pl-4 justify-between">
-                      <div className="flex flex-col">
-                        <GatsbyImage
-                          className="w-40"
-                          alt={bike.category}
-                          objectFit="contain"
-                          objectPosition="50% 0%"
-                          image={
-                            getBikeCategory(bike.category).image.childImageSharp.gatsbyImageData
-                          }
-                        />
-                        <div className="flex-1">
-                          <h2 className="text-2xl font-bold">{bike.title}</h2>
-                          <p
-                            className="mt-2"
-                            // eslint-disable-next-line react/no-danger
-                            dangerouslySetInnerHTML={{
-                              __html: getBikeInformation(bike.information),
-                            }}
-                          />
-                        </div>
-                      </div>
-                      <div className="flex flex-row justify-between">
+                    <div className="w-full pt-6 px-2 lg:px-0 lg:pt-0 lg:w-7/12 flex flex-col lg:pl-4 justify-between">
+                      <h2 className="text-2xl font-bold">{bike.title}</h2>
+                      <p
+                        className="mt-2"
+                        // eslint-disable-next-line react/no-danger
+                        dangerouslySetInnerHTML={{
+                          __html: getBikeInformation(bike.information),
+                        }}
+                      />
+                      <div className="flex flex-col lg:flex-row justify-between">
                         <div className="mt-6 flex flex-row space-x-6">
                           <div>
                             <div className="text-xs text-gray-500">
-                              <span>Kategorie</span>
+                              <span>{page.bikes.category}</span>
                             </div>
                             <div className="text-base font-medium text-gray-800">
                               <div className="">{bike.category}</div>
@@ -239,7 +217,7 @@ function Bikes({ data }) {
                           </div>
                           <div>
                             <div className="text-xs text-gray-500">
-                              <span>Größe</span>
+                              <span>{page.bikes.size}</span>
                             </div>
                             <div className="text-base font-medium text-gray-800">
                               <div className="">{getBikeSizes(bike.sizes)}</div>
@@ -247,7 +225,7 @@ function Bikes({ data }) {
                           </div>
                           <div>
                             <div className="text-xs text-gray-500">
-                              <span>Preis</span>
+                              <span>{page.bikes.price}</span>
                             </div>
                             <div className="text-base font-medium text-gray-800">
                               <div className="">
@@ -257,8 +235,8 @@ function Bikes({ data }) {
                             </div>
                           </div>
                         </div>
-                        <div className="font-semibold cursor-pointer self-end text-gray-900">
-                          Besichtigung buchen
+                        <div className="mt-5 -mr-2 lg:mr-0 lg:mt-0 font-semibold cursor-pointer self-end text-gray-900">
+                          {page.bikes.visitButton}
                         </div>
                       </div>
                     </div>
@@ -347,6 +325,29 @@ export const query = graphql`
             }
           }
         }
+      }
+      header {
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+      }
+      form {
+        categoryHeading
+        categoryText
+        headingText
+        inputHelptext
+        inputLabel
+        inputPlaceholder
+        heading
+      }
+      bikes {
+        visitButton
+        noBikesText
+        size
+        category
+        price
       }
     }
   }

@@ -33,7 +33,7 @@ collections:
       preview: false
     files:
       - file: content/pages/bikes.yml
-        label: Rennräder
+        label: Fahrräder
         name: bikes
         fields:
           - { label: Sammlung, name: collection, widget: hidden, default: page }
@@ -47,6 +47,32 @@ collections:
                 name: description
                 widget: text
               - { label: Bild, name: image, widget: image }
+          - label: Header
+            name: header
+            widget: object
+            fields: 
+              - { label: Bild, name: image, widget: image }
+          - label: Formular
+            name: form
+            widget: object
+            fields: 
+              - { label: Überschrift, name: heading, widget: string }
+              - { label: Überschrifttext, name: headingText, widget: string }
+              - { label: Kategorienüberschrift, name: categoryHeading, widget: string }
+              - { label: Kategorientext, name: categoryText, widget: string }
+              - { label: Eingabelabel, name: inputLabel, widget: string }
+              - { label: Eingabeplatzhalter, name: inputPlaceholder, widget: string }
+              - { label: Eingabehilfstext, name: inputHelptext, widget: string }
+          - label: Fahrräder
+            name: bikes
+            widget: object
+            fields: 
+              - { label: Besichtigungsbutton, name: visitButton, widget: string }
+              - { label: Kategorie, name: category, widget: string }
+              - { label: Größe, name: size, widget: string }
+              - { label: Preis, name: price, widget: string }
+              - { label: Keine Fahrräder gefunden, name: noBikesText, widget: string }
+
       - file: content/pages/home.yml
         label: Startseite
         name: home

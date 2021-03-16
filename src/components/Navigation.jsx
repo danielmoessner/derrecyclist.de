@@ -50,7 +50,7 @@ function Navigation({ inverted }) {
           <NavigationLinkTop to="/fahrraeder/">
             <div>{navigation.link2}</div>
           </NavigationLinkTop>
-          <NavigationLinkTop>
+          <NavigationLinkTop to="/besichtigung/">
             <div>{navigation.link3}</div>
           </NavigationLinkTop>
         </div>
@@ -76,7 +76,7 @@ function Navigation({ inverted }) {
             <NavigationLink to="/fahrraeder/">
               <div>{navigation.link2}</div>
             </NavigationLink>
-            <NavigationLink>
+            <NavigationLink to="/besichtigung/">
               <div>{navigation.link3}</div>
             </NavigationLink>
             <div className="w-full pt-10 pb-16 px-2">
@@ -94,10 +94,10 @@ function Navigation({ inverted }) {
                 />
               </div>
             </div>
-            <NavigationLink>
+            <NavigationLink to="/impressum/">
               <div>{navigation.link5}</div>
             </NavigationLink>
-            <NavigationLink>
+            <NavigationLink to="/datenschutz/">
               <div>{navigation.link6}</div>
             </NavigationLink>
             <div />

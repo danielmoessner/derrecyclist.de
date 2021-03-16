@@ -4,3 +4,20 @@ meta:
   title: Rennräder
   description: Beschreibung test
   image: ../media/bike5.jpeg
+header:
+  image: ../media/bild_14.jpg
+form:
+  heading: Unsere Rennräder
+  headingText: Wähle ganz einfach deine entsprechende Körpergröße aus und
+    reserviere Dir ein Fahrrad zum Besichtigen oder frage an für Versand.
+  categoryHeading: Unsere Kategorien
+  categoryText: Klicke auf eine der Kategorien um diese auszuwählen.
+  inputLabel: Körpergröße
+  inputPlaceholder: z.B. 175
+  inputHelptext: Bitte eine Größe zwischen 155 und 205 cm angeben.
+bikes:
+  visitButton: Besichtigung buchen
+  noBikesText: Leider keine Fahrräder in der gewählten Kategorie und Größe auf Lager.
+  category: Kategorie
+  size: Größe
+  price: Preis
