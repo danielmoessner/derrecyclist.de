@@ -69,13 +69,12 @@ function Bikes({ data }) {
       />
       <Navigation />
 
-      <div
-        className="aspect-w-16 aspect-h-9 lg:aspect-h-6 bg-cover"
-        style={{
-          backgroundImage:
-            'url(https://www.radon-bikes.de/fileadmin/_processed_/csm_499430_f0b28bc0b2.jpg)',
-        }}
-      />
+      <div className="aspect-w-16 aspect-h-9 lg:aspect-h-6 bg-cover">
+        <GatsbyImage
+          image={page.header.image.childImageSharp.gatsbyImageData}
+          alt="Hintergrundbild"
+        />
+      </div>
 
       <div className="relative z-0 -mt-24">
         <div className="absolute flex flex-col inset-0">
@@ -271,31 +270,31 @@ export const query = graphql`
         id
         image1 {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
             id
           }
         }
         image2 {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
             id
           }
         }
         image3 {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
             id
           }
         }
         image4 {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
             id
           }
         }
         image5 {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
             id
           }
         }
@@ -329,7 +328,7 @@ export const query = graphql`
       header {
         image {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(layout: FULL_WIDTH, quality: 70, placeholder: BLURRED)
           }
         }
       }
