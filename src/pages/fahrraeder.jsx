@@ -73,6 +73,7 @@ function Bikes({ data }) {
         <GatsbyImage
           image={page.header.image.childImageSharp.gatsbyImageData}
           alt="Hintergrundbild"
+          style={{ position: 'absolute' }}
         />
       </div>
 
