@@ -136,6 +136,26 @@ collections:
               - { label: Hintergrundbild, name: backgroundImage, widget: image }
               - { label: Pretitel, name: pretitle, widget: string }
               - { label: Titel, name: title, widget: string }
+      - file: content/pages/visit.yml
+        label: Besichtigung
+        name: visit
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: visit }
+          - label: 'Meta'
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - label: Beschreibung
+                name: description
+                widget: text
+              - { label: Bild, name: image, widget: image }
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Bild, name: image, widget: image }
 
   - name: bike
     label: Fahräder

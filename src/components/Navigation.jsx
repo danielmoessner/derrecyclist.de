@@ -5,7 +5,7 @@ import MenuButton from './MenuButton';
 import NavigationLink from './NavigationLink';
 import NavigationLinkTop from './NavigationLinkTop';
 
-function Navigation({ inverted }) {
+function Navigation({ white }) {
   const data = useStaticQuery(graphql`
     {
       navigation: settingsYaml(slug: { eq: "navigation" }) {
@@ -40,8 +40,8 @@ function Navigation({ inverted }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className={`fixed top-0 w-full h-12 pr-5 pl-4 z-40 ${inverted ? 'bg-gray-900' : ''}`}>
-      <div className={`flex justify-between items-center h-full ${inverted ? 'text-white' : ''}`}>
+    <nav className={`fixed top-0 w-full h-12 pr-5 pl-4 z-40 ${white ? 'bg-white' : ''}`}>
+      <div className="flex justify-between items-center h-full">
         <div className="w-32" />
         <div className="md:flex items-center justify-center hidden">
           <NavigationLinkTop to="/">
@@ -109,11 +109,11 @@ function Navigation({ inverted }) {
 }
 
 Navigation.defaultProps = {
-  inverted: false,
+  white: false,
 };
 
 Navigation.propTypes = {
-  inverted: PropTypes.bool,
+  white: PropTypes.bool,
 };
 
 export default Navigation;

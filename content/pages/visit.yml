@@ -1,0 +1,8 @@
+collection: page
+slug: visit
+meta:
+  title: Besichtigung
+  description: Beschreibung
+  image: ../media/bild_14.jpg
+header:
+  image: ../media/bild_1.jpg

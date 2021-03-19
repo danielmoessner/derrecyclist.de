@@ -56,7 +56,7 @@ function Bikes({ data }) {
         description={page.meta.description}
         image={page.meta.image.childImageSharp.resize.src}
       />
-      <Navigation />
+      <Navigation white />
 
       <div className="aspect-w-16 aspect-h-9 lg:aspect-h-6 bg-cover">
         <GatsbyImage
