@@ -50,12 +50,12 @@ collections:
           - label: Header
             name: header
             widget: object
-            fields: 
+            fields:
               - { label: Bild, name: image, widget: image }
           - label: Formular
             name: form
             widget: object
-            fields: 
+            fields:
               - { label: Überschrift, name: heading, widget: string }
               - { label: Überschrifttext, name: headingText, widget: string }
               - { label: Kategorienüberschrift, name: categoryHeading, widget: string }
@@ -66,7 +66,7 @@ collections:
           - label: Fahrräder
             name: bikes
             widget: object
-            fields: 
+            fields:
               - { label: Besichtigungsbutton, name: visitButton, widget: string }
               - { label: Kategorie, name: category, widget: string }
               - { label: Größe, name: size, widget: string }
@@ -173,7 +173,7 @@ collections:
       - { label: Slug, name: slug, widget: string }
       - { label: Bild, name: image, widget: image }
       - { label: Beschreibung, name: description, widget: text }
-      - label: Sortierung,
+      - label: Sortierung
         name: order
         widget: number
         hint: Sortiert wird von klein zu groß also 1 vor 2.

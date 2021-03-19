@@ -43,3 +43,8 @@
     background: #555;
   }
 }
+
+#preview-pane,
+.frame-content {
+  @apply bg-gray-100;
+}

@@ -4,18 +4,15 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import { Transition } from '@headlessui/react';
 import GatsbyImageData from '../types/GatsbyImageData';
 
-function ImageSlider({ images }) {
+function ImageSlider({ images, preview }) {
   const [activeSlide, setActiveSlide] = useState(1);
   const [imageOpen, setImageOpen] = useState(false);
   const slideNumbersArray = Array.from(Array(images.length).keys());
 
   return (
     <div className="relative">
-      <Transition
-        show={imageOpen}
-        className="fixed inset-0 p-10 bg-gray-800 bg-opacity-70 z-40 rounded"
-      >
-        <div className="aspect-w-16 aspect-h-9 lg:aspect-none bg-gray-50 bg-opacity-50 relative rounded lg:relative h-full w-full">
+      <Transition show={imageOpen} className="fixed inset-0 p-10 bg-gray-800 bg-opacity-70 z-40">
+        <div className="aspect-w-16 aspect-h-9 bg-gray-50 bg-opacity-50 relative rounded lg:w-full lg:h-full lg:relative lg:aspect-none">
           <div>
             <button
               onClick={() => setImageOpen(false)}
@@ -37,22 +34,29 @@ function ImageSlider({ images }) {
                 />
               </svg>
             </button>
-            {images.map((image, index) => (
-              <GatsbyImage
-                key={image.childImageSharp.id}
-                className="rounded w-full h-full"
-                style={{ position: 'absolute', display: `${index !== activeSlide ? 'none' : ''}` }}
-                alt={`Slider Bild ${index}`}
-                image={image.childImageSharp.gatsbyImageData}
-              />
-            ))}
+            {images.map((image, index) => {
+              if (!preview)
+                return (
+                  <GatsbyImage
+                    key={image.childImageSharp.id}
+                    className="rounded w-full h-full"
+                    style={{
+                      position: 'absolute',
+                      display: `${index !== activeSlide ? 'none' : ''}`,
+                    }}
+                    alt={`Slider Bild ${index}`}
+                    image={image.childImageSharp.gatsbyImageData}
+                  />
+                );
+              return <div className="rounded w-full h-full absolute overflow-hidden">{image}</div>;
+            })}
           </div>
         </div>
       </Transition>
       {images.map((image, index) => (
         <Transition
           className="absolute inset-0"
-          key={image.childImageSharp.gatsbyImageData.images.fallback.src}
+          key={!preview ? image.childImageSharp.gatsbyImageData.images.fallback.src : index}
           show={activeSlide === index}
           enter="transition-opacity duration-75"
           enterFrom="opacity-0"
@@ -62,13 +66,28 @@ function ImageSlider({ images }) {
           leaveTo="opacity-0"
         >
           <div className="aspect-w-4 aspect-h-3">
-            <GatsbyImage
-              onClick={() => setImageOpen(true)}
-              className="rounded cursor-pointer z-10"
-              style={{ position: 'absolute' }}
-              alt={`Slider Bild ${index}`}
-              image={image.childImageSharp.gatsbyImageData}
-            />
+            {!preview ? (
+              <button
+                className="rounded cursor-pointer z-10 absolute flex justify-center items-center inset-0 overflow-hidden"
+                type="button"
+                onClick={() => setImageOpen(true)}
+              >
+                <GatsbyImage
+                  className="w-full h-full"
+                  style={{ position: 'absolute' }}
+                  alt={`Slider Bild ${index}`}
+                  image={image.childImageSharp.gatsbyImageData}
+                />
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setImageOpen(true)}
+                className="rounded cursor-pointer z-10 absolute overflow-hidden flex justify-center items-center inset-0"
+              >
+                {image}
+              </button>
+            )}
           </div>
         </Transition>
       ))}
@@ -98,12 +117,17 @@ function ImageSlider({ images }) {
   );
 }
 
+ImageSlider.defaultProps = {
+  preview: false,
+};
+
 ImageSlider.propTypes = {
+  preview: PropTypes.bool,
   images: PropTypes.arrayOf(
     PropTypes.shape({
       childImageSharp: PropTypes.shape({
-        gatsbyImageData: GatsbyImageData.isRequired,
-        id: PropTypes.string.isRequired,
+        gatsbyImageData: GatsbyImageData,
+        id: PropTypes.string,
       }),
     })
   ).isRequired,

@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import sanitizeHtml from 'sanitize-html';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import Navigation from '../components/Navigation';
 import Container from '../components/Container';
-import ImageSlider from '../components/ImageSlider';
+import Bike from '../components/Bike';
 
 function Bikes({ data }) {
   const allBikes = data.allBikesYaml.nodes;
@@ -16,19 +15,9 @@ function Bikes({ data }) {
   const [activeCategory, setActiveCategory] = useState('--');
   const [activeSize, setActiveSize] = useState('--');
 
-  const getBikeInformation = (text) => sanitizeHtml(text.replace(/\n/g, '<br />'));
-  const getBikeSizes = (sizes) =>
-    sizes
-      .join(', ')
-      .replace('xs', 'Sehr klein')
-      .replace('sm', 'Klein')
-      .replace('md', 'Mittel')
-      .replace('lg', 'Groß')
-      .replace('xl', 'Sehr groß');
-
   const filteredBikes = () => {
     let bikes = allBikes;
-    if (activeSize !== '--') bikes = bikes.filter((bike) => bike.size.includes(activeSize));
+    if (activeSize !== '--') bikes = bikes.filter((bike) => bike.sizes.includes(activeSize));
     if (activeCategory !== '--') bikes = bikes.filter((bike) => bike.category === activeCategory);
     return bikes;
   };
@@ -111,28 +100,6 @@ function Bikes({ data }) {
                         cm
                       </span>
                     </div>
-                    {/* <option value="--">------</option>
-                      <option value="xs">155cm - 165cm</option>
-                      <option value="sm">165cm - 175cm</option>
-                      <option value="md">175cm - 185cm</option>
-                      <option value="lg">185cm - 190cm</option>
-                      <option value="xl">190cm - 200cm</option>
-                    </select>
-                    <div className="pointer-events-none absolute inset-y-0 right-0 px-2 flex items-center">
-                      <svg
-                        className="h-4 w-4 text-gray-400"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div> */}
                   </div>
                   <p className="mt-2 text-sm text-gray-500" id="email-description">
                     {page.form.inputHelptext}
@@ -186,62 +153,7 @@ function Bikes({ data }) {
             {filteredBikes().length === 0 ? <p>{page.bikes.noBikesText}</p> : ''}
             <ul className="space-y-3">
               {filteredBikes().map((bike) => (
-                <li
-                  className="bg-white shadow overflow-hidden rounded-md p-3 lg:pr-6 lg:pl-4 lg:pt-4 lg:pb-3"
-                  key={bike.id}
-                >
-                  <div className="flex flex-col lg:flex-row">
-                    <div className="w-full lg:w-5/12 relative">
-                      <ImageSlider
-                        images={[bike.image1, bike.image2, bike.image3, bike.image4, bike.image5]}
-                      />
-                    </div>
-                    <div className="w-full pt-6 px-2 lg:px-0 lg:pt-0 lg:w-7/12 flex flex-col lg:pl-4 justify-between">
-                      <h2 className="text-2xl font-bold">{bike.title}</h2>
-                      <p
-                        className="mt-2"
-                        // eslint-disable-next-line react/no-danger
-                        dangerouslySetInnerHTML={{
-                          __html: getBikeInformation(bike.information),
-                        }}
-                      />
-                      <div className="flex flex-col lg:flex-row justify-between">
-                        <div className="mt-6 flex flex-row space-x-6">
-                          <div>
-                            <div className="text-xs text-gray-500">
-                              <span>{page.bikes.category}</span>
-                            </div>
-                            <div className="text-base font-medium text-gray-800">
-                              <div className="">{bike.category}</div>
-                            </div>
-                          </div>
-                          <div>
-                            <div className="text-xs text-gray-500">
-                              <span>{page.bikes.size}</span>
-                            </div>
-                            <div className="text-base font-medium text-gray-800">
-                              <div className="">{getBikeSizes(bike.sizes)}</div>
-                            </div>
-                          </div>
-                          <div>
-                            <div className="text-xs text-gray-500">
-                              <span>{page.bikes.price}</span>
-                            </div>
-                            <div className="text-base font-medium text-gray-800">
-                              <div className="">
-                                {bike.price.toString().replace('.', ',')}
-                                <span> €</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="mt-5 -mr-2 lg:mr-0 lg:mt-0 font-semibold cursor-pointer self-end text-gray-900">
-                          {page.bikes.visitButton}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
+                <Bike key={bike.id} bike={bike} texts={page.bikes} />
               ))}
             </ul>
           </div>
@@ -265,7 +177,6 @@ export const query = graphql`
         category
         price
         sizes
-        slug
         title
         information
         id
