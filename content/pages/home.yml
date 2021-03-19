@@ -9,11 +9,37 @@ header:
   backgroundImage: ../media/bild_7.jpg
 concept:
   backgroundImage: ../media/bild_3.jpg
+  pretitle: Konzept
+  title: Gebrauchte Rennräder Neu
+  text: >-
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores vitae sed
+    veniam aut explicabo optio, esse suscipit facere doloribus, enim tenetur,
+    asperiores amet culpa hic rem molestiae cum nam facilis?
+
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque placeat blanditiis veniam perferendis vero voluptatem a.
+  button: Fahrräder ansehen
 categories:
   backgroundImage: ../media/bild_9.jpg
+  pretitle: Produktkategorien
+  title: Unsere 3 Kollektionen
 openingHours:
   backgroundImage: ../media/bild_14.jpg
+  pretitle: Öffnungszeiten
+  title: Wir freuen uns auf Ihren Besuch
+  textLeft: Aktuell können Sie bei uns Besichtungstermine nach Ihren Wünschen
+    Buchen. Tragen Sie sich dafür einfach in unserem Kalender ein.
+  button: Besichtigungstermin buchen
+  textRight: Immer am ersten Sonntag im Monat ist bei uns Tag der offenen Tür.
+    Dabei können Sie einfach bei uns vorbeischauen und jedes unserer Fahrräder
+    Probe fahren.
+  titleLeft: Besichtigungstermin
+  titleRight: Tag der offenen Tür
 reviews:
   backgroundImage: ../media/bild_1.jpg
+  pretitle: Kundenrezensionen
+  title: Was sagen unsere Kunden?
 contact:
   backgroundImage: ../media/bild_13.jpg
+  pretitle: Kontakt & Standort
+  title: Hier finden Sie uns

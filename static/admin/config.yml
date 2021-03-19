@@ -99,26 +99,43 @@ collections:
             widget: object
             fields:
               - { label: Hintergrundbild, name: backgroundImage, widget: image }
+              - { label: Pretitel, name: pretitle, widget: string }
+              - { label: Titel, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+              - { label: Button, name: button, widget: string }
           - label: Kategorien
             name: categories
             widget: object
             fields:
               - { label: Hintergrundbild, name: backgroundImage, widget: image }
+              - { label: Pretitel, name: pretitle, widget: string }
+              - { label: Titel, name: title, widget: string }
           - label: Öffnungszeiten
             name: openingHours
             widget: object
             fields:
               - { label: Hintergrundbild, name: backgroundImage, widget: image }
+              - { label: Pretitel, name: pretitle, widget: string }
+              - { label: Titel, name: title, widget: string }
+              - { label: Titel Links, name: titleLeft, widget: string }
+              - { label: Text Links, name: textLeft, widget: text }
+              - { label: Titel Rechts, name: titleRight, widget: string }
+              - { label: Text Rechts, name: textRight, widget: text }
+              - { label: Button, name: button, widget: string }
           - label: Kundenstimmen
             name: reviews
             widget: object
             fields:
               - { label: Hintergrundbild, name: backgroundImage, widget: image }
+              - { label: Pretitel, name: pretitle, widget: string }
+              - { label: Titel, name: title, widget: string }
           - label: Kontakt
             name: contact
             widget: object
             fields:
               - { label: Hintergrundbild, name: backgroundImage, widget: image }
+              - { label: Pretitel, name: pretitle, widget: string }
+              - { label: Titel, name: title, widget: string }
 
   - name: bike
     label: Fahräder
@@ -182,7 +199,7 @@ collections:
     label: Kundenrezensionen
     label_singular: Kundenrezension
     editor:
-      preview: true
+      preview: false
     folder: content/reviews
     create: true
     extension: yml

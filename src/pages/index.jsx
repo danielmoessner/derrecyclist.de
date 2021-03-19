@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import sanitizeHtml from 'sanitize-html';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import Section from '../components/Section';
@@ -17,6 +18,7 @@ function Index({ data }) {
   const page = data.pagesYaml;
   const categories = data.allCategoriesYaml.nodes;
   const reviews = data.allReviewsYaml.nodes;
+  const getText = (text) => sanitizeHtml(text.replace(/\n/g, '<br />'));
 
   return (
     <Layout>
@@ -35,7 +37,6 @@ function Index({ data }) {
                 fluid={page.header.backgroundImage.childImageSharp.fluid}
               />
             </div>
-            {/* <div className=""> */}
             <GatsbyImage
               className="absolute w-full h-full flex justify-center items-center"
               image={page.header.logo.childImageSharp.gatsbyImageData}
@@ -43,33 +44,28 @@ function Index({ data }) {
               objectPosition="50% 30%"
               alt={page.meta.title}
             />
-            {/* </div> */}
           </div>
         </Section>
         <Section>
           <InnerSection position="bottom" backgroundImage={page.concept.backgroundImage}>
             <div className="grid grid-cols-5">
               <div className="col-span-5 sm:col-span-2 gap-4">
-                <SectionPre>Konzept</SectionPre>
-                <SectionHeading>Gebrauchte Rennräder Neu</SectionHeading>
+                <SectionPre>{page.concept.pretitle}</SectionPre>
+                <SectionHeading>{page.concept.title}</SectionHeading>
                 <div className="hidden sm:inline">
-                  <Button to="/fahrraeder/">Fahrräder ansehen</Button>
+                  <Button to="/fahrraeder/">{page.concept.button}</Button>
                 </div>
               </div>
               <div className="col-span-5 sm:col-span-3">
-                <div className="prose prose-sm mb-12 sm:mb-0">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores vitae sed
-                    veniam aut explicabo optio, esse suscipit facere doloribus, enim tenetur,
-                    asperiores amet culpa hic rem molestiae cum nam facilis?
-                  </p>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque placeat
-                    blanditiis veniam perferendis vero voluptatem a.
-                  </p>
-                </div>
+                <div
+                  className="prose prose-sm mb-12 sm:mb-0"
+                  // eslint-disable-next-line react/no-danger
+                  dangerouslySetInnerHTML={{
+                    __html: getText(page.concept.text),
+                  }}
+                />
                 <div className="sm:hidden">
-                  <Button>Fahrräder ansehen</Button>
+                  <Button to="/fahrraeder/">{page.concept.button}</Button>
                 </div>
               </div>
             </div>
@@ -79,8 +75,8 @@ function Index({ data }) {
           <InnerSection position="left" backgroundImage={page.categories.backgroundImage}>
             <div className="grid grid-cols-3 gap-x-4">
               <div className="col-span-3">
-                <SectionPre>Produktkategorien</SectionPre>
-                <SectionHeading>Unsere 3 Kollektionen</SectionHeading>
+                <SectionPre>{page.categories.pretitle}</SectionPre>
+                <SectionHeading>{page.categories.title}</SectionHeading>
               </div>
               {categories.map((category) => (
                 <div key={category.id} className="col-span-3 sm:col-span-1 md:col-span-3 mb-16">
@@ -101,26 +97,24 @@ function Index({ data }) {
           <InnerSection position="bottom" backgroundImage={page.openingHours.backgroundImage}>
             <div className="grid grid-cols-1 md:grid-cols-3 md:gap-4 gap-y-12">
               <div className="col-span-1">
-                <SectionPre>Öffnungszeiten</SectionPre>
-                <SectionHeading>Wir freuen uns auf Ihren Besuch</SectionHeading>
-                <Button>Besichtigungstermin buchen</Button>
+                <SectionPre>{page.openingHours.pretitle}</SectionPre>
+                <SectionHeading>{page.openingHours.title}</SectionHeading>
+                <Button to="/besichtigung/">{page.openingHours.button}</Button>
               </div>
               <div className="col-span-1">
-                <h3 className="text-lg font-medium text-gray-700 mb-2">Besichtigungstermin</h3>
+                <h3 className="text-lg font-medium text-gray-700 mb-2">
+                  {page.openingHours.titleLeft}
+                </h3>
                 <div className="prose prose-sm">
-                  <p>
-                    Aktuell können Sie bei uns Besichtungstermine nach Ihren Wünschen Buchen. Tragen
-                    Sie sich dafür einfach in unserem Kalender ein.
-                  </p>
+                  <p>{page.openingHours.textLeft}</p>
                 </div>
               </div>
               <div className="col-span-1">
-                <h3 className="text-lg font-medium text-gray-700 mb-2">Tag der offenen Tür</h3>
+                <h3 className="text-lg font-medium text-gray-700 mb-2">
+                  {page.openingHours.titleRight}
+                </h3>
                 <div className="prose prose-sm">
-                  <p>
-                    Immer am ersten Sonntag im Monat ist bei uns Tag der offenen Tür. Dabei können
-                    Sie einfach bei uns vorbeischauen und jedes unserer Fahrräder Probe fahren.
-                  </p>
+                  <p>{page.openingHours.textRight}</p>
                 </div>
               </div>
             </div>
@@ -130,8 +124,8 @@ function Index({ data }) {
           <InnerSection position="left" backgroundImage={page.reviews.backgroundImage}>
             <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-1 gap-y-8 gap-x-6 md:gap-0">
               <div className="col-span-1">
-                <SectionPre>Kundenrezensionen</SectionPre>
-                <SectionHeading>Was sagen unsere Kunden?</SectionHeading>
+                <SectionPre>{page.reviews.pretitle}</SectionPre>
+                <SectionHeading>{page.reviews.title}</SectionHeading>
               </div>
               {reviews.map((review) => (
                 <div key={review.id} className="col-span-1 md:mb-16 last:mb-0">
@@ -150,8 +144,8 @@ function Index({ data }) {
           <InnerSection position="bottom" backgroundImage={page.contact.backgroundImage}>
             <div className="grid grid-cols-3">
               <div className="col-span-1">
-                <SectionPre>Kontakt &amp; Standort</SectionPre>
-                <SectionHeading>Hier finden Sie uns</SectionHeading>
+                <SectionPre>{page.contact.pretitle}</SectionPre>
+                <SectionHeading>{page.contact.title}</SectionHeading>
               </div>
             </div>
           </InnerSection>
@@ -212,6 +206,10 @@ export const query = graphql`
             }
           }
         }
+        pretitle
+        title
+        text
+        button
       }
       categories {
         backgroundImage {
@@ -225,6 +223,8 @@ export const query = graphql`
             }
           }
         }
+        pretitle
+        title
       }
       openingHours {
         backgroundImage {
@@ -238,6 +238,13 @@ export const query = graphql`
             }
           }
         }
+        pretitle
+        title
+        titleLeft
+        textLeft
+        titleRight
+        textRight
+        button
       }
       reviews {
         backgroundImage {
@@ -251,6 +258,8 @@ export const query = graphql`
             }
           }
         }
+        pretitle
+        title
       }
       contact {
         backgroundImage {
@@ -264,6 +273,8 @@ export const query = graphql`
             }
           }
         }
+        pretitle
+        title
       }
     }
     allCategoriesYaml(sort: { fields: order }) {
