@@ -1,0 +1,4 @@
+- automatische scrollen auf touch bildschirmen allgemein deaktivieren
+- maps einbinden
+- mobil durchgehen
+- impressum & datenschutz
