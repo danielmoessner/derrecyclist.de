@@ -67,6 +67,7 @@ collections:
             name: bikes
             widget: object
             fields:
+              - { label: Versandbutton, name: shippingButton, widget: string }
               - { label: Besichtigungsbutton, name: visitButton, widget: string }
               - { label: Kategorie, name: category, widget: string }
               - { label: Größe, name: size, widget: string }
@@ -156,6 +157,42 @@ collections:
             widget: object
             fields:
               - { label: Bild, name: image, widget: image }
+          - label: Formular
+            name: form
+            widget: object
+            fields:
+              - { label: Überschrift, name: heading, widget: string }
+              - { label: Text, name: text, widget: text }
+              - { label: Button, name: button, widget: string }
+              - { label: Unterüberschrift, name: subheading, widget: string }
+              - { label: Untertext, name: subtext, widget: string }
+      - file: content/pages/shippment.yml
+        label: Versand
+        name: shippment
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: shippment }
+          - label: 'Meta'
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - label: Beschreibung
+                name: description
+                widget: text
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Bild, name: image, widget: image }
+          - label: Formular
+            name: form
+            widget: object
+            fields:
+              - { label: Überschrift, name: heading, widget: string }
+              - { label: Text, name: text, widget: text }
+              - { label: Formularüberschrift, name: formHeading, widget: string }
+              - { label: Button, name: button, widget: string }
 
   - name: bike
     label: Fahräder

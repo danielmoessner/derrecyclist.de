@@ -176,6 +176,7 @@ export const query = graphql`
       nodes {
         category
         price
+        slug
         sizes
         title
         information
@@ -255,6 +256,7 @@ export const query = graphql`
       }
       bikes {
         visitButton
+        shippingButton
         noBikesText
         size
         category

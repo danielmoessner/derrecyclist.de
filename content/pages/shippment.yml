@@ -1,0 +1,14 @@
+collection: page
+slug: shippment
+meta:
+  title: Versand anfragen
+  description: beschreibung
+header:
+  image: ../media/bild_13.jpg
+form:
+  heading: Versand anfragen
+  text: Du kannst ganz einfach den Versand anfragen. Gebe einfach deine Adresse
+    und Kontaktdaten an. Wir setzen uns so schnell es geht mit dir in
+    Verbindung. Und prüfen den bestmöglichen Versand.
+  formHeading: Jetzt anfragen
+  button: Anfragen

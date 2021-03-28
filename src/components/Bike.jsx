@@ -64,12 +64,20 @@ function Bike({ bike, texts, preview }) {
                 </div>
               </div>
             </div>
-            <Link
-              to="/besichtigung/"
-              className="mt-5 -mr-2 lg:mr-0 lg:mt-0 font-semibold cursor-pointer self-end text-gray-900"
-            >
-              {texts.visitButton}
-            </Link>
+            <div className="flex flex-col space-y-2 justify-end">
+              <Link
+                to={`/versand-anfragen/${bike.slug}/`}
+                className="-mr-2 lg:mr-0 lg:mt-0 font-semibold cursor-pointer self-end text-gray-900"
+              >
+                {texts.shippingButton}
+              </Link>
+              <Link
+                to="/besichtigung/"
+                className="-mr-2 lg:mr-0 lg:mt-0 font-semibold cursor-pointer self-end text-gray-900"
+              >
+                {texts.visitButton}
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -85,6 +93,7 @@ Bike.propTypes = {
   preview: PropTypes.bool,
   texts: PropTypes.shape({
     visitButton: PropTypes.string,
+    shippingButton: PropTypes.string,
     category: PropTypes.string,
     size: PropTypes.string,
     price: PropTypes.string,
@@ -92,6 +101,7 @@ Bike.propTypes = {
   bike: PropTypes.shape({
     category: PropTypes.string,
     price: PropTypes.number,
+    slug: PropTypes.string,
     sizes: PropTypes.arrayOf(PropTypes.string),
     title: PropTypes.string,
     information: PropTypes.string,

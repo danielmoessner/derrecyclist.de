@@ -21,3 +21,4 @@ bikes:
   category: Kategorie
   size: Größe
   price: Preis
+  shippingButton: Versand anfragen

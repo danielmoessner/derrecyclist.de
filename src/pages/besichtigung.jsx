@@ -39,12 +39,9 @@ function Page({ data }) {
             <div className="lg:flex lg:justify-between lg:items-start">
               <div className="max-w-xl">
                 <h1 className="text-2xl font-extrabold text-gray-900 sm:text-3xl sm:tracking-tight lg:text-4xl">
-                  Besichtigung buchen
+                  {page.form.heading}
                 </h1>
-                <p className="mt-5 text-base lg:text-lg text-gray-500">
-                  Klicke ganz einfach auf den Button rechts und suche dir einen passenden Zeitraum
-                  aus. Wir freuen uns auf Deinen Besuch.
-                </p>
+                <p className="mt-5 text-base lg:text-lg text-gray-500">{page.form.text}</p>
               </div>
               <div>{/* <InlineWidget url="https://calendly.com/derrecyclist/60min" /> */}</div>
               <button
@@ -52,7 +49,7 @@ function Page({ data }) {
                 onClick={onClick}
                 className="rounded mt-10 border-2 border-gray-800 px-2.5 py-1.5 text-gray-800 hover:text-white hover:bg-gray-800 transition-all duration-300 ease"
               >
-                Jetzt einen Termin aussuchen
+                {page.form.button}
               </button>
             </div>
             <div className="mt-12">
@@ -60,15 +57,13 @@ function Page({ data }) {
                 <div className="col-span-3">
                   <div className="max-w-xl">
                     <h2 className="text-xl font-extrabold text-gray-900 sm:text-2xl sm:tracking-tight lg:text-3xl">
-                      Hier findest Du uns
+                      {page.form.subheading}
                     </h2>
-                    <p className="mt-3 text-base lg:text-lg text-gray-500">
-                      Einfach per Fahrrad zu erreichen ;)
-                    </p>
+                    <p className="mt-3 text-base lg:text-lg text-gray-500">{page.form.subtext}</p>
                   </div>
                 </div>
               </div>
-              <div className="mt-6">maps</div>
+              <div className="mt-6">Maps kommt demnächst..</div>
             </div>
           </div>
         </Container>
@@ -106,6 +101,13 @@ export const query = graphql`
             gatsbyImageData(layout: FULL_WIDTH, quality: 70, placeholder: BLURRED)
           }
         }
+      }
+      form {
+        heading
+        text
+        button
+        subheading
+        subtext
       }
     }
   }
