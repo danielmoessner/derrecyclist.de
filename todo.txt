@@ -2,3 +2,4 @@
 - maps einbinden
 - mobil durchgehen
 - impressum & datenschutz
+- formular auf netlify aktivieren
