@@ -153,7 +153,7 @@ function Index({ data }) {
         </Section>
         <Section>
           <InnerSection position="bottom" backgroundImage={page.contact.backgroundImage}>
-            <div className="grid grid-cols-3">
+            <div className="grid gap-6 md:gap-0 md:grid-cols-3">
               <div className="col-span-1">
                 <SectionPre>{page.contact.pretitle}</SectionPre>
                 <SectionHeading>{page.contact.title}</SectionHeading>
