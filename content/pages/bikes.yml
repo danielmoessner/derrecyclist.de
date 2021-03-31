@@ -4,6 +4,7 @@ meta:
   title: Rennräder
   description: Beschreibung test
   image: ../media/bike5.jpeg
+  keywords: keyword1, keyword2
 header:
   image: ../media/bild_13.jpg
 form:

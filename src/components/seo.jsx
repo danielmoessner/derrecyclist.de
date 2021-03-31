@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({ url, title, description, image, isBlogPost }) {
+function SEO({ title, description, image, isBlogPost, keywords }) {
   const data = useStaticQuery(
     graphql`
       query Favicon {
@@ -26,11 +26,10 @@ function SEO({ url, title, description, image, isBlogPost }) {
       {/* General tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      {image ? <meta name="image" content={image} /> : null}
-      <link rel="canonical" href={url} />
+      {image && <meta name="image" content={image} />}
+      {keywords && <meta name="keywords" content={keywords} />}
 
       {/* OpenGraph tags */}
-      {url ? <meta property="og:url" content={url} /> : null}
       {isBlogPost ? <meta property="og:type" content="article" /> : null}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -51,16 +50,16 @@ function SEO({ url, title, description, image, isBlogPost }) {
 
 SEO.defaultProps = {
   isBlogPost: false,
-  url: '',
   image: '',
+  keywords: '',
 };
 
 SEO.propTypes = {
-  url: PropTypes.string,
   isBlogPost: PropTypes.bool,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.string,
+  keywords: PropTypes.string,
 };
 
 export default SEO;

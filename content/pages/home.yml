@@ -4,6 +4,7 @@ meta:
   description: Beschreibung
   title: Der ReCyclist
   image: ../media/recyclist_logo_black.png
+  keywords: startseite1
 header:
   logo: ../media/recyclist_logo_black.png
   backgroundImage: ../media/bild_7.jpg
@@ -12,15 +13,9 @@ concept:
   pretitle: Konzept
   title: "Wir erfinden das Rad zwar nicht neu, aber hauchen ihm ein neues Leben ein "
   text: >
-    Wir brauchen Sie nicht davon überzeugen, das Fahrrad als Alternative zu
-    einem anderen Verkehrsmittel zu nehmen. Doch sind unsere geliebten Zweiräder
-    auch nicht so klimaneutral, wie es oft den Anschein macht. Insbesondere bei
-    der Herstellung eines Fahrrads entstehen pro 1000€ Anschaffungskosten circa
-    1000kg CO2. Dies ist ein Grund dafür weshalb wir uns auf den Verkauf von
-    gebrauchten Rädern spezialisiert haben. 
-
-
-    Der ReCyclist kauft gebrauchte Fahrräder, bringt sie auf Vordermann und bietet sie ihnen zu einem fairen und marktgerechten Preis an. Warum aber nun ausgerechnet ein Rennrad? 
+    Der ReCyclist kauft gebrauchte Fahrräder, bringt sie auf Vordermann und
+    bietet sie ihnen zu einem fairen und marktgerechten Preis an. Warum aber nun
+    ausgerechnet ein Rennrad? 
 
 
     - Hochwertige und stabile Rahmen: 
@@ -40,6 +35,12 @@ concept:
 
     Vereinbaren sie also noch heute einen Termin zum Besichtigen eines gebrauchten Fahrrads und werden sie zum ReCyclisten. 
   button: Fahrräder ansehen
+  textLeft: Wir brauchen Sie nicht davon überzeugen, das Fahrrad als Alternative
+    zu einem anderen Verkehrsmittel zu nehmen. Doch sind unsere geliebten
+    Zweiräder auch nicht so klimaneutral, wie es oft den Anschein macht.
+    Insbesondere bei der Herstellung eines Fahrrads entstehen pro 1000€
+    Anschaffungskosten circa 1000kg CO2. Dies ist ein Grund dafür weshalb wir
+    uns auf den Verkauf von gebrauchten Rädern spezialisiert haben.
 categories:
   backgroundImage: ../media/bild_9.jpg
   pretitle: Produktkategorien
@@ -64,3 +65,11 @@ contact:
   backgroundImage: ../media/bild_13.jpg
   pretitle: Kontakt & Standort
   title: Hier finden Sie uns
+  titleLeft: Kontakt
+  titleRight: Adresse
+  textLeft: |-
+    (+49) 176 34363671
+    info@der-recyclist.de
+  textRight: |-
+    Hohenzollernstraße 32 RGB 
+    80801 München 

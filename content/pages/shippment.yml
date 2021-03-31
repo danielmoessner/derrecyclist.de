@@ -3,6 +3,8 @@ slug: shippment
 meta:
   title: Versand anfragen
   description: beschreibung
+  keywords: versand1
+  image: ../media/bild_13.jpg
 header:
   image: ../media/bild_13.jpg
 form:

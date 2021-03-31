@@ -7,6 +7,7 @@ import Seo from '../components/seo';
 import Navigation from '../components/Navigation';
 import Container from '../components/Container';
 import Bike from '../components/Bike';
+import Content from '../components/Content';
 
 function Bikes({ data }) {
   const allBikes = data.allBikesYaml.nodes;
@@ -55,6 +56,7 @@ function Bikes({ data }) {
         title={page.meta.title}
         description={page.meta.description}
         image={page.meta.image.childImageSharp.resize.src}
+        keywords={page.meta.keywords}
       />
       <Navigation white />
 
@@ -66,86 +68,76 @@ function Bikes({ data }) {
         />
       </div>
 
-      <div className="relative z-0 -mt-24">
-        <div className="absolute flex flex-col inset-0">
-          <div className="h-24" />
-          <div className="flex-1 bg-gray-200 w-full" />
-        </div>
-        <Container>
-          <div className="px-4 py-3 lg:pt-12 lg:pb-6 bg-gray-100 rounded shadow lg:px-10 relative z-30">
-            <div className="lg:flex lg:justify-between">
-              <div className="max-w-xl">
-                <h1 className="text-2xl font-extrabold text-gray-900 sm:text-3xl sm:tracking-tight lg:text-4xl">
-                  {page.form.heading}
-                </h1>
-                <p className="mt-5 text-base lg:text-lg text-gray-500">{page.form.headingText}</p>
-              </div>
-              <div className="w-full max-w-xs mt-6">
-                <label htmlFor="size" className="block text-base text-gray-500">
-                  {page.form.inputLabel}
-                  <div className="mt-1.5 relative">
-                    <input
-                      onChange={(event) => updateActiveSize(event.target.value)}
-                      id="size"
-                      name="size"
-                      defaultValue="--"
-                      type="number"
-                      placeholder={page.form.inputPlaceholder}
-                      min="155"
-                      max="205"
-                      className="shadow-sm appearance-none block w-full bg-none bg-white border border-gray-300 rounded-md pl-3 pr-10 py-2 text-base text-gray-900 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm"
-                    />
-                    <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                      <span className="text-gray-500 sm:text-sm" id="size-unit">
-                        cm
-                      </span>
-                    </div>
-                  </div>
-                  <p className="mt-2 text-sm text-gray-500" id="email-description">
-                    {page.form.inputHelptext}
-                  </p>
-                </label>
-              </div>
-            </div>
-            <div className="mt-12">
-              <div className="grid grid-cols-3 gap-6">
-                <div className="col-span-3">
-                  <div className="max-w-xl">
-                    <h2 className="text-xl font-extrabold text-gray-900 sm:text-2xl sm:tracking-tight lg:text-3xl">
-                      {page.form.categoryHeading}
-                    </h2>
-                    <p className="mt-3 text-base lg:text-lg text-gray-500">
-                      {page.form.categoryText}
-                    </p>
-                  </div>
-                </div>
-                {categories.map((category) => (
-                  <div key={category.id} className="col-span-3 sm:col-span-1 group">
-                    <div className="flex items-center justify-center">
-                      <button
-                        onClick={() => updateCategory(category.title)}
-                        type="button"
-                        className="group focus:outline-none"
-                      >
-                        <GatsbyImage
-                          className={`scale-75 transform transition duration-150 ${
-                            activeCategory === category.title
-                              ? 'scale-95 group-hover:scale-100'
-                              : 'group-hover:scale-90'
-                          }`}
-                          objectPosition="50% 50%"
-                          image={category.image.childImageSharp.gatsbyImageData}
-                          alt={category.title}
-                        />
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+      <Content showBottom={false}>
+        <div className="lg:flex lg:justify-between">
+          <div className="max-w-xl">
+            <h1 className="text-2xl font-extrabold text-gray-900 sm:text-3xl sm:tracking-tight lg:text-4xl">
+              {page.form.heading}
+            </h1>
+            <p className="mt-5 text-base lg:text-lg text-gray-500">{page.form.headingText}</p>
           </div>
-        </Container>
-      </div>
+          <div className="w-full max-w-xs mt-6">
+            <label htmlFor="size" className="block text-base text-gray-500">
+              {page.form.inputLabel}
+              <div className="mt-1.5 relative">
+                <input
+                  onChange={(event) => updateActiveSize(event.target.value)}
+                  id="size"
+                  name="size"
+                  defaultValue="--"
+                  type="number"
+                  placeholder={page.form.inputPlaceholder}
+                  min="155"
+                  max="205"
+                  className="shadow-sm appearance-none block w-full bg-none bg-white border border-gray-300 rounded-md pl-3 pr-10 py-2 text-base text-gray-900 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm"
+                />
+                <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                  <span className="text-gray-500 sm:text-sm" id="size-unit">
+                    cm
+                  </span>
+                </div>
+              </div>
+              <p className="mt-2 text-sm text-gray-500" id="email-description">
+                {page.form.inputHelptext}
+              </p>
+            </label>
+          </div>
+        </div>
+        <div className="mt-12">
+          <div className="grid grid-cols-3 gap-6">
+            <div className="col-span-3">
+              <div className="max-w-xl">
+                <h2 className="text-xl font-extrabold text-gray-900 sm:text-2xl sm:tracking-tight lg:text-3xl">
+                  {page.form.categoryHeading}
+                </h2>
+                <p className="mt-3 text-base lg:text-lg text-gray-500">{page.form.categoryText}</p>
+              </div>
+            </div>
+            {categories.map((category) => (
+              <div key={category.id} className="col-span-3 sm:col-span-1 group">
+                <div className="flex items-center justify-center">
+                  <button
+                    onClick={() => updateCategory(category.title)}
+                    type="button"
+                    className="group focus:outline-none"
+                  >
+                    <GatsbyImage
+                      className={`scale-75 transform transition duration-150 ${
+                        activeCategory === category.title
+                          ? 'scale-95 group-hover:scale-100'
+                          : 'group-hover:scale-90'
+                      }`}
+                      objectPosition="50% 50%"
+                      image={category.image.childImageSharp.gatsbyImageData}
+                      alt={category.title}
+                    />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Content>
 
       <div className="bg-gray-200" style={{ minHeight: '50vh' }}>
         <Container>
@@ -230,6 +222,7 @@ export const query = graphql`
       meta {
         description
         title
+        keywords
         image {
           childImageSharp {
             resize(width: 1200) {

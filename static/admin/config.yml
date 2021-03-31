@@ -46,6 +46,10 @@ collections:
               - label: Beschreibung
                 name: description
                 widget: text
+              - label: Keywords
+                name: keywords
+                widget: string
+                hint: 'Bitte so angeben: keyword1, keyword2, keyword3'
               - { label: Bild, name: image, widget: image }
           - label: Header
             name: header
@@ -88,6 +92,10 @@ collections:
               - label: Beschreibung
                 name: description
                 widget: text
+              - label: Keywords
+                name: keywords
+                widget: string
+                hint: 'Bitte so angeben: keyword1, keyword2, keyword3'
               - { label: Bild, name: image, widget: image }
           - label: Header
             name: header
@@ -102,6 +110,7 @@ collections:
               - { label: Hintergrundbild, name: backgroundImage, widget: image }
               - { label: Pretitel, name: pretitle, widget: string }
               - { label: Titel, name: title, widget: string }
+              - { label: Text, name: textLeft, widget: text }
               - { label: Text, name: text, widget: text }
               - { label: Button, name: button, widget: string }
           - label: Kategorien
@@ -137,6 +146,10 @@ collections:
               - { label: Hintergrundbild, name: backgroundImage, widget: image }
               - { label: Pretitel, name: pretitle, widget: string }
               - { label: Titel, name: title, widget: string }
+              - { label: Titel Links, name: titleLeft, widget: string }
+              - { label: Text Links, name: textLeft, widget: text }
+              - { label: Titel Rechts, name: titleRight, widget: string }
+              - { label: Text Rechts, name: textRight, widget: text }
       - file: content/pages/visit.yml
         label: Besichtigung
         name: visit
@@ -151,6 +164,10 @@ collections:
               - label: Beschreibung
                 name: description
                 widget: text
+              - label: Keywords
+                name: keywords
+                widget: string
+                hint: 'Bitte so angeben: keyword1, keyword2, keyword3'
               - { label: Bild, name: image, widget: image }
           - label: Header
             name: header
@@ -180,6 +197,10 @@ collections:
               - label: Beschreibung
                 name: description
                 widget: text
+              - label: Keywords
+                name: keywords
+                widget: string
+                hint: 'Bitte so angeben: keyword1, keyword2, keyword3'
           - label: Header
             name: header
             widget: object
@@ -193,6 +214,63 @@ collections:
               - { label: Text, name: text, widget: text }
               - { label: Formularüberschrift, name: formHeading, widget: string }
               - { label: Button, name: button, widget: string }
+      - file: content/pages/thanks.yml
+        label: Danke
+        name: thanks
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: thanks }
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Bild, name: image, widget: image }
+          - label: Inhalt
+            name: content
+            widget: object
+            fields:
+              - { label: Überschrift, name: heading, widget: string }
+              - { label: Text, name: text, widget: string }
+      - file: content/pages/imprint.md
+        label: Impressum
+        name: imprint
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: imprint }
+          - label: 'Meta'
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - label: Beschreibung
+                name: description
+                widget: text
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Bild, name: image, widget: image }
+          - { label: Inhalt, name: body, widget: markdown }
+      - file: content/pages/dataProtection.md
+        label: Datenschutz
+        name: dataProtection
+        fields:
+          - { label: Sammlung, name: collection, widget: hidden, default: page }
+          - { label: Slug, name: slug, widget: hidden, default: data-protection }
+          - label: 'Meta'
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - label: Beschreibung
+                name: description
+                widget: text
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Bild, name: image, widget: image }
+          - { label: Inhalt, name: body, widget: markdown }
 
   - name: bike
     label: Fahräder
@@ -280,6 +358,7 @@ collections:
         fields:
           - { label: URL der Seite, name: siteUrl, widget: string, required: false }
           - { label: Favicon, name: favicon, widget: image }
+          - { label: E-Mail, name: email, widget: string }
           - { label: Telefon, name: phone, widget: string }
           - { label: Adresse, name: address, widget: text }
       - file: 'content/settings/navigation.yml'

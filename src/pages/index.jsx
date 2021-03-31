@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
@@ -13,6 +13,7 @@ import InnerSection from '../components/InnerSection';
 import SectionHeading from '../components/SectionHeading';
 import SectionPre from '../components/SectionPre';
 import Button from '../components/Button';
+import generateLineBreaks from '../utils/lineBreaks';
 
 function Index({ data }) {
   const page = data.pagesYaml;
@@ -20,12 +21,21 @@ function Index({ data }) {
   const reviews = data.allReviewsYaml.nodes;
   const getText = (text) => sanitizeHtml(text.replace(/\n/g, '<br />'));
 
+  useEffect(() => {
+    // eslint-disable-next-line
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0 ||  navigator.msMaxTouchPoints > 0) {
+      // eslint-disable-next-line
+      document.querySelector('.md\\:scroll-snap-type-y-mandatory').classList.remove('md:scroll-snap-type-y-mandatory')
+    }
+  });
+
   return (
     <Layout>
       <Seo
         title={page.meta.title}
         description={page.meta.description}
         image={page.meta.image.childImageSharp.resize.src}
+        keywords={page.meta.keywords}
       />
       <Navigation />
       <SectionWrapper>
@@ -48,11 +58,12 @@ function Index({ data }) {
         </Section>
         <Section>
           <InnerSection position="bottom" backgroundImage={page.concept.backgroundImage}>
-            <div className="grid grid-cols-5">
-              <div className="col-span-5 sm:col-span-2 gap-4">
+            <div className="grid grid-cols-5 gap-6">
+              <div className="col-span-5 sm:col-span-2">
                 <SectionPre>{page.concept.pretitle}</SectionPre>
                 <SectionHeading>{page.concept.title}</SectionHeading>
-                <div className="hidden sm:inline">
+                <p className="prose prose-sm">{page.concept.textLeft}</p>
+                <div className="hidden sm:block sm:mt-10">
                   <Button to="/fahrraeder/">{page.concept.button}</Button>
                 </div>
               </div>
@@ -147,6 +158,26 @@ function Index({ data }) {
                 <SectionPre>{page.contact.pretitle}</SectionPre>
                 <SectionHeading>{page.contact.title}</SectionHeading>
               </div>
+              <div className="col-span-1">
+                <h3 className="text-lg font-medium text-gray-700 mb-2">{page.contact.titleLeft}</h3>
+                <div className="prose prose-sm">
+                  <p
+                    // eslint-disable-next-line react/no-danger
+                    dangerouslySetInnerHTML={{ __html: generateLineBreaks(page.contact.textLeft) }}
+                  />
+                </div>
+              </div>
+              <div className="col-span-1">
+                <h3 className="text-lg font-medium text-gray-700 mb-2">
+                  {page.contact.titleRight}
+                </h3>
+                <div className="prose prose-sm">
+                  <p
+                    // eslint-disable-next-line react/no-danger
+                    dangerouslySetInnerHTML={{ __html: generateLineBreaks(page.contact.textRight) }}
+                  />
+                </div>
+              </div>
             </div>
           </InnerSection>
         </Section>
@@ -175,6 +206,7 @@ export const query = graphql`
         }
         description
         title
+        keywords
       }
       header {
         logo {
@@ -208,6 +240,7 @@ export const query = graphql`
         }
         pretitle
         title
+        textLeft
         text
         button
       }
@@ -275,6 +308,10 @@ export const query = graphql`
         }
         pretitle
         title
+        titleLeft
+        textLeft
+        titleRight
+        textRight
       }
     }
     allCategoriesYaml(sort: { fields: order }) {

@@ -5,7 +5,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import Navigation from '../components/Navigation';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
-import Container from '../components/Container';
+import Content from '../components/Content';
 
 function Page({ data }) {
   const bike = data.bikesYaml;
@@ -17,6 +17,7 @@ function Page({ data }) {
         title={`${page.meta.title} - ${bike.title}`}
         description={page.meta.description}
         image={bike.image1.childImageSharp.resize.src}
+        keywords={page.meta.keywords}
       />
       <Navigation white />
 
@@ -28,158 +29,144 @@ function Page({ data }) {
         />
       </div>
 
-      <div className="relative z-0 -mt-24">
-        <div className="absolute flex flex-col inset-0">
-          <div className="h-24" />
-          <div className="flex-1 bg-gray-200 w-full" />
+      <Content maxWidthClass="max-w-xl">
+        <div className="lg:flex lg:justify-between lg:items-start">
+          <div className="max-w-xl">
+            <h1 className="text-2xl font-extrabold text-gray-900 sm:text-3xl sm:tracking-tight lg:text-4xl">
+              {page.form.heading}
+            </h1>
+            <p className="mt-5 text-base lg:text-lg text-gray-500">{page.form.text}</p>
+          </div>
         </div>
-        <Container>
-          <div className="max-w-xl mx-auto px-4 py-3 bg-gray-100 rounded shadow relative z-30 lg:px-10 lg:pt-8 lg:pb-6">
-            <div className="lg:flex lg:justify-between lg:items-start">
-              <div className="max-w-xl">
-                <h1 className="text-2xl font-extrabold text-gray-900 sm:text-3xl sm:tracking-tight lg:text-4xl">
-                  {page.form.heading}
-                </h1>
-                <p className="mt-5 text-base lg:text-lg text-gray-500">{page.form.text}</p>
-              </div>
-            </div>
-            <div className="mt-12">
-              <div className="grid grid-cols-3 gap-6">
-                <div className="col-span-3">
-                  <div className="max-w-lg">
-                    <h2 className="text-xl font-extrabold text-gray-900 mb-6 sm:text-2xl sm:tracking-tight lg:text-3xl">
-                      {page.form.formHeading}
-                    </h2>
-                    <form action="#" method="POST">
-                      <div className="">
-                        <div className="">
-                          <div className="grid grid-cols-6 gap-6">
-                            <div className="col-span-6 sm:col-span-6">
-                              <label
-                                htmlFor="bike"
-                                className="block text-sm font-medium text-gray-700"
-                              >
-                                Fahrrad
-                                <input
-                                  type="text"
-                                  name="bike"
-                                  id="bike"
-                                  defaultValue={bike.title}
-                                  className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                                />
-                              </label>
-                            </div>
-                            <div className="col-span-6 sm:col-span-3">
-                              <label
-                                htmlFor="first_name"
-                                className="block text-sm font-medium text-gray-700"
-                              >
-                                Vorname
-                                <input
-                                  type="text"
-                                  name="first_name"
-                                  id="first_name"
-                                  autoComplete="given-name"
-                                  className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                                />
-                              </label>
-                            </div>
-
-                            <div className="col-span-6 sm:col-span-3">
-                              <label
-                                htmlFor="last_name"
-                                className="block text-sm font-medium text-gray-700"
-                              >
-                                Nachname
-                                <input
-                                  type="text"
-                                  name="last_name"
-                                  id="last_name"
-                                  autoComplete="family-name"
-                                  className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                                />
-                              </label>
-                            </div>
-
-                            <div className="col-span-6 sm:col-span-6">
-                              <label
-                                htmlFor="email_address"
-                                className="block text-sm font-medium text-gray-700"
-                              >
-                                E-Mail
-                                <input
-                                  type="text"
-                                  name="email_address"
-                                  id="email_address"
-                                  autoComplete="email"
-                                  className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                                />
-                              </label>
-                            </div>
-                            <div className="col-span-6 sm:col-span-6">
-                              <label
-                                htmlFor="street_address"
-                                className="block text-sm font-medium text-gray-700"
-                              >
-                                Straße
-                                <input
-                                  type="text"
-                                  name="street_address"
-                                  id="street_address"
-                                  autoComplete="street-address"
-                                  className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                                />
-                              </label>
-                            </div>
-                            <div className="col-span-6 sm:col-span-3 lg:col-span-3">
-                              <label
-                                htmlFor="postal_code"
-                                className="block text-sm font-medium text-gray-700"
-                              >
-                                PLZ
-                                <input
-                                  type="text"
-                                  name="postal_code"
-                                  id="postal_code"
-                                  autoComplete="postal-code"
-                                  className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                                />
-                              </label>
-                            </div>
-                            <div className="col-span-6 sm:col-span-6 lg:col-span-3">
-                              <label
-                                htmlFor="city"
-                                className="block text-sm font-medium text-gray-700"
-                              >
-                                Stadt
-                                <input
-                                  type="text"
-                                  name="city"
-                                  id="city"
-                                  className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                                />
-                              </label>
-                            </div>
-                          </div>
+        <div className="mt-12">
+          <div className="grid grid-cols-3 gap-6">
+            <div className="col-span-3">
+              <div className="max-w-lg">
+                <h2 className="text-xl font-extrabold text-gray-900 mb-6 sm:text-2xl sm:tracking-tight lg:text-3xl">
+                  {page.form.formHeading}
+                </h2>
+                <form action="/danke/" method="POST" data-netlify="true">
+                  <input type="hidden" name="form-name" value="versandanfrage" />
+                  <div className="">
+                    <div className="">
+                      <div className="grid grid-cols-6 gap-6">
+                        <div className="col-span-6 sm:col-span-6">
+                          <label htmlFor="bike" className="block text-sm font-medium text-gray-700">
+                            Fahrrad
+                            <input
+                              type="text"
+                              name="bike"
+                              id="bike"
+                              defaultValue={bike.title}
+                              className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                            />
+                          </label>
                         </div>
-                        <div className="text-right mt-6">
-                          <button
-                            type="submit"
-                            className="rounded border-2 border-gray-800 px-2.5 py-1.5 text-gray-800 hover:text-white hover:bg-gray-800 transition-all duration-300 ease"
+                        <div className="col-span-6 sm:col-span-3">
+                          <label
+                            htmlFor="first_name"
+                            className="block text-sm font-medium text-gray-700"
                           >
-                            {page.form.button}
-                          </button>
+                            Vorname
+                            <input
+                              type="text"
+                              name="first_name"
+                              id="first_name"
+                              autoComplete="given-name"
+                              className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                            />
+                          </label>
+                        </div>
+
+                        <div className="col-span-6 sm:col-span-3">
+                          <label
+                            htmlFor="last_name"
+                            className="block text-sm font-medium text-gray-700"
+                          >
+                            Nachname
+                            <input
+                              type="text"
+                              name="last_name"
+                              id="last_name"
+                              autoComplete="family-name"
+                              className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                            />
+                          </label>
+                        </div>
+
+                        <div className="col-span-6 sm:col-span-6">
+                          <label
+                            htmlFor="email_address"
+                            className="block text-sm font-medium text-gray-700"
+                          >
+                            E-Mail
+                            <input
+                              type="text"
+                              name="email_address"
+                              id="email_address"
+                              autoComplete="email"
+                              className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                            />
+                          </label>
+                        </div>
+                        <div className="col-span-6 sm:col-span-6">
+                          <label
+                            htmlFor="street_address"
+                            className="block text-sm font-medium text-gray-700"
+                          >
+                            Straße
+                            <input
+                              type="text"
+                              name="street_address"
+                              id="street_address"
+                              autoComplete="street-address"
+                              className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                            />
+                          </label>
+                        </div>
+                        <div className="col-span-6 sm:col-span-3 lg:col-span-3">
+                          <label
+                            htmlFor="postal_code"
+                            className="block text-sm font-medium text-gray-700"
+                          >
+                            PLZ
+                            <input
+                              type="text"
+                              name="postal_code"
+                              id="postal_code"
+                              autoComplete="postal-code"
+                              className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                            />
+                          </label>
+                        </div>
+                        <div className="col-span-6 sm:col-span-6 lg:col-span-3">
+                          <label htmlFor="city" className="block text-sm font-medium text-gray-700">
+                            Stadt
+                            <input
+                              type="text"
+                              name="city"
+                              id="city"
+                              className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                            />
+                          </label>
                         </div>
                       </div>
-                    </form>
+                    </div>
+                    <div className="text-right mt-6">
+                      <button
+                        type="submit"
+                        className="rounded border-2 border-gray-800 px-2.5 py-1.5 text-gray-800 hover:text-white hover:bg-gray-800 transition-all duration-300 ease"
+                      >
+                        {page.form.button}
+                      </button>
+                    </div>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
-        </Container>
-      </div>
-      <div className="bg-gray-200" style={{ minHeight: '50vh' }} />
+        </div>
+      </Content>
     </Layout>
   );
 }
@@ -227,6 +214,7 @@ export const query = graphql`
       meta {
         description
         title
+        keywords
       }
       header {
         image {

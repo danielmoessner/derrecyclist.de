@@ -31,6 +31,7 @@ function Navigation({ white }) {
       }
       global: settingsYaml(slug: { eq: "global" }) {
         phone
+        email
         address
       }
     }
@@ -83,15 +84,19 @@ function Navigation({ white }) {
               <h2 className="text-sm font-bild uppercase mb-2 tracking-wider font-medium">
                 {navigation.link4}
               </h2>
-              <div className="grid grid-cols-2 font-light py-1">
-                <div className="leading-tight">{navigation.phoneLabel}</div>
-                <div className="leading-tight">{navigation.addressLabel}</div>
-                <div className="leading-tight">{global.phone}</div>
-                <div
-                  className="leading-tight whitespace-pre"
-                  // eslint-disable-next-line
-                  dangerouslySetInnerHTML={{ __html: global.address }}
-                />
+              <div className="flex flex-col space-y-3 font-light py-1">
+                <div>
+                  <div className="">{global.phone}</div>
+                  <div className="">{global.email}</div>
+                </div>
+                <div>
+                  <div className="font-normal">{navigation.addressLabel}</div>
+                  <div
+                    className="leading-tight whitespace-pre"
+                    // eslint-disable-next-line react/no-danger
+                    dangerouslySetInnerHTML={{ __html: global.address }}
+                  />
+                </div>
               </div>
             </div>
             <NavigationLink to="/impressum/">

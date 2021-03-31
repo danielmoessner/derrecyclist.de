@@ -15,7 +15,7 @@ module.exports = {
   },
   variants: {
     extend: {
-      backgroundColor: ['odd'],
+      backgroundColor: ['odd', 'active'],
       scale: ['group-hover'],
       margin: ['last'],
     },

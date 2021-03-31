@@ -5,9 +5,12 @@ import { Transition } from '@headlessui/react';
 import GatsbyImageData from '../types/GatsbyImageData';
 
 function ImageSlider({ images, preview }) {
-  const [activeSlide, setActiveSlide] = useState(1);
+  const [activeSlide, setActiveSlide] = useState(0);
   const [imageOpen, setImageOpen] = useState(false);
   const slideNumbersArray = Array.from(Array(images.length).keys());
+
+  if (activeSlide >= images.length) setActiveSlide(0);
+  if (activeSlide < 0) setActiveSlide(images.length - 1);
 
   return (
     <div className="relative">
@@ -17,7 +20,7 @@ function ImageSlider({ images, preview }) {
             <button
               onClick={() => setImageOpen(false)}
               type="button"
-              className="z-10 absolute text-gray-100 top-0 right-0 w-12 h-12 bg-gray-900 rounded flex items-center justify-center hover:bg-gray-800 hover:text-white"
+              className="z-10 absolute text-gray-100 top-0 right-0 w-12 h-12 bg-gray-900 rounded-tr rounded-bl flex items-center justify-center hover:bg-gray-800 hover:text-white focus:outline-none active:bg-gray-700"
             >
               <svg
                 className="w-7 h-7"
@@ -31,6 +34,46 @@ function ImageSlider({ images, preview }) {
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={() => setActiveSlide(activeSlide + 1)}
+              type="button"
+              className="z-10 absolute text-gray-100 top-0 my-auto bottom-0 right-0 w-12 h-12 bg-gray-900 rounded-l flex items-center justify-center hover:bg-gray-800 hover:text-white focus:outline-none active:bg-gray-700"
+            >
+              <svg
+                className="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={() => setActiveSlide(activeSlide - 1)}
+              type="button"
+              className="z-10 absolute text-gray-100 top-0 my-auto bottom-0 left-0 w-12 h-12 bg-gray-900 rounded-r flex items-center justify-center hover:bg-gray-800 hover:text-white focus:outline-none active:bg-gray-700"
+            >
+              <svg
+                className="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
                 />
               </svg>
             </button>

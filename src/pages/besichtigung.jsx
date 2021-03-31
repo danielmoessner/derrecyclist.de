@@ -6,7 +6,7 @@ import { openPopupWidget } from 'react-calendly';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import Navigation from '../components/Navigation';
-import Container from '../components/Container';
+import Content from '../components/Content';
 
 function Page({ data }) {
   const page = data.pagesYaml;
@@ -18,6 +18,7 @@ function Page({ data }) {
         title={page.meta.title}
         description={page.meta.description}
         image={page.meta.image.childImageSharp.resize.src}
+        keywords={page.meta.keywords}
       />
       <Navigation white />
 
@@ -29,47 +30,37 @@ function Page({ data }) {
         />
       </div>
 
-      <div className="relative z-0 -mt-24">
-        <div className="absolute flex flex-col inset-0">
-          <div className="h-24" />
-          <div className="flex-1 bg-gray-200 w-full" />
+      <Content>
+        <div className="lg:flex lg:justify-between lg:items-start">
+          <div className="max-w-xl">
+            <h1 className="text-2xl font-extrabold text-gray-900 sm:text-3xl sm:tracking-tight lg:text-4xl">
+              {page.form.heading}
+            </h1>
+            <p className="mt-5 text-base lg:text-lg text-gray-500">{page.form.text}</p>
+          </div>
+          <div>{/* <InlineWidget url="https://calendly.com/derrecyclist/60min" /> */}</div>
+          <button
+            type="button"
+            onClick={onClick}
+            className="rounded mt-10 border-2 border-gray-800 px-2.5 py-1.5 text-gray-800 hover:text-white hover:bg-gray-800 transition-all duration-300 ease"
+          >
+            {page.form.button}
+          </button>
         </div>
-        <Container>
-          <div className="px-4 py-3 bg-gray-100 rounded shadow relative z-30 lg:px-10 lg:pt-8 lg:pb-6">
-            <div className="lg:flex lg:justify-between lg:items-start">
+        <div className="mt-12">
+          <div className="grid grid-cols-3 gap-6">
+            <div className="col-span-3">
               <div className="max-w-xl">
-                <h1 className="text-2xl font-extrabold text-gray-900 sm:text-3xl sm:tracking-tight lg:text-4xl">
-                  {page.form.heading}
-                </h1>
-                <p className="mt-5 text-base lg:text-lg text-gray-500">{page.form.text}</p>
+                <h2 className="text-xl font-extrabold text-gray-900 sm:text-2xl sm:tracking-tight lg:text-3xl">
+                  {page.form.subheading}
+                </h2>
+                <p className="mt-3 text-base lg:text-lg text-gray-500">{page.form.subtext}</p>
               </div>
-              <div>{/* <InlineWidget url="https://calendly.com/derrecyclist/60min" /> */}</div>
-              <button
-                type="button"
-                onClick={onClick}
-                className="rounded mt-10 border-2 border-gray-800 px-2.5 py-1.5 text-gray-800 hover:text-white hover:bg-gray-800 transition-all duration-300 ease"
-              >
-                {page.form.button}
-              </button>
-            </div>
-            <div className="mt-12">
-              <div className="grid grid-cols-3 gap-6">
-                <div className="col-span-3">
-                  <div className="max-w-xl">
-                    <h2 className="text-xl font-extrabold text-gray-900 sm:text-2xl sm:tracking-tight lg:text-3xl">
-                      {page.form.subheading}
-                    </h2>
-                    <p className="mt-3 text-base lg:text-lg text-gray-500">{page.form.subtext}</p>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-6">Maps kommt demnächst..</div>
             </div>
           </div>
-        </Container>
-      </div>
-
-      <div className="bg-gray-200" style={{ minHeight: '50vh' }} />
+          <div className="mt-6">Maps kommt demnächst..</div>
+        </div>
+      </Content>
     </Layout>
   );
 }
@@ -87,6 +78,7 @@ export const query = graphql`
       meta {
         description
         title
+        keywords
         image {
           childImageSharp {
             resize(width: 1200) {
