@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import Navigation from '../components/Navigation';
@@ -45,7 +45,7 @@ function Page({ data }) {
                 <h2 className="text-xl font-extrabold text-gray-900 mb-6 sm:text-2xl sm:tracking-tight lg:text-3xl">
                   {page.form.formHeading}
                 </h2>
-                <form action="/danke/" method="POST" data-netlify="true">
+                <form action="/danke/" method="POST" data-netlify="true" name="versandanfrage">
                   <input type="hidden" name="form-name" value="versandanfrage" />
                   <div className="">
                     <div className="">
@@ -153,6 +153,7 @@ function Page({ data }) {
                       </div>
                     </div>
                     <div className="text-right mt-6">
+                      <Link to="/danke/" className="hidden" />
                       <button
                         type="submit"
                         className="rounded border-2 border-gray-800 px-2.5 py-1.5 text-gray-800 hover:text-white hover:bg-gray-800 transition-all duration-300 ease"
