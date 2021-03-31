@@ -5,12 +5,14 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import Navigation from '../components/Navigation';
 import Layout from '../components/layout';
 import Content from '../components/Content';
+import Seo from '../components/seo';
 
 function Page({ data }) {
   const page = data.pagesYaml;
 
   return (
     <Layout>
+      <Seo title="Danke" description="" />
       <Navigation white />
       <div className="aspect-w-16 aspect-h-9 lg:aspect-h-6 bg-cover">
         <GatsbyImage
