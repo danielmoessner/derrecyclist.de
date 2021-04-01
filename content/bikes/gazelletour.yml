@@ -1,0 +1,25 @@
+collection: bike
+title: Gazelle Rennrad mit Lenkerschaltung
+slug: gazelletour
+category: Klassik
+image1: ../media/vorlage-querformat-3.jpg
+image2: ../media/dsc00187.jpg
+image3: ../media/dsc00192.jpg
+image4: ../media/dsc00190.jpg
+image5: ../media/dsc00189.jpg
+price: 390
+sizes:
+  - md
+information: |-
+  Typ: Vintage Rennrad
+  Marke: Gazelle
+  Modell: Tour De L‘Avenir
+  Rahmenhöhe: 57 cm
+  Reifen Größe: 28 Zoll
+  Mantel: Michelin (Laufräder Mavic)
+  Bremsen: Shimano 105 vorne und hinten
+  Gangschaltung : 2x8 Shimano 105 Schaltung
+  Umwerfer: Shimano 105
+  Klingel: ja
+  Extras: 2x Flaschenhalter, Bordcomputer (Cateye)
+  Zustand: generalüberholt, fahrbereit
