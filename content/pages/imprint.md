@@ -18,7 +18,7 @@ Hohenzollernstraße 32 RGB\
 ## Kontakt
 
 Telefon: (+49) 176 34363671\
-E-Mail: info@der-recyclist.de
+E-Mail: info@derrecyclist.de
 
 ## Verbraucherstreitbeilegung / Universalschlichtungsstelle
 
