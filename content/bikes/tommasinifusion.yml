@@ -1,0 +1,26 @@
+collection: bike
+title: "Tommasini Fusion neuwertig "
+slug: tommasinifusion
+category: Klassik
+image1: ../media/vorlage-querformat-17.jpg
+image2: ../media/dsc00112.jpg
+image3: ../media/dsc00114.jpg
+image4: ../media/dsc00115.jpg
+image5: ../media/dsc00116.jpg
+price: 990
+sizes:
+  - md
+  - sm
+information: |-
+  Typ: Sportliches Rennrad 
+  Marke: Tommasini  
+  Modell: Fusion      
+  Rahmenhöhe: 55 cm
+  Reifen Größe: 28 Zoll 
+  Mantel: Michelin (Laufräder Mavic)  
+  Bremsen: Record Campagnolo vorne und hinten 
+  Gangschaltung : 2x10 Campagnolo Record Schaltung   
+  Umwerfer: Campagnolo Record 
+  Klingel: nein
+  Extras: 2x Flaschenhalter, Flasche 
+  Zustand: Wie Neu
