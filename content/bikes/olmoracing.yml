@@ -1,0 +1,26 @@
+collection: bike
+title: "Original Olmo Rennrad mit Campagnolo Ausstattung "
+slug: Olmoracing
+category: Klassik
+image1: ../media/vorlage-querformat-5.jpg
+image2: ../media/dsc00068.jpg
+image3: ../media/dsc00069.jpg
+image4: ../media/dsc00072.jpg
+image5: ../media/dsc00074.jpg
+price: 590
+sizes:
+  - md
+  - sm
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Olmo    
+  Modell: Racing       
+  Rahmenhöhe: 54cm
+  Reifen Größe: 28 Zoll 
+  Mantel: Vittoria (Laufräder futura )  
+  Bremsen: Campagnolo Mirage vorne und hinten 
+  Gangschaltung : 2x8 Campagnolo Mirage Schaltung   
+  Umwerfer: Campagnolo Veloce
+  Klingel: nein
+  Extras: Flaschenhalter, seltene Original Olmo Luftpumpe
+  Zustand: generalüberholt, fahrbereit
