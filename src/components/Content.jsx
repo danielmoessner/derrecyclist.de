@@ -12,7 +12,7 @@ function Component({ children, maxWidthClass, showBottom }) {
         </div>
         <Container>
           <div
-            className={`px-4 py-3 mx-auto bg-gray-100 rounded shadow relative z-30 ${maxWidthClass} lg:px-10 lg:pt-8 lg:pb-6`}
+            className={`px-4 pb-3 pt-4 mx-auto bg-gray-100 rounded shadow relative z-30 ${maxWidthClass} lg:px-10 lg:pt-8 lg:pb-6`}
           >
             {children}
           </div>

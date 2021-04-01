@@ -25,7 +25,8 @@ function Index({ data }) {
     // eslint-disable-next-line
     if ('ontouchstart' in window || navigator.maxTouchPoints > 0 ||  navigator.msMaxTouchPoints > 0) {
       // eslint-disable-next-line
-      document.querySelector('.md\\:scroll-snap-type-y-mandatory').classList.remove('md:scroll-snap-type-y-mandatory')
+      const element = document.querySelector('.md\\:scroll-snap-type-y-mandatory')
+      if (element) element.classList.remove('md:scroll-snap-type-y-mandatory');
     }
   });
 

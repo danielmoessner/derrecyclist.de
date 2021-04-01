@@ -71,13 +71,13 @@ function Navigation({ white }) {
       >
         <div className="pt-16 px-3 pb-16">
           <div className="flex flex-col divide-y divide-gray-200">
-            <NavigationLink to="/">
+            <NavigationLink setOpen={setOpen} to="/">
               <div>{navigation.link1}</div>
             </NavigationLink>
-            <NavigationLink to="/fahrraeder/">
+            <NavigationLink setOpen={setOpen} to="/fahrraeder/">
               <div>{navigation.link2}</div>
             </NavigationLink>
-            <NavigationLink to="/besichtigung/">
+            <NavigationLink setOpen={setOpen} to="/besichtigung/">
               <div>{navigation.link3}</div>
             </NavigationLink>
             <div className="w-full pt-10 pb-16 px-2">
@@ -99,10 +99,10 @@ function Navigation({ white }) {
                 </div>
               </div>
             </div>
-            <NavigationLink to="/impressum/">
+            <NavigationLink setOpen={setOpen} to="/impressum/">
               <div>{navigation.link5}</div>
             </NavigationLink>
-            <NavigationLink to="/datenschutz/">
+            <NavigationLink setOpen={setOpen} to="/datenschutz/">
               <div>{navigation.link6}</div>
             </NavigationLink>
             <div />

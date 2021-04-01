@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import { navigate } from '@reach/router';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import Navigation from '../components/Navigation';
@@ -26,8 +27,10 @@ function Bikes({ data }) {
   const updateCategory = (newCategory) => {
     if (activeCategory === newCategory) {
       setActiveCategory('--');
+      navigate('#fahrraeder');
     } else {
       setActiveCategory(newCategory);
+      navigate('#fahrraeder');
     }
   };
 
@@ -139,7 +142,7 @@ function Bikes({ data }) {
         </div>
       </Content>
 
-      <div className="bg-gray-200" style={{ minHeight: '50vh' }}>
+      <div className="bg-gray-200" style={{ minHeight: '50vh' }} id="fahrraeder">
         <Container>
           <div className="px-0 pt-16 pb-32 lg:px-8">
             {filteredBikes().length === 0 ? <p>{page.bikes.noBikesText}</p> : ''}

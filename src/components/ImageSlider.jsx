@@ -2,19 +2,27 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { Transition } from '@headlessui/react';
+import { useSwipeable } from 'react-swipeable';
 import GatsbyImageData from '../types/GatsbyImageData';
 
 function ImageSlider({ images, preview }) {
   const [activeSlide, setActiveSlide] = useState(0);
   const [imageOpen, setImageOpen] = useState(false);
   const slideNumbersArray = Array.from(Array(images.length).keys());
+  const handlers = useSwipeable({
+    onSwipedLeft: () => setActiveSlide(activeSlide + 1),
+    onSwipedRight: () => setActiveSlide(activeSlide - 1),
+  });
 
   if (activeSlide >= images.length) setActiveSlide(0);
   if (activeSlide < 0) setActiveSlide(images.length - 1);
 
   return (
     <div className="relative">
-      <Transition show={imageOpen} className="fixed inset-0 p-10 bg-gray-800 bg-opacity-70 z-40">
+      <Transition
+        show={imageOpen}
+        className="hidden lg:block fixed inset-0 p-10 bg-gray-800 bg-opacity-70 z-40"
+      >
         <div className="aspect-w-16 aspect-h-9 bg-gray-50 bg-opacity-50 relative rounded lg:w-full lg:h-full lg:relative lg:aspect-none">
           <div>
             <button
@@ -108,7 +116,11 @@ function ImageSlider({ images, preview }) {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="aspect-w-4 aspect-h-3">
+          <div
+            className="aspect-w-4 aspect-h-3"
+            // eslint-disable-next-line
+            {...handlers}
+          >
             {!preview ? (
               <button
                 className="rounded cursor-pointer z-10 absolute flex justify-center items-center inset-0 overflow-hidden"
