@@ -8,9 +8,10 @@ meta:
 header:
   image: ../media/bild_13.jpg
 form:
-  heading: Unsere Rennräder
+  heading: Unsere Fahrräder
   headingText: Wähle ganz einfach deine entsprechende Körpergröße aus und
-    reserviere Dir ein Fahrrad zum Besichtigen oder frage an für Versand.
+    reserviere Dir ein passendes Fahrrad zum Besichtigen oder frage für Versand
+    an.
   categoryHeading: Unsere Kategorien
   categoryText: Klicke auf eine der Kategorien um diese auszuwählen.
   inputLabel: Körpergröße
