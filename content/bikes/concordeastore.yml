@@ -1,0 +1,24 @@
+collection: bike
+title: Concorde Rennrad in schönem Zustand
+slug: concordeastore
+category: Klassik
+image1: ../media/vorlage-querformat-7.jpg
+image2: ../media/dsc00204.jpg
+image3: ../media/dsc00208.jpg
+image4: ../media/dsc00207.jpg
+image5: ../media/dsc00206.jpg
+price: 350
+sizes:
+  - lg
+information: |-
+  Typ: Vintage Rennrad
+  Marke: Concorde
+  Modell: Astore
+  Rahmenhöhe: 60 cm
+  Reifen Größe: 28 Zoll
+  Bremsen: Suntour Radius vorne und hinten
+  Gangschaltung : 2x6 Suntour Radius Schaltung
+  Umwerfer: Suntour Radius
+  Klingel: ja
+  Extras: Flaschenhalter
+  Zustand: generalüberholt, fahrbereit
