@@ -56,13 +56,14 @@ categories:
 openingHours:
   backgroundImage: ../media/bild_14.jpg
   pretitle: Öffnungszeiten
-  title: Wir freuen uns auf Ihren Besuch
-  textLeft: Aktuell können Sie bei uns Besichtungstermine nach Ihren Wünschen
-    Buchen. Tragen Sie sich dafür einfach in unserem Kalender ein.
+  title: Wir freuen uns auf deinen Besuch
+  textLeft: "Aktuell haben wir keine fixen Öffnungszeiten, sondern du kannst bei
+    uns persönliche Besichtigungstermine nach deinen Wünschen buchen. Trage dich
+    dafür einfach in unserem Kalender ein. "
   button: Besichtigungstermin buchen
   textRight: Immer am ersten Sonntag im Monat ist bei uns Tag der offenen Tür.
-    Dabei können Sie einfach bei uns vorbeischauen und jedes unserer Fahrräder
-    Probe fahren.
+    Schau einfach bei uns vorbei und mache eine Probefahrt mit jedem unserer
+    Fahrräder.
   titleLeft: Besichtigungstermin
   titleRight: Tag der offenen Tür
 reviews:
