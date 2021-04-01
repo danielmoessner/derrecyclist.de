@@ -1,0 +1,26 @@
+collection: bike
+title: Neuwertiges Battaglin Rennrad
+slug: battaglinpink
+category: ReStored
+image1: ../media/vorlage-querformat-4.jpg
+image2: ../media/dsc00117.jpg
+image3: ../media/dsc00118.jpg
+image4: ../media/dsc00120.jpg
+image5: ../media/dsc00121.jpg
+price: 590
+sizes:
+  - md
+information: |-
+  Eckdaten:
+
+  Typ: Vintage Rennrad
+  Marke: Battaglin
+  Rahmenhöhe: 56 cm
+  Reifen Größe: 28 Zoll
+  Mantel: BRN (Laufräder Ambrosio)
+  Bremsen: Campagnolo vorne und hinten
+  Gangschaltung : 2x6 Campagnolo Veloce Schaltung
+  Umwerfer: Campagnolo Veloce
+  Klingel: nein
+  Extras: Flaschenhalter, Campagnolo Flasche
+  Zustand: generalüberholt, fahrbereit
