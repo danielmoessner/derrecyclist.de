@@ -9,8 +9,8 @@ header:
   image: ../media/bild_13.jpg
 form:
   heading: Versand anfragen
-  text: Du kannst ganz einfach den Versand anfragen. Gebe einfach deine Adresse
-    und Kontaktdaten an. Wir setzen uns so schnell es geht mit dir in
-    Verbindung. Und prüfen den bestmöglichen Versand.
+  text: Du kannst ganz einfach den Versand anfragen, indem du deine Adresse und
+    Kontaktdaten angibst. Wir setzen uns so schnell es geht mit Dir in
+    Verbindung und prüfen den bestmöglichen Versand.
   formHeading: Jetzt anfragen
   button: Anfragen
