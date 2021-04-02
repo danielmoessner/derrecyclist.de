@@ -11,7 +11,7 @@ header:
 
 ## Angaben gemäß § 5 TMG
 
-Der Recyclist\
+Der ReCyclist Becker Tobias & Fischer Fabian GbR\
 Hohenzollernstraße 32 RGB\
 80801 München
 
