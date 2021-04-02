@@ -1,0 +1,23 @@
+collection: bike
+title: Aquila (orange)
+slug: aquilaorange
+category: Klassik
+image1: ../media/vorlage-querformat-31.jpg
+image2: ../media/dsc00236.jpg
+image3: ../media/dsc00237.jpg
+image4: ../media/dsc00238.jpg
+image5: ../media/dsc00241.jpg
+price: 350
+sizes:
+  - md
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Aquila           
+  Rahmenhöhe: 57 cm
+  Reifen Größe: 28 Zoll
+  Bremsen: vorne und hinten 
+  Gangschaltung : 2x5 Huret Schaltung   
+  Umwerfer: Huret 
+  Klingel: nein
+  Extras: - 
+  Zustand: generalüberholt, fahrbereit
