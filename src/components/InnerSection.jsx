@@ -30,7 +30,7 @@ function InnerSection({ position, children, backgroundImage, wide }) {
 
   return (
     <div className={`flex-1 ${wrapperStyles()}`}>
-      <div className={`bg-green-600 h-0 ${imageStyles()}`}>
+      <div className={`bg-green-600 h-96 md:h-0 ${imageStyles()}`}>
         <Img className="w-full h-full" fluid={backgroundImage.childImageSharp.fluid} />
       </div>
       <div className={contentStyles()}>
