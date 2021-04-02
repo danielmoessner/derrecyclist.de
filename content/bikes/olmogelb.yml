@@ -1,0 +1,23 @@
+collection: bike
+title: Olmo (gelb)
+slug: olmogelb
+category: Klassik
+image1: ../media/vorlage-querformat-36.jpg
+image2: ../media/dsc00260.jpg
+image3: ../media/dsc00262.jpg
+image4: ../media/dsc00261.jpg
+image5: ../media/dsc00263.jpg
+price: 490
+sizes:
+  - md
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Olmo  
+  Rahmenhöhe: 57cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Campagnolo vorne und hinten 
+  Gangschaltung : 2x8 Campagnolo Avanti Schaltung 
+  Licht: nein 
+  Klingel: nein 
+  Extras: Trinkflaschenhalter
+  Zustand: Top Zustand
