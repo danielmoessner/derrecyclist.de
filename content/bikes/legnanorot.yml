@@ -1,0 +1,23 @@
+collection: bike
+title: Legnano rot
+slug: legnanorot
+category: Klassik
+image1: ../media/vorlage-querformat-40.jpg
+image2: ../media/dsc00256.jpg
+image3: ../media/dsc00257.jpg
+image4: ../media/dsc00258.jpg
+image5: ../media/dsc00259.jpg
+price: 320
+sizes:
+  - sm
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Legnano 
+  Rahmenhöhe: 52cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Universal Weinmann vorne  und hinten 
+  Gangschaltung : 2x5 Campagnolo Patent Schaltung 
+  Licht: nein 
+  Klingel: nein 
+  Extras: Trinkflaschenhalter 
+  Zustand: generalüberholt, fahrbereit
