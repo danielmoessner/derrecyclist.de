@@ -1,0 +1,25 @@
+collection: bike
+title: "Jan Janssen Tour de France "
+slug: janjanssetourdefrance
+category: Klassik
+image1: ../media/vorlage-querformat-45.jpg
+image2: ../media/dsc00199.jpg
+image3: ../media/dsc00200.jpg
+image4: ../media/dsc00202.jpg
+image5: ../media/dsc00203.jpg
+price: 390
+sizes:
+  - xl
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Jan Janssen 
+  Model: Tour de France 
+  Rahmenhöhe: 67 cm
+  Reifen Größe: 28 Zoll 
+  Mantel: Hutchinson (Mavic Laufräder) 
+  Bremsen: Campagnolo Athena vorne und hinten 
+  Gangschaltung : 2x8 Campagnolo Athena Schaltung 
+  Umwerfer: Campagnolo Athena 
+  Klingel: nein
+  Extras: Flaschenhalter, Luftpumpe, Bordcomputer (ACT) 
+  Zustand: generalüberholt, fahrbereit
