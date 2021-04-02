@@ -18,8 +18,7 @@ function InnerSection({ position, children, backgroundImage, wide }) {
   };
 
   const contentStyles = () => {
-    if (position === 'left')
-      return 'md:w-4/12 lg:w-1/5 md:max-h-screen md:overflow-y-scroll scrollbar-small';
+    if (position === 'left') return 'md:w-96 md:max-h-screen md:overflow-y-scroll scrollbar-small';
     return '';
   };
 
@@ -31,7 +30,7 @@ function InnerSection({ position, children, backgroundImage, wide }) {
 
   return (
     <div className={`flex-1 ${wrapperStyles()}`}>
-      <div className={`bg-green-600 h-96 ${imageStyles()}`}>
+      <div className={`bg-green-600 h-0 ${imageStyles()}`}>
         <Img className="w-full h-full" fluid={backgroundImage.childImageSharp.fluid} />
       </div>
       <div className={contentStyles()}>
