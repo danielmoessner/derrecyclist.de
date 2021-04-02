@@ -1,0 +1,23 @@
+collection: bike
+title: Bianchi (celeste/grün)
+slug: bianchicelestegrün
+category: Klassik
+image1: ../media/vorlage-querformat-44.jpg
+image2: ../media/dsc00146.jpg
+image3: ../media/dsc00147.jpg
+image4: ../media/dsc00150.jpg
+image5: ../media/dsc00151.jpg
+price: 490
+sizes:
+  - md
+information: |-
+  Typ: Vintage Rennrad
+  Marke: Bianchi
+  Rahmenhöhe: 57cm
+  Reifen Größe: 28 Zoll
+  Bremsen: Universal vorne und hinten
+  Gangschaltung : 2x5 Huret Schaltung
+  Licht: nein
+  Klingel: nein
+  Extras: Original L'Eroica Flasche , Luftpumpe
+  Zustand: generalüberholt, fahrbereit
