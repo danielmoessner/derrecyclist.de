@@ -3,7 +3,6 @@ import { graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import sanitizeHtml from 'sanitize-html';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import Section from '../components/Section';
@@ -19,7 +18,6 @@ function Index({ data }) {
   const page = data.pagesYaml;
   const categories = data.allCategoriesYaml.nodes;
   const reviews = data.allReviewsYaml.nodes;
-  const getText = (text) => sanitizeHtml(text.replace(/\n/g, '<br />'));
 
   useEffect(() => {
     // eslint-disable-next-line
@@ -258,7 +256,6 @@ export const query = graphql`
         pretitle
         title
         textLeft
-        text
         prose {
           text
           title

@@ -38,7 +38,6 @@ function Page({ data }) {
             </h1>
             <p className="mt-5 text-base lg:text-lg text-gray-500">{page.form.text}</p>
           </div>
-          <div>{/* <InlineWidget url="https://calendly.com/derrecyclist/60min" /> */}</div>
           <button
             type="button"
             onClick={onClick}
@@ -58,7 +57,16 @@ function Page({ data }) {
               </div>
             </div>
           </div>
-          <div className="mt-6">Maps kommt demnächst..</div>
+          <div className="mt-6">
+            <iframe
+              className="w-full rounded overflow-hidden focus:outline-none"
+              title="Google Maps"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10645.679654145493!2d11.5815093!3d48.1599877!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xac577e05b2c26096!2sDer%20ReCyclist!5e0!3m2!1sde!2sde!4v1617393729868!5m2!1sde!2sde"
+              height="450"
+              allowFullScreen=""
+              loading="lazy"
+            />
+          </div>
         </div>
       </Content>
     </Layout>

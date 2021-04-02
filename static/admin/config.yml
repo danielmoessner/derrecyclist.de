@@ -111,7 +111,6 @@ collections:
               - { label: Pretitel, name: pretitle, widget: string }
               - { label: Titel, name: title, widget: string }
               - { label: Text, name: textLeft, widget: text }
-              - { label: Text, name: text, widget: text }
               - label: Texte
                 name: prose
                 widget: list

@@ -196,7 +196,11 @@ export const query = graphql`
         }
         image4 {
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              transformOptions: { fit: CONTAIN }
+            )
             id
           }
         }

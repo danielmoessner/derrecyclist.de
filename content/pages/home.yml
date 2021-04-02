@@ -11,34 +11,7 @@ header:
 concept:
   backgroundImage: ../media/bild_3.jpg
   pretitle: Konzept
-  title: "Wir erfinden das Rad zwar nicht neu, aber hauchen ihm ein neues Leben ein. "
-  text: >-
-    Der ReCyclist kauft gebrauchte Fahrräder, bringt sie auf Vordermann und
-    bietet sie wieder zu einem fairen und marktgerechten Preis an. Dabei haben
-    wir uns vor allem auf vintage Rennräder spezialisiert.
-
-    Warum aber nun ausgerechnet ein vintage Rennrad kaufen? 
-
-
-    - Hochwertige und stabile Bauteile: 
-
-    Die verbauten Komponenten und die hervorragende Handwerkskunst aus den 80er/90er Jahren ermöglichen bis heute eine unvergleichbare Qualität und Langlebigkeit. 
-
-
-    - Alte Mechanik = Einfache Wartung: 
-
-    Die Bauteile basieren auf simplen und transparenten mechanischen Abläufen und ermöglichen es so, ganz unkompliziert selbst einzelne Teile auszutauschen, zu pflegen, zu optimieren und zu personalisieren. Dadurch wird dein Rennrad nicht nur ein Fortbewegungsmittel, sondern ein einzigartiger Begleiter den man Lieben lernt.
-
-
-    - Vintage = mehr als ein Trend:
-
-    Zeitloser Stil, außergewöhnliche Designs und derzeit wieder gefragter denn je. Vintage und Fahrräder sind mittlerweile weit mehr als bloß ein Trend, sondern das Ergebnis aus der Bewusstseinswandlung der Wegwerfgesellschaft. Nicht nur wir profitieren davon, sondern auch Du als Kunde, denn mit dem Kauf eines Rennrads des ReCyclisten investierst Du in ein langlebiges Produkt, welches über die Jahre eher eine Preissteigerung anstelle eines Preisverfalls erfährt.
-
-
-    Vereinbare also noch heute einen Besichtigungstermin und werde selbst zum ReCyclisten. 
-
-
-    Der Besuch unseres Lagers mit über 80 Rennrädern ist alleine für sich ein Erlebnis und eine Zeitreise durch die Rennrad-Historie. Wir nehmen uns persönlich für jeden Kunden so viel Zeit wie er benötigt und erklären alles rund ums Thema Fahrrad/Rennrad. Bei unserer großen Auswahl finden Wir zusammen garantiert deinen neuen passenden Begleiter auf zwei Rädern. 
+  title: 'Wir erfinden das Rad zwar nicht neu, aber hauchen ihm ein neues Leben ein. '
   button: Fahrräder ansehen
   textLeft: Das gute alte Fahrrad war und ist auch zukünftig der wohl beste
     Kompromiss aus Mobilität, Individualität und Klimafreundlichkeit. Nicht nur
@@ -56,12 +29,12 @@ concept:
         bietet sie wieder zu einem fairen und marktgerechten Preis an. Dabei
         haben wir uns vor allem auf vintage Rennräder spezialisiert.
 
-        Warum aber nun ausgerechnet ein vintage Rennrad kaufen? 
+        Warum aber nun ausgerechnet ein vintage Rennrad kaufen?
     - title: Hochwertige und stabile Bauteile
-      text: "Die verbauten Komponenten und die hervorragende Handwerkskunst aus den
+      text: 'Die verbauten Komponenten und die hervorragende Handwerkskunst aus den
         80er/90er Jahren ermöglichen bis heute eine unvergleichbare Qualität und
-        Langlebigkeit. "
-    - title: "Alte Mechanik = Einfache Wartung: "
+        Langlebigkeit. '
+    - title: 'Alte Mechanik = Einfache Wartung: '
       text: Die Bauteile basieren auf simplen und transparenten mechanischen Abläufen
         und ermöglichen es so, ganz unkompliziert selbst einzelne Teile
         auszutauschen, zu pflegen, zu optimieren und zu personalisieren. Dadurch
@@ -94,9 +67,9 @@ openingHours:
     Schau einfach bei uns vorbei und mache eine Probefahrt mit jedem unserer
     Fahrräder.
   button: Besichtigungstermin buchen
-  textLeft: "Aktuell haben wir keine fixen Öffnungszeiten, sondern du kannst bei
+  textLeft: 'Aktuell haben wir keine fixen Öffnungszeiten, sondern du kannst bei
     uns persönliche Besichtigungstermine nach deinen Wünschen buchen. Trage dich
-    dafür einfach in unserem Kalender ein. "
+    dafür einfach in unserem Kalender ein. '
   pretitle: Öffnungszeiten
   title: Wir freuen uns auf deinen Besuch
   titleLeft: Besichtigungstermin
@@ -116,4 +89,4 @@ contact:
     info@derrecyclist.de
   textRight: |-
     Hohenzollernstraße 32 RGB 
-    80801 München 
+    80801 München
