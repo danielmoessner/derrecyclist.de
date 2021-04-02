@@ -1,0 +1,25 @@
+collection: bike
+title: Giant Cadex
+slug: giantcadex
+category: Klassik
+image1: ../media/vorlage-querformat-10.jpg
+image2: ../media/dsc00231.jpg
+image3: ../media/dsc00233.jpg
+image4: ../media/dsc00234.jpg
+image5: ../media/dsc00235.jpg
+price: 450
+sizes:
+  - md
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Giant 
+  Modell: Cadex ALR    
+  Rahmenhöhe: 56 cm
+  Reifen Größe: 28 Zoll 
+  Mantel: Vittoria (Rigida Laufräder) 
+  Bremsen: Shimano 105 vorne und hinten 
+  Gangschaltung : 2x8 Shimano 105 Schaltung   
+  Umwerfer: Shimano 105 
+  Klingel: nein
+  Extras: - 
+  Zustand: generalüberholt, fahrbereit
