@@ -52,15 +52,15 @@ function Index({ data }) {
               className="absolute w-full h-full flex justify-center items-center"
               image={page.header.logo.childImageSharp.gatsbyImageData}
               objectFit="none"
-              objectPosition="50% 30%"
+              objectPosition="50% 20%"
               alt={page.meta.title}
             />
           </div>
         </Section>
         <Section>
-          <InnerSection position="bottom" backgroundImage={page.concept.backgroundImage}>
-            <div className="grid grid-cols-5 gap-6">
-              <div className="col-span-5 sm:col-span-2">
+          <InnerSection wide position="bottom" backgroundImage={page.concept.backgroundImage}>
+            <div className="grid grid-cols-6 gap-6">
+              <div className="col-span-6 sm:col-span-2">
                 <SectionPre>{page.concept.pretitle}</SectionPre>
                 <SectionHeading>{page.concept.title}</SectionHeading>
                 <p className="prose prose-sm">{page.concept.textLeft}</p>
@@ -68,14 +68,22 @@ function Index({ data }) {
                   <Button to="/fahrraeder/">{page.concept.button}</Button>
                 </div>
               </div>
-              <div className="col-span-5 sm:col-span-3">
-                <div
-                  className="prose prose-sm mb-12 sm:mb-0"
+              <div className="col-span-6 sm:col-span-4">
+                {/* <div
+                  className="prose prose-sm mb-12 sm:mb-0 max-w-full lg:column-count-2"
                   // eslint-disable-next-line react/no-danger
                   dangerouslySetInnerHTML={{
                     __html: getText(page.concept.text),
                   }}
-                />
+                /> */}
+                <div className="prose prose-sm mb-12 sm:mb-0 max-w-full lg:column-count-2">
+                  {page.concept.prose.map((prose) => (
+                    <React.Fragment key={prose.title}>
+                      <h3>{prose.title}</h3>
+                      <p>{prose.text}</p>
+                    </React.Fragment>
+                  ))}
+                </div>
                 <div className="sm:hidden">
                   <Button to="/fahrraeder/">{page.concept.button}</Button>
                 </div>
@@ -106,8 +114,8 @@ function Index({ data }) {
           </InnerSection>
         </Section>
         <Section>
-          <InnerSection position="bottom" backgroundImage={page.openingHours.backgroundImage}>
-            <div className="grid grid-cols-1 md:grid-cols-3 md:gap-4 gap-y-12">
+          <InnerSection wide position="bottom" backgroundImage={page.openingHours.backgroundImage}>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-4 gap-y-12">
               <div className="col-span-1">
                 <SectionPre>{page.openingHours.pretitle}</SectionPre>
                 <SectionHeading>{page.openingHours.title}</SectionHeading>
@@ -123,6 +131,14 @@ function Index({ data }) {
               </div>
               <div className="col-span-1">
                 <h3 className="text-lg font-medium text-gray-700 mb-2">
+                  {page.openingHours.titleCenter}
+                </h3>
+                <div className="prose prose-sm">
+                  <p>{page.openingHours.textCenter}</p>
+                </div>
+              </div>
+              <div className="col-span-1">
+                <h3 className="text-lg font-medium text-gray-700 mb-2">
                   {page.openingHours.titleRight}
                 </h3>
                 <div className="prose prose-sm">
@@ -132,7 +148,7 @@ function Index({ data }) {
             </div>
           </InnerSection>
         </Section>
-        <Section>
+        <Section hidden={page.reviews.hidden}>
           <InnerSection position="left" backgroundImage={page.reviews.backgroundImage}>
             <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-1 gap-y-8 gap-x-6 md:gap-0">
               <div className="col-span-1">
@@ -243,6 +259,10 @@ export const query = graphql`
         title
         textLeft
         text
+        prose {
+          text
+          title
+        }
         button
       }
       categories {
@@ -276,6 +296,8 @@ export const query = graphql`
         title
         titleLeft
         textLeft
+        titleCenter
+        textCenter
         titleRight
         textRight
         button
@@ -294,6 +316,7 @@ export const query = graphql`
         }
         pretitle
         title
+        hidden
       }
       contact {
         backgroundImage {

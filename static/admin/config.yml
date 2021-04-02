@@ -112,6 +112,12 @@ collections:
               - { label: Titel, name: title, widget: string }
               - { label: Text, name: textLeft, widget: text }
               - { label: Text, name: text, widget: text }
+              - label: Texte
+                name: prose
+                widget: list
+                fields:
+                  - { label: Titel, name: title, widget: string }
+                  - { label: Text, name: text, widget: text }
               - { label: Button, name: button, widget: string }
           - label: Kategorien
             name: categories
@@ -129,6 +135,8 @@ collections:
               - { label: Titel, name: title, widget: string }
               - { label: Titel Links, name: titleLeft, widget: string }
               - { label: Text Links, name: textLeft, widget: text }
+              - { label: Titel Center, name: titleCenter, widget: string }
+              - { label: Text Center, name: textCenter, widget: text }
               - { label: Titel Rechts, name: titleRight, widget: string }
               - { label: Text Rechts, name: textRight, widget: text }
               - { label: Button, name: button, widget: string }
@@ -139,6 +147,7 @@ collections:
               - { label: Hintergrundbild, name: backgroundImage, widget: image }
               - { label: Pretitel, name: pretitle, widget: string }
               - { label: Titel, name: title, widget: string }
+              - { label: Versteckt, name: hidden, widget: boolean }
           - label: Kontakt
             name: contact
             widget: object

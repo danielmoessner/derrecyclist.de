@@ -21,14 +21,14 @@ function ImageSlider({ images, preview }) {
     <div className="relative">
       <Transition
         show={imageOpen}
-        className="hidden lg:block fixed inset-0 p-10 bg-gray-800 bg-opacity-70 z-40"
+        className="hidden lg:block fixed inset-0 p-10 bg-gray-300 bg-opacity-70 z-40"
       >
-        <div className="aspect-w-16 aspect-h-9 bg-gray-50 bg-opacity-50 relative rounded lg:w-full lg:h-full lg:relative lg:aspect-none">
+        <div className="aspect-w-16 aspect-h-9 rounded lg:aspect-none">
           <div>
             <button
               onClick={() => setImageOpen(false)}
               type="button"
-              className="z-10 absolute text-gray-100 top-0 right-0 w-12 h-12 bg-gray-900 rounded-tr rounded-bl flex items-center justify-center hover:bg-gray-800 hover:text-white focus:outline-none active:bg-gray-700"
+              className="z-10 absolute text-gray-100 top-0 right-0 w-12 h-12 bg-gray-900 rounded-bl flex items-center justify-center hover:bg-gray-800 hover:text-white focus:outline-none active:bg-gray-700"
             >
               <svg
                 className="w-7 h-7"
@@ -91,9 +91,10 @@ function ImageSlider({ images, preview }) {
                   <GatsbyImage
                     key={image.childImageSharp.id}
                     className="rounded w-full h-full"
+                    objectFit="contain"
                     style={{
-                      position: 'absolute',
                       display: `${index !== activeSlide ? 'none' : ''}`,
+                      position: 'static',
                     }}
                     alt={`Slider Bild ${index}`}
                     image={image.childImageSharp.gatsbyImageData}

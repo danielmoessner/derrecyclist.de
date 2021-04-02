@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 import Container from './Container';
 import ImageFluid from '../types/ImageFluid';
 
-function InnerSection({ position, children, backgroundImage }) {
+function InnerSection({ position, children, backgroundImage, wide }) {
   const wrapperStyles = () => {
     if (position === 'left') return 'md:flex-row-reverse flex flex-col';
     if (position === 'bottom') return 'flex flex-col';
@@ -36,7 +36,7 @@ function InnerSection({ position, children, backgroundImage }) {
       </div>
       <div className={contentStyles()}>
         <div className={paddingStyles()}>
-          <Container>{children}</Container>
+          <Container wide={wide}>{children}</Container>
         </div>
       </div>
     </div>
@@ -45,12 +45,14 @@ function InnerSection({ position, children, backgroundImage }) {
 
 InnerSection.defaultProps = {
   position: 'bottom',
+  wide: false,
 };
 
 InnerSection.propTypes = {
   children: PropTypes.element.isRequired,
   position: PropTypes.oneOf(['left', 'bottom']),
   backgroundImage: ImageFluid.isRequired,
+  wide: PropTypes.bool,
 };
 
 export default InnerSection;
