@@ -1,0 +1,23 @@
+collection: bike
+title: Giant Speeder Lite (gelb/pink)
+slug: giantspeederlitegelbpink
+category: Klassik
+image1: ../media/vorlage-querformat-42.jpg
+image2: ../media/dsc00321.jpg
+image3: ../media/dsc00322.jpg
+image4: ../media/dsc00323.jpg
+image5: ../media/dsc00324.jpg
+price: 290
+sizes:
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Giant
+  Modell: Speeder Lite             
+  Rahmenhöhe: 60cm
+  Reifen Größe: 28 Zoll  
+  Bremsen: Exage Motion vorne und hinten 
+  Gangschaltung : 2x7 Shimano SIS Schaltung     
+  Klingel: ja 
+  Extras: Flaschenhalter
+  Zustand: generalüberholt, fahrbereit 
