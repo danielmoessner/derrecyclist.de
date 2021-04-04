@@ -6,7 +6,7 @@ meta:
   image: ../media/recyclist_logo_black.png
   keywords: startseite1
 header:
-  logo: ../media/recyclist_logo_rgb.svg
+  logo: ../media/recyclist_logo_rgb.png
   backgroundImage: ../media/bild_7.jpg
 concept:
   backgroundImage: ../media/bild_3.jpg
