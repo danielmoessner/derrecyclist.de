@@ -198,6 +198,7 @@ collections:
               - { label: Button, name: button, widget: string }
               - { label: Unterüberschrift, name: subheading, widget: string }
               - { label: Untertext, name: subtext, widget: string }
+              - { label: Calendly Link, name: calendly, widget: string }
       - file: content/pages/shippment.yml
         label: Versand
         name: shippment

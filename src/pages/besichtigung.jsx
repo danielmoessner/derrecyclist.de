@@ -10,7 +10,7 @@ import Content from '../components/Content';
 
 function Page({ data }) {
   const page = data.pagesYaml;
-  const onClick = () => openPopupWidget({ url: 'https://calendly.com/derrecyclist/60min' });
+  const onClick = () => openPopupWidget({ url: page.form.calendly });
 
   return (
     <Layout>
@@ -108,6 +108,7 @@ export const query = graphql`
         button
         subheading
         subtext
+        calendly
       }
     }
   }

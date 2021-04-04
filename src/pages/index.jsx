@@ -173,9 +173,12 @@ function Index({ data }) {
               <div className="col-span-1">
                 <SectionPre>{page.contact.pretitle}</SectionPre>
                 <SectionHeading>{page.contact.title}</SectionHeading>
-                <div className="flex space-x-2 hidden">
-                  <ButtonA>Facebook</ButtonA>
-                  <ButtonA>Instagram</ButtonA>
+                <div className="flex space-x-2">
+                  {page.contact.buttons.map((button) => (
+                    <>
+                      <ButtonA link={button.link}>{button.text}</ButtonA>
+                    </>
+                  ))}
                 </div>
               </div>
               <div className="col-span-1">
@@ -338,6 +341,10 @@ export const query = graphql`
         textLeft
         titleRight
         textRight
+        buttons {
+          text
+          link
+        }
       }
     }
     allCategoriesYaml(sort: { fields: order }) {
