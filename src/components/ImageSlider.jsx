@@ -19,11 +19,8 @@ function ImageSlider({ images, preview }) {
 
   return (
     <div className="relative">
-      <Transition
-        show={imageOpen}
-        className="hidden lg:block fixed inset-0 p-10 bg-gray-300 bg-opacity-70 z-40"
-      >
-        <div className="aspect-w-16 aspect-h-9 rounded lg:aspect-none">
+      <Transition show={imageOpen} className="fixed inset-0 bg-gray-300 bg-opacity-70 z-40">
+        <div className="rounded">
           <div>
             <button
               onClick={() => setImageOpen(false)}
@@ -90,10 +87,9 @@ function ImageSlider({ images, preview }) {
                 return (
                   <GatsbyImage
                     key={image.childImageSharp.id}
-                    className="rounded w-full h-full"
+                    className={`rounded w-full h-full ${index !== activeSlide ? 'hidden' : ''}`}
                     objectFit="contain"
                     style={{
-                      display: `${index !== activeSlide ? 'none' : ''}`,
                       position: 'static',
                     }}
                     alt={`Slider Bild ${index}`}

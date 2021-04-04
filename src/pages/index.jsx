@@ -175,9 +175,9 @@ function Index({ data }) {
                 <SectionHeading>{page.contact.title}</SectionHeading>
                 <div className="flex space-x-2">
                   {page.contact.buttons.map((button) => (
-                    <>
+                    <React.Fragment key={button.link}>
                       <ButtonA link={button.link}>{button.text}</ButtonA>
-                    </>
+                    </React.Fragment>
                   ))}
                 </div>
               </div>
