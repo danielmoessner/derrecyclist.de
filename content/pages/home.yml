@@ -55,14 +55,14 @@ concept:
 
         Der Besuch unseres Lagers mit über 80 Rennrädern ist alleine für sich ein Erlebnis und eine Zeitreise durch die Rennrad-Historie. Wir nehmen uns persönlich für jeden Kunden so viel Zeit wie er benötigt und erklären alles rund ums Thema Fahrrad/Rennrad. Bei unserer großen Auswahl finden Wir zusammen garantiert deinen neuen passenden Begleiter auf zwei Rädern.
 categories:
-  backgroundImage: ../media/bild_9.jpg
+  backgroundImage: ../media/dsc07140.jpg
   pretitle: Produktkategorien
   title: Unsere 3 Kollektionen
 openingHours:
   textCenter: Text zum versand
   titleRight: Tag der offenen Tür
   titleCenter: Versand
-  backgroundImage: ../media/bild_14.jpg
+  backgroundImage: ../media/dsc06970.jpg
   textRight: Immer am ersten Sonntag im Monat ist bei uns Tag der offenen Tür.
     Schau einfach bei uns vorbei und mache eine Probefahrt mit jedem unserer
     Fahrräder.
@@ -79,7 +79,7 @@ reviews:
   title: Was sagen unsere Kunden?
   hidden: true
 contact:
-  backgroundImage: ../media/bild_13.jpg
+  backgroundImage: ../media/dsc06965.jpg
   pretitle: Kontakt & Standort
   title: Hier findest Du uns
   titleLeft: Kontakt
