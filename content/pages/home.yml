@@ -3,15 +3,15 @@ slug: home
 meta:
   description: Beschreibung
   title: Der ReCyclist
-  image: ../media/recyclist_logo_black.png
+  image: ../media/recyclist_logo_rgb.jpg
   keywords: startseite1
 header:
-  logo: ../media/recyclist_logo_black.png
+  logo: ../media/recyclist_logo_rgb.jpg
   backgroundImage: ../media/bild_7.jpg
 concept:
   backgroundImage: ../media/bild_3.jpg
   pretitle: Konzept
-  title: 'Wir erfinden das Rad zwar nicht neu, aber hauchen ihm ein neues Leben ein. '
+  title: "Wir erfinden das Rad zwar nicht neu, aber hauchen ihm ein neues Leben ein. "
   button: Fahrräder ansehen
   textLeft: Das gute alte Fahrrad war und ist auch zukünftig der wohl beste
     Kompromiss aus Mobilität, Individualität und Klimafreundlichkeit. Nicht nur
@@ -31,10 +31,10 @@ concept:
 
         Warum aber nun ausgerechnet ein vintage Rennrad kaufen?
     - title: Hochwertige und stabile Bauteile
-      text: 'Die verbauten Komponenten und die hervorragende Handwerkskunst aus den
+      text: "Die verbauten Komponenten und die hervorragende Handwerkskunst aus den
         80er/90er Jahren ermöglichen bis heute eine unvergleichbare Qualität und
-        Langlebigkeit. '
-    - title: 'Alte Mechanik = Einfache Wartung: '
+        Langlebigkeit. "
+    - title: "Alte Mechanik = Einfache Wartung: "
       text: Die Bauteile basieren auf simplen und transparenten mechanischen Abläufen
         und ermöglichen es so, ganz unkompliziert selbst einzelne Teile
         auszutauschen, zu pflegen, zu optimieren und zu personalisieren. Dadurch
@@ -67,9 +67,9 @@ openingHours:
     Schau einfach bei uns vorbei und mache eine Probefahrt mit jedem unserer
     Fahrräder.
   button: Besichtigungstermin buchen
-  textLeft: 'Aktuell haben wir keine fixen Öffnungszeiten, sondern du kannst bei
+  textLeft: "Aktuell haben wir keine fixen Öffnungszeiten, sondern du kannst bei
     uns persönliche Besichtigungstermine nach deinen Wünschen buchen. Trage dich
-    dafür einfach in unserem Kalender ein. '
+    dafür einfach in unserem Kalender ein. "
   pretitle: Öffnungszeiten
   title: Wir freuen uns auf deinen Besuch
   titleLeft: Besichtigungstermin
