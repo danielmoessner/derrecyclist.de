@@ -3,10 +3,10 @@ slug: home
 meta:
   description: Beschreibung
   title: Der ReCyclist
-  image: ../media/recyclist_logo_rgb.jpg
+  image: ../media/recyclist_logo_rgb.svg
   keywords: startseite1
 header:
-  logo: ../media/recyclist_logo_rgb.jpg
+  logo: ../media/recyclist_logo_rgb.svg
   backgroundImage: ../media/bild_7.jpg
 concept:
   backgroundImage: ../media/bild_3.jpg
