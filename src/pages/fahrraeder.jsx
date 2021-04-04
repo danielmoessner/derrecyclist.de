@@ -178,19 +178,31 @@ export const query = graphql`
         id
         image1 {
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              transformOptions: { fit: CONTAIN }
+            )
             id
           }
         }
         image2 {
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              transformOptions: { fit: CONTAIN }
+            )
             id
           }
         }
         image3 {
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              transformOptions: { fit: CONTAIN }
+            )
             id
           }
         }
@@ -206,7 +218,11 @@ export const query = graphql`
         }
         image5 {
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              transformOptions: { fit: CONTAIN }
+            )
             id
           }
         }

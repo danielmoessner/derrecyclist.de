@@ -111,6 +111,21 @@ function Page({ data }) {
                         </div>
                         <div className="col-span-6 sm:col-span-6">
                           <label
+                            htmlFor="phone"
+                            className="block text-sm font-medium text-gray-700"
+                          >
+                            Telefonnummer
+                            <input
+                              type="text"
+                              name="phone"
+                              id="phone"
+                              autoComplete="tel"
+                              className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                            />
+                          </label>
+                        </div>
+                        <div className="col-span-6 sm:col-span-6">
+                          <label
                             htmlFor="street_address"
                             className="block text-sm font-medium text-gray-700"
                           >

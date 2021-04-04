@@ -12,6 +12,7 @@ import InnerSection from '../components/InnerSection';
 import SectionHeading from '../components/SectionHeading';
 import SectionPre from '../components/SectionPre';
 import Button from '../components/Button';
+import ButtonA from '../components/ButtonA';
 import generateLineBreaks from '../utils/lineBreaks';
 
 function Index({ data }) {
@@ -172,6 +173,10 @@ function Index({ data }) {
               <div className="col-span-1">
                 <SectionPre>{page.contact.pretitle}</SectionPre>
                 <SectionHeading>{page.contact.title}</SectionHeading>
+                <div className="flex space-x-2 hidden">
+                  <ButtonA>Facebook</ButtonA>
+                  <ButtonA>Instagram</ButtonA>
+                </div>
               </div>
               <div className="col-span-1">
                 <h3 className="text-lg font-medium text-gray-700 mb-2">{page.contact.titleLeft}</h3>

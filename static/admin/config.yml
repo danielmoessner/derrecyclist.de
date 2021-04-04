@@ -11,10 +11,10 @@ local_backend: true
 locale: de
 
 # See https://www.netlifycms.org/docs/configuration-options/#display-url
-display_url: https://recyclist.de
+display_url: http://derrecyclist.de
 
 # See https://www.netlifycms.org/docs/configuration-options/#site-url
-site_url: https://recyclist.de
+site_url: http://derrecyclist.de
 
 # See https://www.netlifycms.org/docs/configuration-options/#media-folder
 media_folder: /content/media
@@ -158,6 +158,13 @@ collections:
               - { label: Text Links, name: textLeft, widget: text }
               - { label: Titel Rechts, name: titleRight, widget: string }
               - { label: Text Rechts, name: textRight, widget: text }
+              - label: Buttons
+                name: buttons
+                widget: list
+                fields:
+                  - { label: Text, name: text, widget: string }
+                  - { label: Link, name: link, widget: string }
+
       - file: content/pages/visit.yml
         label: Besichtigung
         name: visit
