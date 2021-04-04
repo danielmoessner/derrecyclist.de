@@ -90,3 +90,8 @@ contact:
   textRight: |-
     Hohenzollernstraße 32 RGB 
     80801 München
+  buttons:
+    - text: Facebook
+      link: "#"
+    - text: Instagram
+      link: "#"
