@@ -61,7 +61,9 @@ categories:
   pretitle: Produktkategorien
   title: Unsere 3 Kollektionen
 openingHours:
-  textCenter: Text zum versand
+  textCenter: Du kannst uns nicht persönlich besuchen? Kein Problem! Frage einfach
+    den Versand an und wir zeigen dir das Rad per Videochat und versenden es zu
+    dir nach Hause.
   titleRight: Tag der offenen Tür
   titleCenter: Versand
   backgroundImage: ../media/dsc06970.jpg
