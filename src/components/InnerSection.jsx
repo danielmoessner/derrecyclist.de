@@ -6,31 +6,31 @@ import ImageFluid from '../types/ImageFluid';
 
 function InnerSection({ position, children, backgroundImage, wide }) {
   const wrapperStyles = () => {
-    if (position === 'left') return 'md:flex-row-reverse flex flex-col';
+    if (position === 'left') return 'lg:flex-row-reverse flex flex-col';
     if (position === 'bottom') return 'flex flex-col';
     return '';
   };
 
   const imageStyles = () => {
-    if (position === 'left') return 'md:w-8/12 lg:w-4/5 md:h-auto';
-    if (position === 'bottom') return 'flex-1';
+    if (position === 'left') return 'flex-1 lg:h-auto';
+    if (position === 'bottom') return 'flex-1 lg:h-0';
     return '';
   };
 
   const contentStyles = () => {
-    if (position === 'left') return 'md:w-96 md:max-h-screen md:overflow-y-scroll scrollbar-small';
+    if (position === 'left') return 'lg:w-96 lg:max-h-screen lg:overflow-y-scroll scrollbar-small';
     return '';
   };
 
   const paddingStyles = () => {
-    if (position === 'left') return 'pt-12 pb-16 md:pl-4 md:pr-6 md:pt-12 md:pb-24';
-    if (position === 'bottom') return 'pt-12 pb-16 md:pb-12';
+    if (position === 'left') return 'pt-12 pb-16 lg:pl-4 lg:pr-6 lg:pt-12 lg:pb-24';
+    if (position === 'bottom') return 'pt-12 pb-16 lg:pb-12';
     return '';
   };
 
   return (
     <div className={`flex-1 ${wrapperStyles()}`}>
-      <div className={`bg-green-600 h-96 md:h-0 ${imageStyles()}`}>
+      <div className={`bg-green-600 h-96 ${imageStyles()}`}>
         <Img className="w-full h-full" fluid={backgroundImage.childImageSharp.fluid} />
       </div>
       <div className={contentStyles()}>

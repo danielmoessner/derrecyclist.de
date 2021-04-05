@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Section({ children, hidden }) {
   return (
     <section
-      className={`w-full flex-none bg-gray-100 odd:bg-gray-100 flex scroll-snap-align-center md:h-screen ${
+      className={`w-full flex-none bg-gray-100 odd:bg-gray-100 flex scroll-snap-align-center lg:h-screen ${
         hidden ? 'hidden' : ''
       }`}
     >

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { GatsbyImage } from 'gatsby-plugin-image';
@@ -10,6 +10,7 @@ import Content from '../components/Content';
 function Page({ data }) {
   const bike = data.bikesYaml;
   const page = data.pagesYaml;
+  const [enabled, setEnabled] = useState(false);
 
   return (
     <Layout>
@@ -70,6 +71,7 @@ function Page({ data }) {
                             Vorname
                             <input
                               type="text"
+                              required
                               name="first_name"
                               id="first_name"
                               autoComplete="given-name"
@@ -86,6 +88,7 @@ function Page({ data }) {
                             Nachname
                             <input
                               type="text"
+                              required
                               name="last_name"
                               id="last_name"
                               autoComplete="family-name"
@@ -99,7 +102,7 @@ function Page({ data }) {
                             htmlFor="email_address"
                             className="block text-sm font-medium text-gray-700"
                           >
-                            E-Mail
+                            E-Mail (optional)
                             <input
                               type="text"
                               name="email_address"
@@ -118,6 +121,7 @@ function Page({ data }) {
                             <input
                               type="text"
                               name="phone"
+                              required
                               id="phone"
                               autoComplete="tel"
                               className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
@@ -129,9 +133,10 @@ function Page({ data }) {
                             htmlFor="street_address"
                             className="block text-sm font-medium text-gray-700"
                           >
-                            Straße
+                            Straße &amp; Hausnummer
                             <input
                               type="text"
+                              required
                               name="street_address"
                               id="street_address"
                               autoComplete="street-address"
@@ -147,6 +152,7 @@ function Page({ data }) {
                             PLZ
                             <input
                               type="text"
+                              required
                               name="postal_code"
                               id="postal_code"
                               autoComplete="postal-code"
@@ -158,12 +164,46 @@ function Page({ data }) {
                           <label htmlFor="city" className="block text-sm font-medium text-gray-700">
                             Stadt
                             <input
+                              required
                               type="text"
                               name="city"
                               id="city"
                               className="mt-1 focus:ring-gray-500 focus:border-gray-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                             />
                           </label>
+                        </div>
+                        <div className="col-span-6 sm:col-span-6 lg:col-span-6">
+                          <div className="flex items-center">
+                            <button
+                              type="button"
+                              onClick={() => setEnabled(!enabled)}
+                              className={`bg-gray-200 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 ${
+                                enabled ? 'bg-gray-600' : 'bg-gray-200'
+                              }`}
+                              aria-pressed="false"
+                              aria-labelledby="datenschutz-label"
+                            >
+                              <input
+                                type="checkbox"
+                                className="sr-only"
+                                defaultChecked={enabled}
+                                required
+                              />
+                              <span className="sr-only">Datenschutz</span>
+                              <span
+                                aria-hidden="true"
+                                className={`pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200 ${
+                                  enabled ? 'translate-x-5' : 'translate-x-0'
+                                }`}
+                              />
+                            </button>
+                            <span className="ml-3" id="datenschutz-label">
+                              <span className="text-sm font-medium text-gray-700">
+                                Ich stimme zu, dass meine Daten kurzzeitig zum Beantworten der
+                                Anfrage gespeichert werden.
+                              </span>
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
