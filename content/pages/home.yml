@@ -1,7 +1,9 @@
 collection: page
 slug: home
 meta:
-  description: Beschreibung
+  description: |-
+    Der ReCyclist ist dein Vintage Rennrad Anbieter im Herzen von München
+    Shop/Termin/Versand 
   title: Der ReCyclist
   image: ../media/recyclist_logo_rgb.png
   keywords: DerRecyclist, Fahrräder
