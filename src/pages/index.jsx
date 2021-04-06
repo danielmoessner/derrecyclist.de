@@ -175,7 +175,7 @@ function Index({ data }) {
                 <SectionHeading>{page.contact.title}</SectionHeading>
 
                 <div className="flex space-x-2">
-                  <ButtonA link={page.contact.facebook}>
+                  <ButtonA href={page.contact.facebook}>
                     <svg
                       aria-hidden="true"
                       focusable="false"
@@ -192,7 +192,7 @@ function Index({ data }) {
                       />
                     </svg>
                   </ButtonA>
-                  <ButtonA link={page.contact.instagram}>
+                  <ButtonA href={page.contact.instagram}>
                     <svg
                       aria-hidden="true"
                       focusable="false"
