@@ -13,7 +13,8 @@ form:
     reserviere Dir ein passendes Fahrrad zum Besichtigen oder frage für Versand
     an.
   categoryHeading: Unsere Kollektionen
-  categoryText: Klicke auf eine der Kollektionen um dessen Räder zu erkunden
+  categoryText: Klicke auf eine der Kollektionen, um dessen Räder zu erkunden und
+    klicke noch einmal für den gesamten Bestand.
   inputLabel: Körpergröße
   inputPlaceholder: z.B. 175
   inputHelptext: Bitte eine Größe zwischen 155 und 205 cm angeben.
