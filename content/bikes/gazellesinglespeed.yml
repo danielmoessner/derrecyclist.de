@@ -1,0 +1,25 @@
+collection: bike
+title: Gazelle Hollandrad Singlespeed
+slug: gazellesinglespeed
+category: "ReTro "
+image1: ../media/vorlage-querformat-19.jpg
+image2: ../media/dsc00345.jpg
+image3: ../media/dsc00346.jpg
+image4: ../media/dsc00347.jpg
+image5: ../media/dsc00348.jpg
+price: 350
+sizes:
+  - sm
+  - md
+  - lg
+information: |-
+  Typ: Vintage Hollandrad
+  Marke: Gazelle 
+  Modell: Basic     
+  Rahmenhöhe: 51 cm
+  Reifen Größe: 28 Zoll  
+  Bremsen: Rücktritt
+  Gangschaltung : Singlespeed     
+  Klingel: nein
+  Extras: Korb Vorbau, Ständer, integriertes Schloss, Licht vorne und hinten  
+  Zustand: generalüberholt, fahrbereit
