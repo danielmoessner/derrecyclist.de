@@ -1,0 +1,24 @@
+collection: bike
+title: "Gazelle Race Trophy "
+slug: "gazelleracetrophy "
+category: Klassik
+image1: ../media/vorlage-querformat-59.jpg
+image2: ../media/dsc00369.jpg
+image3: ../media/dsc00370.jpg
+image4: ../media/dsc00372.jpg
+image5: ../media/dsc00373.jpg
+price: 350
+sizes:
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Gazelle 
+  Modell: Race Trophy    
+  Rahmenhöhe: 60 cm
+  Reifen Größe: 28 Zoll (Mavic Laufräder)
+  Bremsen: Shimano 105 vorne und hinten 
+  Gangschaltung : 2x6 Shimano 105 Schaltung   
+  Umwerfer: Shimano 105 
+  Klingel: nein
+  Extras: Flaschenhalter 
+  Zustand: generalüberholt, fahrbereit
