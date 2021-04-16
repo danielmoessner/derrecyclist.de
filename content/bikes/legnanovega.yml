@@ -1,0 +1,25 @@
+collection: bike
+title: "Legnano Vega "
+slug: legnanovega
+category: Klassik
+image1: ../media/vorlage-querformat-47.jpg
+image2: ../media/dsc00396.jpg
+image3: ../media/dsc00397.jpg
+image4: ../media/dsc00398.jpg
+image5: ../media/dsc00399.jpg
+price: 350
+sizes:
+  - sm
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Legnano   
+  Modell: Vega        
+  Rahmenhöhe: 52 cm
+  Reifen Größe: 28 Zoll 
+  Mantel: Continental L‘Eroica Edition 
+  Bremsen: Exage Motion vorne und hinten 
+  Gangschaltung : 2x6 Exage 500EX Schaltung   
+  Umwerfer: Exage 300EX 
+  Klingel: nein
+  Extras: Flaschenhalter, L’Eroica Flasche 
+  Zustand: generalüberholt, fahrbereit
