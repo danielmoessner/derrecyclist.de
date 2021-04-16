@@ -1,0 +1,25 @@
+collection: bike
+title: "Gazelle Olympia Race "
+slug: gazelleolympiarace
+category: Klassik
+image1: ../media/vorlage-querformat-57.jpg
+image2: ../media/dsc00349.jpg
+image3: ../media/dsc00353.jpg
+image4: ../media/dsc00357.jpg
+image5: ../media/dsc00358.jpg
+price: 350
+sizes:
+  - lg
+information: |-
+  Typ: Vintage Rennrad
+  Marke: Gazelle
+  Modell: Olympia Race
+  Rahmenhöhe: 60 cm
+  Reifen Größe: 28 Zoll
+  Mantel: breite Größe
+  Bremsen: Weinmann vorne und hinten
+  Gangschaltung : 2x6 Gazelle Schaltung
+  Umwerfer: Suntour
+  Klingel: ja
+  Extras: Flaschenhalter
+  Zustand: generalüberholt, fahrbereit
