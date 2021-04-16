@@ -1,0 +1,24 @@
+collection: bike
+title: Rossin
+slug: rossin
+category: Klassik
+image1: ../media/vorlage-querformat-48.jpg
+image2: ../media/dsc00409.jpg
+image3: ../media/dsc00410.jpg
+image4: ../media/dsc00411.jpg
+image5: ../media/dsc00412.jpg
+price: 390
+sizes:
+  - md
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Rossin          
+  Rahmenhöhe: 56 cm
+  Reifen Größe: 28 Zoll 
+  Mantel: Vittoria (Laufräder Oxford)  
+  Bremsen: vorne und hinten 
+  Gangschaltung : 2x6 Campagnolo Veloce Schaltung   
+  Umwerfer: Campagnolo Veloce
+  Klingel: nein
+  Extras: Flaschenhalter, Flasche 
+  Zustand: generalüberholt, fahrbereit
