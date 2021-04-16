@@ -1,0 +1,25 @@
+collection: bike
+title: Batavus Criterium
+slug: batavuscriterium
+category: Klassik
+image1: ../media/vorlage-querformat-50.jpg
+image2: ../media/dsc00413.jpg
+image3: ../media/dsc00414.jpg
+image4: ../media/dsc00415.jpg
+image5: ../media/dsc00416.jpg
+price: 390
+sizes:
+  - md
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Batavus 
+  Modell: Criterium   
+  Rahmenhöhe: 56 cm
+  Reifen Größe: 28 Zoll 
+  Mantel: Continental (Vuelta Classic Laufräder)  
+  Bremsen: Exage 500EX vorne und hinten 
+  Gangschaltung : 2x7 Exage 300EX Schaltung   
+  Umwerfer: Exage 500Ex 
+  Klingel: nein
+  Extras: Flaschenhalter 
+  Zustand: generalüberholt, fahrbereit
