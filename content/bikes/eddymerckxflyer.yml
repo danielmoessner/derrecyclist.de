@@ -1,0 +1,26 @@
+collection: bike
+title: Eddy Merckx Flyer
+slug: eddymerckxflyer
+category: Klassik
+image1: ../media/vorlage-querformat-46.jpg
+image2: ../media/dsc00400.jpg
+image3: ../media/dsc00401.jpg
+image4: ../media/dsc00402.jpg
+image5: ../media/dsc00403.jpg
+price: 490
+sizes:
+  - sm
+  - xs
+information: |-
+  Typ: Vintage (Sport) Rennrad 
+  Marke: Eddy Merckx 
+  Modell: Flyer 
+  Rahmenhöhe: 52 cm
+  Reifen Größe: 28 Zoll 
+  Mantel: Continental Ultra Sport (Ambrosio Laufräder) 
+  Bremsen: Campagnolo Xenon vorne und hinten 
+  Gangschaltung : 2x9 Campagnolo Xenon  Schaltung 
+  Umwerfer: Campagnolo Xenon 
+  Klingel: nein
+  Extras: 2x Flaschenhalter, Bordcomputer (Specialized) 
+  Zustand: generalüberholt, fahrbereit
