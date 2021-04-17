@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
@@ -42,9 +41,10 @@ function Index({ data }) {
         <Section>
           <div className="min-h-screen-80 flex-1 relative">
             <div className="absolute w-full h-full">
-              <Img
+              <GatsbyImage
                 className="absolute w-full h-full"
-                fluid={page.header.backgroundImage.childImageSharp.fluid}
+                image={page.header.backgroundImage.childImageSharp.gatsbyImageData}
+                alt="Hintergrundbild"
               />
             </div>
             <GatsbyImage
@@ -100,9 +100,9 @@ function Index({ data }) {
               {categories.map((category) => (
                 <div key={category.id} className="col-span-3 sm:col-span-1 lg:col-span-3 mb-16">
                   <Link to="/fahrraeder/" className="group">
-                    <Img
+                    <GatsbyImage
                       className="mx-auto mb-6 w-3/4 group-hover:scale-110 transform transition duration-150"
-                      fluid={category.image.childImageSharp.fluid}
+                      image={category.image.childImageSharp.gatsbyImageData}
                       alt={category.title}
                     />
                   </Link>
@@ -269,26 +269,14 @@ export const query = graphql`
         }
         backgroundImage {
           childImageSharp {
-            fluid(maxWidth: 4000) {
-              srcSet
-              src
-              sizes
-              base64
-              aspectRatio
-            }
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
         }
       }
       concept {
         backgroundImage {
           childImageSharp {
-            fluid(maxWidth: 4000) {
-              srcSet
-              src
-              sizes
-              base64
-              aspectRatio
-            }
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
         }
         pretitle
@@ -303,13 +291,7 @@ export const query = graphql`
       categories {
         backgroundImage {
           childImageSharp {
-            fluid(maxWidth: 4000) {
-              srcSet
-              src
-              sizes
-              base64
-              aspectRatio
-            }
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
         }
         pretitle
@@ -318,13 +300,7 @@ export const query = graphql`
       openingHours {
         backgroundImage {
           childImageSharp {
-            fluid(maxWidth: 4000) {
-              srcSet
-              src
-              sizes
-              base64
-              aspectRatio
-            }
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
         }
         pretitle
@@ -340,13 +316,7 @@ export const query = graphql`
       reviews {
         backgroundImage {
           childImageSharp {
-            fluid(maxWidth: 4000) {
-              srcSet
-              src
-              sizes
-              base64
-              aspectRatio
-            }
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
         }
         pretitle
@@ -356,13 +326,7 @@ export const query = graphql`
       contact {
         backgroundImage {
           childImageSharp {
-            fluid(maxWidth: 4000) {
-              srcSet
-              src
-              sizes
-              base64
-              aspectRatio
-            }
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
         }
         pretitle
@@ -381,14 +345,7 @@ export const query = graphql`
         title
         image {
           childImageSharp {
-            fluid(maxWidth: 400) {
-              src
-              sizes
-              base64
-              aspectRatio
-              srcSet
-              tracedSVG
-            }
+            gatsbyImageData
           }
         }
         order

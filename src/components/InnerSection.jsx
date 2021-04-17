@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import Container from './Container';
-import ImageFluid from '../types/ImageFluid';
+import GatsbyImageData from '../types/GatsbyImageData';
 
 function InnerSection({ position, children, backgroundImage, wide }) {
   const wrapperStyles = () => {
@@ -31,7 +31,11 @@ function InnerSection({ position, children, backgroundImage, wide }) {
   return (
     <div className={`flex-1 ${wrapperStyles()}`}>
       <div className={`bg-green-600 h-96 ${imageStyles()}`}>
-        <Img className="w-full h-full" fluid={backgroundImage.childImageSharp.fluid} />
+        <GatsbyImage
+          className="w-full h-full"
+          image={backgroundImage.childImageSharp.gatsbyImageData}
+          alt="Hintergrundbild Sektion"
+        />
       </div>
       <div className={contentStyles()}>
         <div className={paddingStyles()}>
@@ -50,7 +54,11 @@ InnerSection.defaultProps = {
 InnerSection.propTypes = {
   children: PropTypes.element.isRequired,
   position: PropTypes.oneOf(['left', 'bottom']),
-  backgroundImage: ImageFluid.isRequired,
+  backgroundImage: PropTypes.shape({
+    childImageSharp: PropTypes.shape({
+      gatsbyImageData: GatsbyImageData,
+    }),
+  }).isRequired,
   wide: PropTypes.bool,
 };
 
