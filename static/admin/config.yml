@@ -97,7 +97,6 @@ collections:
                 widget: string
                 hint: 'Bitte so angeben: keyword1, keyword2, keyword3'
               - { label: Bild, name: image, widget: image }
-              
           - label: Header
             name: header
             widget: object
