@@ -22,7 +22,6 @@ module.exports = {
       },
     },
     'gatsby-transformer-yaml',
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-postcss',
     {
       resolve: 'gatsby-source-filesystem',
