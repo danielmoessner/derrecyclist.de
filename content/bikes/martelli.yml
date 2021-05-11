@@ -1,0 +1,24 @@
+collection: bike
+title: Rennrad RH60
+slug: martelli
+category: Klassik
+image1: ../media/vorlage-querformat-71.jpg
+image2: ../media/dsc00594.jpg
+image3: ../media/dsc00595.jpg
+image4: ../media/dsc00596.jpg
+image5: ../media/dsc00597.jpg
+price: 350
+sizes:
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: unbekannt          
+  Modell: unbekannt          
+  Rahmenhöhe: 60 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen:  Shimano 105 vorne und hinten 
+  Gangschaltung : 2x6 Shimano 105 Schaltung   
+  Umwerfer: Shimano 105
+  Klingel: nein
+  Extras: Flaschenhalter, Cinelli Lenker 
+  Zustand: generalüberholt, fahrbereit 
