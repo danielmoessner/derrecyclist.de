@@ -1,0 +1,24 @@
+collection: bike
+title: "Motobecane Prestige "
+slug: motobecaneprestige
+category: Klassik
+image1: ../media/vorlage-querformat-74.jpg
+image2: ../media/dsc00582.jpg
+image3: ../media/dsc00583.jpg
+image4: ../media/dsc00584.jpg
+image5: ../media/dsc00585.jpg
+price: 350
+sizes:
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Motobecane          
+  Modell: Prestige          
+  Rahmenhöhe: 60 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Motobecane vorne und hinten 
+  Gangschaltung : 2x5 Huret  Schaltung   
+  Umwerfer: Huret
+  Klingel: ja 
+  Extras: Reflektoren, Licht, erweiterte Bremshebel, Schutzbleche 
+  Zustand: generalüberholt, fahrbereit 
