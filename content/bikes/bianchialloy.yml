@@ -1,0 +1,24 @@
+collection: bike
+title: Bianchi SL Lite Alloy
+slug: bianchialloy
+category: Klassik
+image1: ../media/vorlage-querformat-66.jpg
+image2: ../media/dsc00559.jpg
+image3: ../media/dsc00560.jpg
+image4: ../media/dsc00561.jpg
+image5: ../media/dsc00562.jpg
+price: 490
+sizes:
+  - md
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Bianchi      
+  Modell: SL Lite Alloy          
+  Rahmenhöhe: 55 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Campagnolo Veloce vorne und hinten 
+  Gangschaltung : 2x9 Campagnolo Daytona Schaltung   
+  Umwerfer: Campagnolo Daytona 
+  Klingel: nein
+  Extras: 2x Flaschenhalter, Luftpumpe  
+  Zustand: generalüberholt, fahrbereit
