@@ -1,0 +1,25 @@
+collection: bike
+title: Gazelle formula
+slug: gazelleformula
+category: Klassik
+image1: ../media/vorlage-querformat-69.jpg
+image2: ../media/dsc00598.jpg
+image3: ../media/dsc00600.jpg
+image4: ../media/dsc00601.jpg
+image5: ../media/dsc00599.jpg
+price: 390
+sizes:
+  - lg
+  - xl
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Gazelle         
+  Modell: formula         
+  Rahmenhöhe: 61 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen:  Shimano 600 vorne und hinten 
+  Gangschaltung : 2x7 Shimano 600 Schaltung   
+  Umwerfer: Shimano 600
+  Klingel: nein
+  Extras: Flaschenhalter  
+  Zustand: generalüberholt, fahrbereit
