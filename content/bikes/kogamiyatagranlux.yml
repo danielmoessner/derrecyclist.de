@@ -1,0 +1,24 @@
+collection: bike
+title: Koga Miyata GranLux
+slug: kogamiyatagranlux
+category: Klassik
+image1: ../media/vorlage-querformat-72.jpg
+image2: ../media/dsc00563.jpg
+image3: ../media/dsc00565.jpg
+image4: ../media/dsc00566.jpg
+image5: ../media/dsc00567.jpg
+price: 390
+sizes:
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Koga Miyata       
+  Modell: GranLux           
+  Rahmenhöhe: 58 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano 105 vorne und hinten 
+  Gangschaltung : 3x8 Shimano 105 Schaltung   
+  Umwerfer: Shimano 105
+  Klingel: nein
+  Extras: 2x Flaschenhalter  
+  Zustand: generalüberholt, fahrbereit
