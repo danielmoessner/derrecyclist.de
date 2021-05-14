@@ -1,0 +1,25 @@
+collection: bike
+title: Gazelle Hollandrad (mit 3 Gängen)
+slug: gazellehollandradmit3gängen
+category: "ReTro "
+image1: ../media/vorlage-querformat-87.jpg
+image2: ../media/dsc00722-1.jpg
+image3: ../media/dsc00724-1.jpg
+image4: ../media/dsc00725-1.jpg
+image5: ../media/dsc00726-1.jpg
+price: 390
+sizes:
+  - sm
+  - xs
+  - md
+information: |
+  Typ: Vintage Rennrad 
+  Marke: Gazelle           
+  Modell: Hollandrad          
+  Rahmenhöhe: 47 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Rücktritt und  vorne 
+  Gangschaltung : 3 Gang Nexus Schaltung   
+  Klingel: ja 
+  Extras: Integriertes Schloss, Licht  
+  Zustand: generalüberholt, fahrbereit  
