@@ -1,0 +1,24 @@
+collection: bike
+title: Koga Miyata GentsLux
+slug: kogamiyatagentslux
+category: Klassik
+image1: ../media/vorlage-querformat-82.jpg
+image2: ../media/dsc00686.jpg
+image3: ../media/dsc00687.jpg
+image4: ../media/dsc00688.jpg
+image5: ../media/dsc00689.jpg
+price: 450
+sizes:
+  - sm
+  - md
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Koga Miyata      
+  Modell: GentsLux (E. Groenewoud)        
+  Rahmenhöhe: 54 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano 600 vorne und hinten 
+  Gangschaltung : 2x8 Shimano 600
+  Klingel: ja
+  Extras: Flaschenhalter, Bordcomputer, 
+  Zustand: generalüberholt, fahrbereit
