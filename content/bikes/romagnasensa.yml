@@ -1,0 +1,24 @@
+collection: bike
+title: Romagna Sensa
+slug: romagnasensa
+category: ReStored
+image1: ../media/vorlage-querformat-79.jpg
+image2: ../media/dsc00662.jpg
+image3: ../media/dsc00663.jpg
+image4: ../media/dsc00664.jpg
+image5: ../media/dsc00668.jpg
+price: 490
+sizes:
+  - md
+information: |-
+  Typ: Sportliches Rennrad 
+  Marke: Sensa    
+  Modell: Romagna         
+  Rahmenhöhe: 55cm
+  Reifen Größe: 28 Zoll 
+  Bremsen:  Shimano Sora vorne und hinten 
+  Gangschaltung : 3x9 Shimano Sora Schaltung   
+  Umwerfer: Shimano Sora
+  Klingel: nein  
+  Extras: Flaschenhalter 
+  Zustand: wie neu
