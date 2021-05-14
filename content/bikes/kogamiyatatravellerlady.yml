@@ -1,0 +1,25 @@
+collection: bike
+title: "Koga Miyata Traveller Lady "
+slug: kogamiyatatravellerlady
+category: Klassik
+image1: ../media/vorlage-querformat-90.jpg
+image2: ../media/dsc00549.jpg
+image3: ../media/dsc00550.jpg
+image4: ../media/dsc00551.jpg
+image5: ../media/dsc00553.jpg
+price: 350
+sizes:
+  - sm
+  - md
+information: |-
+  Typ: Vintage Halbrenner 
+  Marke: Koga Miyata           
+  Modell: Traveller-Lady         
+  Rahmenhöhe: 54 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano Tourney vorne und hinten 
+  Gangschaltung : 2x5 Shimano Altus Schaltung   
+  Umwerfer: Shimano Altus 
+  Klingel: nein
+  Extras: integriertes Schloss, Licht, erweiterte Bremshebel   
+  Zustand: generalüberholt, fahrbereit
