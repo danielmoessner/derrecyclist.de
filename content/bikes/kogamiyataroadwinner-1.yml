@@ -1,0 +1,25 @@
+collection: bike
+title: "Koga Miyata Roadwinner "
+slug: "kogamiyataroadwinner "
+category: Klassik
+image1: ../media/vorlage-querformat-81.jpg
+image2: ../media/dsc00690.jpg
+image3: ../media/dsc00691.jpg
+image4: ../media/dsc00692.jpg
+image5: ../media/dsc00693.jpg
+price: 390
+sizes:
+  - lg
+  - xl
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Koga Miyata           
+  Modell: Roadwinner         
+  Rahmenhöhe: 62 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano Tourney vorne und hinten 
+  Gangschaltung : 2x6 Shimano Altus Schaltung   
+  Umwerfer: Shimano Altus
+  Klingel: ja
+  Extras: Flaschenhalter, erweiterte Bremshebel 
+  Zustand: generalüberholt, fahrbereit
