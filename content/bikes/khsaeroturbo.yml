@@ -1,0 +1,24 @@
+collection: bike
+title: KHS Aero Turbo
+slug: khsaeroturbo
+category: Klassik
+image1: ../media/vorlage-querformat-96.jpg
+image2: ../media/dsc00855.jpg
+image3: ../media/dsc00856.jpg
+image4: ../media/dsc00857.jpg
+image5: ../media/dsc00858.jpg
+price: 290
+sizes:
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: KHS          
+  Modell: Aero Turbo                   
+  Rahmenhöhe: 58cm   
+  Reifen Größe: 28 Zoll 
+  Bremsen: Exage Motion vorne und hinten 
+  Gangschaltung : 2x7 Exage 300 EX   
+  Umwerfer: Exage 300 EX            
+  Klingel: ja 
+  Extras: - 
+  Zustand: generalüberholt, fahrbereit 
