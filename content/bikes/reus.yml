@@ -1,0 +1,24 @@
+collection: bike
+title: Reus
+slug: reus
+category: Klassik
+image1: ../media/vorlage-querformat-107.jpg
+image2: ../media/dsc00812.jpg
+image3: ../media/dsc00813.jpg
+image4: ../media/dsc00814.jpg
+image5: ../media/dsc00815.jpg
+price: 350
+sizes:
+  - md
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Reus                           
+  Rahmenhöhe: 57cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano 105 vorne und hinten 
+  Gangschaltung : 2x8 Shimano 600 
+  Umwerfer: Shimano 105      
+  Klingel: ja
+  Extras: Bordcomputer, Flaschenhalter
+  Zustand: generalüberholt, fahrbereit 
