@@ -1,0 +1,25 @@
+collection: bike
+title: Giant Cadex CFR 2
+slug: giantcadexcfr2
+category: Klassik
+image1: ../media/vorlage-querformat-101.jpg
+image2: ../media/dsc00841.jpg
+image3: ../media/dsc00842.jpg
+image4: ../media/dsc00844.jpg
+image5: ../media/dsc00845.jpg
+price: 390
+sizes:
+  - md
+  - sm
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Giant         
+  Modell: Cadex CFR 2                  
+  Rahmenhöhe: 53cm  
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano 105 vorne und hinten 
+  Gangschaltung : 2x8 Shimano RSX  
+  Umwerfer: Shimano 105           
+  Klingel: ja 
+  Extras: 2x Flaschenhalter, Luftpumpe, Bordcomputer 
+  Zustand: generalüberholt, fahrbereit
