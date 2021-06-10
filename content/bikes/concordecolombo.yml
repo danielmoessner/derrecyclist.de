@@ -1,0 +1,26 @@
+collection: bike
+title: Concorde Colombo
+slug: concordecolombo
+category: Klassik
+image1: ../media/vorlage-querformat-117.jpg
+image2: ../media/dsc00774.jpg
+image3: ../media/dsc00775.jpg
+image4: ../media/dsc00776.jpg
+image5: ../media/dsc00778.jpg
+price: 490
+sizes:
+  - md
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Concorde     
+  Modell: Colombo                         
+  Rahmenhöhe: 58 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Campagnolo Athena vorne und hinten 
+  Gangschaltung : 2x8 
+  Campagnolo Victory   Schaltung   
+  Umwerfer: Campagnolo      
+  Klingel: nein
+  Extras: Flaschenhalter   
+  Zustand: generalüberholt, fahrbereit
