@@ -1,0 +1,23 @@
+collection: bike
+title: "Hermann Braun "
+slug: hermannbraun
+category: Klassik
+image1: ../media/vorlage-querformat-110.jpg
+image2: ../media/dsc00783.jpg
+image3: ../media/dsc00784.jpg
+image4: ../media/dsc00785.jpg
+image5: ../media/dsc00786.jpg
+price: 390
+sizes:
+  - md
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Model Hermann Braun                             
+  Rahmenhöhe: 54 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano 600 vorne und hinten 
+  Gangschaltung : 2x8 Shimano 600 Schaltung   
+  Umwerfer: Shimano 600      
+  Klingel: nein
+  Extras: Flaschenhalter
+  Zustand: generalüberholt, fahrbereit 
