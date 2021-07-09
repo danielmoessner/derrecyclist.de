@@ -1,0 +1,25 @@
+collection: bike
+title: Nishiki
+slug: nishiki
+category: Klassik
+image1: ../media/vorlage-querformat-73.jpg
+image2: ../media/dsc09065.jpg
+image3: ../media/dsc09066.jpg
+image4: ../media/dsc09067.jpg
+image5: ../media/dsc09068.jpg
+price: 290
+sizes:
+  - md
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Nishiki           
+  Modell: Arrow Speed         
+  Rahmenhöhe: 58 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Dia Compe vorne und hinten 
+  Gangschaltung : 2x5 Suntour Seven Schaltung   
+  Umwerfer: Suntour
+  Klingel: nein
+  Extras: Flaschenhalter 
+  Zustand: generalüberholt, fahrbereit
