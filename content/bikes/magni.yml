@@ -1,0 +1,24 @@
+collection: bike
+title: Pep Magni
+slug: magni
+category: Klassik
+image1: ../media/vorlage-querformat-77.jpg
+image2: ../media/dsc09013.jpg
+image3: ../media/dsc09014.jpg
+image4: ../media/dsc09016.jpg
+image5: ../media/dsc09017.jpg
+price: 590
+sizes:
+  - md
+  - sm
+information: |-
+  Typ: Vintage Rennrad L‘Eroica
+  Marke: Pep Magni             
+  Rahmenhöhe: 54cm 
+  Reifen Größe: 28 Zoll 
+  Bremsen: Universal Mod.77 vorne und hinten 
+  Gangschaltung : 2x6 Campagnolo Nuovo Gran Sport Schaltung   
+  Umwerfer: Campagnolo   
+  Klingel: nein
+  Extras: Flaschenhalter, L‘Eroica Flasche
+  Zustand: generalüberholt, fahrbereit
