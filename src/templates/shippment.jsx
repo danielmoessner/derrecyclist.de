@@ -185,8 +185,8 @@ function Page({ data }) {
                             >
                               <input
                                 type="checkbox"
-                                className="sr-only"
-                                defaultChecked={enabled}
+                                className="sr-only transform translate-x-3 translate-y-2"
+                                checked={enabled}
                                 required
                               />
                               <span className="sr-only">Datenschutz</span>
