@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/af8a6280-1a4a-451e-be4e-e62a26670b21/deploy-status)](https://app.netlify.com/sites/derrecyclist-deployedvongatsby/deploys)
