@@ -1,0 +1,22 @@
+collection: bike
+title: "Unic Sport "
+slug: unicsport
+category: "ReTro "
+image1: ../media/vorlage-querformat-89.jpg
+image2: ../media/dsc00554.jpg
+image3: ../media/dsc00556.jpg
+image4: ../media/dsc00557.jpg
+image5: ../media/dsc00558.jpg
+price: 250
+sizes:
+  - sm
+information: |-
+  Typ: Vintage Fahrrad
+  Marke: Unic Sport                 
+  Rahmenhöhe: 50 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Mafag vorne und hinten 
+  Gangschaltung : 2x5 Simplex Schaltung   
+  Klingel: nein
+  Extras: -  
+  Zustand: generalüberholt, fahrbereit 

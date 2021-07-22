@@ -1,0 +1,24 @@
+collection: bike
+title: Peugeot Course
+slug: peugeotcourse
+category: Klassik
+image1: ../media/vorlage-querformat-95.jpg
+image2: ../media/dsc00868.jpg
+image3: ../media/dsc00869.jpg
+image4: ../media/dsc00870.jpg
+image5: ../media/dsc00871.jpg
+price: 350
+sizes:
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Peugeot  
+  Modell: Course (orange)                          
+  Rahmenhöhe: 60cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Peugeot vorne und hinten 
+  Gangschaltung : 2x5 Suntour Cyclone 7000 
+  Umwerfer: Simplex       
+  Klingel: nein
+  Extras: Flaschenhalter
+  Zustand: generalüberholt, fahrbereit 

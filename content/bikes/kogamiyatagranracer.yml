@@ -1,0 +1,24 @@
+collection: bike
+title: "Koga Miyata GranRacer "
+slug: kogamiyatagranracer
+category: Klassik
+image1: ../media/vorlage-querformat-49.jpg
+image2: ../media/dsc08975.jpg
+image3: ../media/dsc08976.jpg
+image4: ../media/dsc08977.jpg
+image5: ../media/dsc08978.jpg
+price: 390
+sizes:
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Koga Miyata           
+  Modell: GranRacer         
+  Rahmenhöhe: 60 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano 105 vorne und hinten 
+  Gangschaltung : 2x8 Shimano 105 Schaltung   
+  Umwerfer: Shimano 105 
+  Klingel: nein
+  Extras: -  
+  Zustand: generalüberholt, fahrbereit 

@@ -1,0 +1,24 @@
+collection: bike
+title: Batavus Competition
+slug: batavuscompetition
+category: Klassik
+image1: ../media/vorlage-querformat-102.jpg
+image2: ../media/dsc00828.jpg
+image3: ../media/dsc00830.jpg
+image4: ../media/dsc00831.jpg
+image5: ../media/dsc00829.jpg
+price: 290
+sizes:
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Batavus
+  Modell: Competition                         
+  Rahmenhöhe: 59cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano 105 vorne und hinten 
+  Gangschaltung : 2x7 Shimano 105  
+  Umwerfer: Shimano 105
+  Klingel: ja
+  Extras: Flaschenhalter, Satteltasche
+  Zustand: generalüberholt, fahrbereit

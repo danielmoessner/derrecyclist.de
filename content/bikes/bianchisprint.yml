@@ -1,0 +1,25 @@
+collection: bike
+title: Bianchi Sprint
+slug: bianchisprint
+category: Klassik
+image1: ../media/vorlage-querformat-66.jpg
+image2: ../media/dsc09083.jpg
+image3: ../media/dsc09084.jpg
+image4: ../media/dsc09085.jpg
+image5: ../media/dsc09086.jpg
+price: 590
+sizes:
+  - md
+  - lg
+information: |-
+  Typ: Vintage Rennrad (L‘Eroica)
+  Marke: Bianchi    
+  Modell: Sprint           
+  Rahmenhöhe: 57cm 
+  Reifen Größe: 28 Zoll 
+  Bremsen: Universal vorne und hinten 
+  Gangschaltung : 2x5 Campagnolo Valentino Extra Schaltung   
+  Umwerfer: Campagnolo  
+  Klingel: nein
+  Extras: Flaschenhalter, L'Eroica Flasche 
+  Zustand: generalüberholt, fahrbereit
