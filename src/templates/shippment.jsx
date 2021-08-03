@@ -102,9 +102,10 @@ function Page({ data }) {
                             htmlFor="email_address"
                             className="block text-sm font-medium text-gray-700"
                           >
-                            E-Mail (optional)
+                            E-Mail
                             <input
                               type="text"
+                              required
                               name="email_address"
                               id="email_address"
                               autoComplete="email"
