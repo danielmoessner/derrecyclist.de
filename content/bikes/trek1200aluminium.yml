@@ -1,0 +1,24 @@
+collection: bike
+title: "Trek 1200 Aluminium "
+slug: trek1200aluminium
+category: Klassik
+image1: ../media/vorlage-querformat-neu-3.jpg
+image2: ../media/img_4833.jpg
+image3: ../media/img_4834.jpg
+image4: ../media/img_4835.jpg
+image5: ../media/img_4837.jpg
+price: 390
+sizes:
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Trek  
+  Modell: 1200 Aluminium                 
+  Rahmenhöhe: 61 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano RX 100 vorne und hinten 
+  Gangschaltung : 2x7 Shimano RX100   
+  Umwerfer: Shimano RX100  
+  Klingel: ja 
+  Extras: Satteltasche, 2x Flaschenhalter 
+  Zustand: generalüberholt, fahrbereit  
