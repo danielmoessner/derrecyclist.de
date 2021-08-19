@@ -1,0 +1,25 @@
+collection: bike
+title: "Colnago Aluminium "
+slug: colnagoaluminium
+category: Klassik
+image1: ../media/vorlage-querformat-neu-10.jpg
+image2: ../media/img_4800.jpg
+image3: ../media/img_4801.jpg
+image4: ../media/img_4802.jpg
+image5: ../media/img_4804.jpg
+price: 590
+sizes:
+  - lg
+  - xl
+information: |-
+  Typ: Sportliches Rennrad 
+  Marke: Colnago   
+  Modell: Aluminium                 
+  Rahmenhöhe: 61 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Campagnolo vorne und hinten 
+  Gangschaltung : 2x9 Campagnolo Veloce    
+  Umwerfer: Campagnolo Veloce   
+  Klingel: ja  
+  Extras: 2x Flaschenhalter, Luftpumpe, Bordcomputer 
+  Zustand: generalüberholt, fahrbereit  
