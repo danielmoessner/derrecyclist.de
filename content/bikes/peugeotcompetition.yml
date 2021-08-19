@@ -1,0 +1,24 @@
+collection: bike
+title: Peugeot Competition
+slug: peugeotcompetition
+category: Klassik
+image1: ../media/vorlage-querformat-neu-7.jpg
+image2: ../media/img_4796.jpg
+image3: ../media/img_4797.jpg
+image4: ../media/img_4798.jpg
+image5: ../media/img_4799.jpg
+price: 350
+sizes:
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Peugeot 
+  Modell: Competition               
+  Rahmenhöhe: 61 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano 105 vorne und hinten 
+  Gangschaltung : 2x7 Shimano 105
+  Umwerfer: Shimano 105
+  Klingel: ja
+  Extras: Flaschenhalter 
+  Zustand: generalüberholt, fahrbereit 
