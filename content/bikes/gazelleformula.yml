@@ -1,0 +1,25 @@
+collection: bike
+title: Gazelle formula
+slug: gazelleformula
+category: Klassik
+image1: ../media/vorlage-querformat-neu-31.jpg
+image2: ../media/img_4736.jpg
+image3: ../media/img_4737.jpg
+image4: ../media/img_4738.jpg
+image5: ../media/img_4739.jpg
+price: 290
+sizes:
+  - md
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Gazelle    
+  Modell: formula                 
+  Rahmenhöhe: 59 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Exage 500 EX  vorne und hinten 
+  Gangschaltung : 2x7 Exage 500 EX   
+  Umwerfer: Exage 500 EX  
+  Klingel: ja
+  Extras: Flaschenhalter, Bordcomputer
+  Zustand: generalüberholt, fahrbereit 
