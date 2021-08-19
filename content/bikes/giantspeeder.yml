@@ -1,0 +1,24 @@
+collection: bike
+title: Giant Speeder
+slug: giantspeeder
+category: Klassik
+image1: ../media/vorlage-querformat-neu-15.jpg
+image2: ../media/img_4838.jpg
+image3: ../media/img_4839.jpg
+image4: ../media/img_4840.jpg
+image5: ../media/img_4841.jpg
+price: 290
+sizes:
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Giant       
+  Modell: Speeder (weiß Pink)                  
+  Rahmenhöhe: 60cm 
+  Reifen Größe: 28 Zoll 
+  Bremsen: Dia Compe vorne und hinten 
+  Gangschaltung : 2x5     
+  Umwerfer: Shimano      
+  Klingel: ja    
+  Extras: Flaschenhalter, dicke Reifen 
+  Zustand: generalüberholt, fahrbereit
