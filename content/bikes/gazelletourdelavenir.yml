@@ -1,0 +1,25 @@
+collection: bike
+title: "Gazelle Tour de l'Avenir "
+slug: gazelletourdelavenir
+category: Klassik
+image1: ../media/vorlage-querformat-neu-4.jpg
+image2: ../media/img_4779.jpg
+image3: ../media/img_4780.jpg
+image4: ../media/img_4781.jpg
+image5: ../media/img_4783.jpg
+price: 290
+sizes:
+  - md
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Gazelle    
+  Modell: Tour de l‘Avenir               
+  Rahmenhöhe: 59 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Weinmann vorne und hinten 
+  Gangschaltung : 2x5 Suntour Vx 
+  Umwerfer: Suntour  
+  Klingel: ja 
+  Extras: - 
+  Zustand: generalüberholt, fahrbereit 
