@@ -1,0 +1,25 @@
+collection: bike
+title: "Giant Peloton "
+slug: giantpeloton
+category: Klassik
+image1: ../media/vorlage-querformat-neu-33.jpg
+image2: ../media/img_4749.jpg
+image3: ../media/img_4750.jpg
+image4: ../media/img_4751.jpg
+image5: ../media/img_4752.jpg
+price: 390
+sizes:
+  - md
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Giant     
+  Modell: Peloton 8200                 
+  Rahmenhöhe: 59cm (Oberrohr 55cm) 
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano Rsx vorne und hinten 
+  Gangschaltung : 2x8 Shimano RSX    
+  Umwerfer: Shimano Ultegra    
+  Klingel: nein  
+  Extras: Flaschenhalter 
+  Zustand: generalüberholt, fahrbereit 
