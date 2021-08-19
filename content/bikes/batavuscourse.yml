@@ -1,0 +1,25 @@
+collection: bike
+title: "Batavus Course "
+slug: batavuscourse
+category: Klassik
+image1: ../media/vorlage-querformat-neu-23.jpg
+image2: ../media/img_4697.jpg
+image3: ../media/img_4698.jpg
+image4: ../media/img_4699.jpg
+image5: ../media/img_4702.jpg
+price: 590
+sizes:
+  - xs
+  - sm
+information: |-
+  Typ: Sportliches Rennrad 
+  Marke: Batavus  
+  Modell: Course                 
+  Rahmenhöhe: 52 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano Tiagra vorne und hinten 
+  Gangschaltung : 3x9 Shimano Tiagra   
+  Umwerfer: Shimano Tiagra  
+  Klingel: nein 
+  Extras: - 
+  Zustand: generalüberholt, fahrbereit
