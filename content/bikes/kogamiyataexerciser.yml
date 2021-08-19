@@ -1,0 +1,25 @@
+collection: bike
+title: "Koga Miyata Exerciser "
+slug: kogamiyataexerciser
+category: Klassik
+image1: ../media/vorlage-querformat-neu-30.jpg
+image2: ../media/img_4745.jpg
+image3: ../media/img_4746.jpg
+image4: ../media/img_4747.jpg
+image5: ../media/img_4748.jpg
+price: 390
+sizes:
+  - md
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Koga Miyata   
+  Modell: Exerciser                  
+  Rahmenhöhe: 58 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano 105 vorne und hinten 
+  Gangschaltung : 2x7 Shimano 105   
+  Umwerfer: Shimano 105
+  Klingel: nein  
+  Extras: Flaschenhalter 
+  Zustand: generalüberholt, fahrbereit 
