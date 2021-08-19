@@ -1,0 +1,24 @@
+collection: bike
+title: Veneto
+slug: "veneto "
+category: Klassik
+image1: ../media/vorlage-querformat-neu-32.jpg
+image2: ../media/img_4757.jpg
+image3: ../media/img_4758.jpg
+image4: ../media/img_4759.jpg
+image5: ../media/img_4760.jpg
+price: 390
+sizes:
+  - md
+  - lg
+information: |-
+  Typ: Sportliches Rennrad 
+  Marke: Veneto                  
+  Rahmenhöhe: 61  cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano Sora  vorne und hinten 
+  Gangschaltung : 2x8 Shimano Sora Schaltung   
+  Umwerfer: Shimano Sora  
+  Klingel: nein
+  Extras: Flaschenhalter, Bordcomputer  
+  Zustand: generalüberholt, fahrbereit 
