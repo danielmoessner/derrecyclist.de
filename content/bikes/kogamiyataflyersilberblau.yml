@@ -1,0 +1,25 @@
+collection: bike
+title: Koga Miyata Flyer (silber/blau)
+slug: kogamiyataflyersilberblau
+category: Klassik
+image1: ../media/vorlage-querformat-neu-21.jpg
+image2: ../media/img_4688.jpg
+image3: ../media/img_4689.jpg
+image4: ../media/img_4690.jpg
+image5: ../media/img_4691.jpg
+price: 390
+sizes:
+  - md
+  - sm
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Koga Miyata   
+  Modell: Flyer                  
+  Rahmenhöhe: 54 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano 600 vorne und hinten 
+  Gangschaltung : 2x7 Shimano 600   
+  Umwerfer: Shimano 600  
+  Klingel: nein  
+  Extras: Flaschenhalter 
+  Zustand: generalüberholt, fahrbereit
