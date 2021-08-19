@@ -1,0 +1,25 @@
+collection: bike
+title: "Concorde Aquila "
+slug: concrodeaquila
+category: Klassik
+image1: ../media/vorlage-querformat-neu-22.jpg
+image2: ../media/img_4753.jpg
+image3: ../media/img_4754.jpg
+image4: ../media/img_4755.jpg
+image5: ../media/img_4756.jpg
+price: 350
+sizes:
+  - sm
+  - md
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Concorde
+  Modell: Aquila                
+  Rahmenhöhe: 54 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano 105 vorne und hinten 
+  Gangschaltung : 2x7 Shimano 105   
+  Umwerfer: Shimano 105 (Golden Arrow) 
+  Klingel: ja
+  Extras: Flaschenhalter
+  Zustand: generalüberholt, fahrbereit 
