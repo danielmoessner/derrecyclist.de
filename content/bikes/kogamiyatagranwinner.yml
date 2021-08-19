@@ -1,0 +1,25 @@
+collection: bike
+title: Koga Miyata GranWinner
+slug: kogamiyatagranwinner
+category: Klassik
+image1: ../media/vorlage-querformat-neu-24.jpg
+image2: ../media/img_4703.jpg
+image3: ../media/img_4704.jpg
+image4: ../media/img_4705.jpg
+image5: ../media/img_4706.jpg
+price: 390
+sizes:
+  - md
+  - sm
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Koga Miyata 
+  Modell: GranWinner                 
+  Rahmenhöhe: 54 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano 600 vorne und hinten 
+  Gangschaltung : 2x7 Shimano 600   
+  Umwerfer: Shimano 600  
+  Klingel: ja 
+  Extras: Flaschenhalter 
+  Zustand: generalüberholt, fahrbereit 
