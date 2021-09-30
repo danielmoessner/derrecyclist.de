@@ -1,0 +1,24 @@
+collection: bike
+title: "Gazelle Olympia "
+slug: gazelle
+category: Klassik
+image1: ../media/vorlage-querformat-neu-a-12.jpg
+image2: ../media/dsc09158.jpg
+image3: ../media/dsc09159.jpg
+image4: ../media/dsc09160.jpg
+image5: ../media/dsc09161.jpg
+price: 290
+sizes:
+  - xl
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Gazelle           
+  Modell: Olympia     
+  Rahmenhöhe: 62 cm  
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano Exage Motion vorne und hinten 
+  Gangschaltung : 2x6 Shimano Exage Motion Schaltung   
+  Umwerfer: Shimano Exage Motion 
+  Klingel: ja  
+  Extras: Flaschenhalter 
+  Zustand: generalüberholt, fahrbereit
