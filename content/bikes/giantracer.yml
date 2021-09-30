@@ -1,0 +1,24 @@
+collection: bike
+title: "Giant Racer "
+slug: "giantracer "
+category: Klassik
+image1: ../media/vorlage-querformat-neu-a-18.jpg
+image2: ../media/dsc09182.jpg
+image3: ../media/dsc09183.jpg
+image4: ../media/dsc09184.jpg
+image5: ../media/dsc09185.jpg
+price: 290
+sizes:
+  - md
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Giant        
+  Modell: Racer       
+  Rahmenhöhe: 55 cm
+  Reifen Größe: 28 Zoll 
+  Bremsen: vorne und hinten 
+  Gangschaltung : 2x7 Suntour RT Schaltung   
+  Umwerfer: Suntour RT
+  Klingel: nein 
+  Extras: Flaschenhalter
+  Zustand: generalüberholt, fahrbereit
