@@ -1,0 +1,24 @@
+collection: bike
+title: Koga Miyata Roadspeed
+slug: kogamiyataroadspeed
+category: Klassik
+image1: ../media/vorlage-querformat-neu-a-10.jpg
+image2: ../media/dsc09154.jpg
+image3: ../media/dsc09155.jpg
+image4: ../media/dsc09156.jpg
+image5: ../media/dsc09157.jpg
+price: 390
+sizes:
+  - md
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Koga Miyata         
+  Modell: Roadspeed             
+  Rahmenhöhe: 58 cm (Oberrohr 56cm) 
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano RSX vorne und hinten 
+  Gangschaltung : 2x8 Shimano RSX Schaltung   
+  Umwerfer:  Shimano RSX 
+  Klingel: ja 
+  Extras: Flaschenhalter, Satteltasche 
+  Zustand: generalüberholt, fahrbereit
