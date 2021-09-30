@@ -1,0 +1,25 @@
+collection: bike
+title: Concorde Toscana
+slug: concordetoscana
+category: Klassik
+image1: ../media/vorlage-querformat-neu-a-26.jpg
+image2: ../media/dsc09223.jpg
+image3: ../media/dsc09224.jpg
+image4: ../media/dsc09225.jpg
+image5: ../media/dsc09226.jpg
+price: 390
+sizes:
+  - lg
+  - xl
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Concorde               
+  Modell: Toscana            
+  Rahmenhöhe: 61cm  
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano 105 vorne und hinten 
+  Gangschaltung : 2x8 Shimano 105 Schaltung   
+  Umwerfer: Shimano 105   
+  Klingel: nein    
+  Extras: Flaschenhalter 
+  Zustand: generalüberholt, fahrbereit
