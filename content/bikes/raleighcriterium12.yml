@@ -1,0 +1,25 @@
+collection: bike
+title: Raleigh Criterium 12
+slug: raleighcriterium12
+category: Klassik
+image1: ../media/vorlage-querformat-neu-a-29.jpg
+image2: ../media/dsc09227.jpg
+image3: ../media/dsc09228.jpg
+image4: ../media/dsc09229.jpg
+image5: ../media/dsc09230.jpg
+price: 390
+sizes:
+  - md
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Raleigh                
+  Modell: Criterium 12             
+  Rahmenhöhe: 57cm   
+  Reifen Größe: 28 Zoll 
+  Bremsen: Weinmann 570 Top  vorne und hinten 
+  Gangschaltung : 2x6 Shimano Light Action Schaltung   
+  Umwerfer: Shimano   
+  Klingel: nein    
+  Extras: Flaschenhalter 
+  Zustand: generalüberholt, fahrbereit
