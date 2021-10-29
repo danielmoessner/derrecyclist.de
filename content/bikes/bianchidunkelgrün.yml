@@ -1,0 +1,24 @@
+collection: bike
+title: Bianchi (dunkelgrün)
+slug: "bianchidunkelgrün "
+category: Klassik
+image1: ../media/vorlage-querformat-neu-b-14.jpg
+image2: ../media/dsc09311.jpg
+image3: ../media/dsc09312.jpg
+image4: ../media/dsc09313.jpg
+image5: ../media/dsc09314.jpg
+price: 690
+sizes:
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Bianchi          
+  Modell: -        
+  Rahmenhöhe: 59 cm 
+  Reifen Größe: 28 Zoll 
+  Bremsen:  Campagnolo Athena vorne und hinten 
+  Gangschaltung : 2x8 Campagnolo Athena    
+  Umwerfer: Campagnolo Athena
+  Klingel: nein  
+  Extras: keine 
+  Zustand: generalüberholt, fahrbereit
