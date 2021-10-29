@@ -1,0 +1,23 @@
+collection: bike
+title: "Colnago "
+slug: "colnago "
+category: Klassik
+image1: ../media/vorlage-querformat-neu-b-19.jpg
+image2: ../media/dsc09331.jpg
+image3: ../media/dsc09332.jpg
+image4: ../media/dsc09333.jpg
+image5: ../media/dsc09334.jpg
+price: 590
+sizes:
+  - md
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Colnago                          
+  Rahmenhöhe: 56cm 
+  Reifen Größe: 28 Zoll 
+  Bremsen: Universal Mod. 77  vorne und hinten 
+  Gangschaltung : 2x5 Campagnolo Nuovo Gran Sport  
+  Umwerfer: Campagnolo  
+  Klingel: nein 
+  Extras: -  
+  Zustand: generalüberholt, fahrbereit
