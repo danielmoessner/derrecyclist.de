@@ -1,0 +1,24 @@
+collection: bike
+title: Bottecchia Giro d‘Italia
+slug: "bottecchiagirod'italia "
+category: Klassik
+image1: ../media/vorlage-querformat-neu-b-27.jpg
+image2: ../media/dsc09360.jpg
+image3: ../media/dsc09361.jpg
+image4: ../media/dsc09362.jpg
+image5: ../media/dsc09363.jpg
+price: 390
+sizes:
+  - md
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Bottecchia  
+  Modell: Giro d‘Italia                          
+  Rahmenhöhe: 54cm 
+  Reifen Größe: 28 Zoll 
+  Bremsen: Exage Motion  vorne und hinten 
+  Gangschaltung : 2x7 Shimano Exage 300EX 
+  Umwerfer: Shimano Exage 400EX  
+  Klingel: nein 
+  Extras: -  
+  Zustand: generalüberholt, fahrbereit
