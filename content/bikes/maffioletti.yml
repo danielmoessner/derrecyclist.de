@@ -1,0 +1,25 @@
+collection: bike
+title: Maffioletti
+slug: maffioletti
+category: Klassik
+image1: ../media/vorlage-querformat-neu-b-28.jpg
+image2: ../media/dsc09356.jpg
+image3: ../media/dsc09357.jpg
+image4: ../media/dsc09358.jpg
+image5: ../media/dsc09359.jpg
+price: 390
+sizes:
+  - sm
+  - md
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Maffioletti 
+  Modell: Special                      
+  Rahmenhöhe: 53cm 
+  Reifen Größe: 28 Zoll 
+  Bremsen: Galli vorne und hinten 
+  Gangschaltung : 2x6 Simplex 
+  Umwerfer: Huret   
+  Klingel: nein 
+  Extras: Flaschenhalter, L'Eroica Flasche, C. Menghini Vorbau
+  Zustand: generalüberholt, fahrbereit
