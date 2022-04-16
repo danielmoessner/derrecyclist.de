@@ -1,0 +1,24 @@
+collection: bike
+title: "Koga Miyata Flyer "
+slug: kogamiyataflyer
+category: Klassik
+image1: ../media/vorlage-querformat-neu-c-29.jpg
+image2: ../media/dsc09471.jpg
+image3: ../media/dsc09472.jpg
+image4: ../media/dsc09474.jpg
+image5: ../media/dsc09475.jpg
+price: 550
+sizes:
+  - md
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Koga Miyata
+  Modell: Flyer                              
+  Rahmenhöhe: 55cm 
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano 600 vorne und hinten 
+  Gangschaltung : 2x7 Shimano 600
+  Umwerfer: Shimano 600    
+  Klingel: ja  
+  Extras: Original Koga Satte, Flaschenhalter, Nummerhalterung 
+  Zustand: generalüberholt, fahrbereit
