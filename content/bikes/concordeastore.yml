@@ -1,0 +1,24 @@
+collection: bike
+title: "Concorde Astore "
+slug: "concordeastore "
+category: Klassik
+image1: ../media/vorlage-querformat-neu-c-12.jpg
+image2: ../media/dsc09533.jpg
+image3: ../media/dsc09534.jpg
+image4: ../media/dsc09535.jpg
+image5: ../media/dsc09536.jpg
+price: 450
+sizes:
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Concorde  
+  Modell: Astore                           
+  Rahmenhöhe: 59cm   
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano 600 vorne und hinten 
+  Gangschaltung : 2x7 Shimano 600 Schaltwerk 
+  Umwerfer: Shimano 600 
+  Klingel: ja
+  Extras: Flaschenhalter, Luftpumpe 
+  Zustand: generalüberholt, fahrbereit
