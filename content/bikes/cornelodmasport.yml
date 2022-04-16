@@ -1,0 +1,24 @@
+collection: bike
+title: "Cornelo dma sport "
+slug: "cornelodmasport "
+category: Klassik
+image1: ../media/vorlage-querformat-neu-c-9.jpg
+image2: ../media/dsc09453.jpg
+image3: ../media/dsc09454.jpg
+image4: ../media/dsc09455.jpg
+image5: ../media/dsc09456.jpg
+price: 450
+sizes:
+  - sm
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Cornelo    
+  Modell: dma sport                          
+  Rahmenhöhe: 50cm   
+  Reifen Größe: 28 Zoll 
+  Bremsen: Miche vorne und hinten 
+  Gangschaltung : 2x7 Campagnolo Avanti  Schaltwerk 
+  Umwerfer: Campagnolo Veloce 
+  Klingel: ja  
+  Extras: Flaschenhalter, Zusatzbremshebel 
+  Zustand: generalüberholt, fahrbereit
