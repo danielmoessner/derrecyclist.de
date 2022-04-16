@@ -1,0 +1,24 @@
+collection: bike
+title: "Batavus Course "
+slug: "batavuscourse "
+category: Klassik
+image1: ../media/vorlage-querformat-neu-c-14.jpg
+image2: ../media/dsc09457.jpg
+image3: ../media/dsc09459.jpg
+image4: ../media/dsc09458.jpg
+image5: ../media/dsc09460.jpg
+price: 350
+sizes:
+  - lg
+information: |-
+  Typ: Vintage  Rennrad 
+  Marke: Batavus 
+  Modell: Course                        
+  Rahmenhöhe: 59cm   
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano Exage Action vorne und hinten 
+  Gangschaltung : 2x7 Shimano Exage 400EX Schaltwerk 
+  Umwerfer: Shimano Exage 400EX 
+  Klingel: ja
+  Extras: Flaschenhalter 
+  Zustand: generalüberholt, fahrbereit
