@@ -1,0 +1,25 @@
+collection: bike
+title: Koga Miyata Roadspeed
+slug: kogamiyataroadspeed
+category: Klassik
+image1: ../media/vorlage-querformat-neu-c-33.jpg
+image2: ../media/dsc09466.jpg
+image3: ../media/dsc09467.jpg
+image4: ../media/dsc09468.jpg
+image5: ../media/dsc09469.jpg
+price: 590
+sizes:
+  - lg
+  - xl
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Koga Miyata 
+  Modell: Roadspeed                           
+  Rahmenhöhe: 63cm   
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano 600 Arabesque vorne und hinten 
+  Gangschaltung : 2x6 Shimano 600 Arabesque Schaltwerk 
+  Umwerfer: Shimano 600 Arabesque 
+  Klingel: ja 
+  Extras: Flaschenhalter, Luftpumpe 
+  Zustand: generalüberholt, fahrbereit
