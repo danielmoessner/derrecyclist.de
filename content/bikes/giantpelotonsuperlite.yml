@@ -1,0 +1,25 @@
+collection: bike
+title: "Giant Peloton Superlite "
+slug: giantpelotonsuperlite
+category: Klassik
+image1: ../media/vorlage-querformat-neu-c-16.jpg
+image2: ../media/dsc09481.jpg
+image3: ../media/dsc09482.jpg
+image4: ../media/dsc09484.jpg
+image5: ../media/dsc09485.jpg
+price: 490
+sizes:
+  - lg
+  - xl
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Giant   
+  Modell: Peloton Super Lite                           
+  Rahmenhöhe: 62cm   
+  Reifen Größe: 28 Zoll 
+  Bremsen: Shimano RX100 vorne und hinten 
+  Gangschaltung : 2x7 Shimano RX100 Schaltwerk 
+  Umwerfer: Shimano RX100 
+  Klingel: nein 
+  Extras: Flaschenhalter 
+  Zustand: generalüberholt, fahrbereit
