@@ -1,0 +1,24 @@
+collection: bike
+title: "Giant Speeder "
+slug: "giantspeeder "
+category: Klassik
+image1: ../media/vorlage-querformat-neu-c-8.jpg
+image2: ../media/dsc09419.jpg
+image3: ../media/dsc09420.jpg
+image4: ../media/dsc09421.jpg
+image5: ../media/dsc09422.jpg
+price: 290
+sizes:
+  - lg
+information: |-
+  Typ: Vintage Rennrad 
+  Marke: Giant   
+  Modell: Speeder                            
+  Rahmenhöhe: 58cm   
+  Reifen Größe: 28 Zoll 
+  Bremsen: Exage Motion  vorne und hinten 
+  Gangschaltung : 2x7 Shimano Exage 300EX Schaltwerk 
+  Umwerfer: Shimano Exage 300EX 
+  Klingel: nein 
+  Extras: 2x Flaschenhalter 
+  Zustand: generalüberholt, fahrbereit
