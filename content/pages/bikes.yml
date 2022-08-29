@@ -9,18 +9,20 @@ header:
   image: ../media/dsc06944.jpg
 form:
   heading: Unsere Fahrräder
-  headingText: Wähle ganz einfach deine entsprechende Körpergröße aus und
-    reserviere Dir ein passendes Fahrrad zum Besichtigen oder frage für Versand
-    an.
+  headingText: Wir bauen um! Wir bauen um! Wir bauen um! Wir bauen um! Wir bauen
+    um! Wir bauen um! Wir bauen um! Wir bauen um! Wir bauen um! Wir bauen um!
+    Wir bauen um! Wir bauen um!
   categoryHeading: Unsere Kollektionen
-  categoryText: Klicke auf eine der Kollektionen, um dessen Räder zu erkunden und
-    klicke noch einmal für den gesamten Bestand.
+  categoryText: Wir bauen um! Wir bauen um! Wir bauen um! Wir bauen um! Wir bauen
+    um! Wir bauen um! Wir bauen um! Wir bauen um! Wir bauen um! Wir bauen um!
+    Wir bauen um! Wir bauen um!
   inputLabel: Körpergröße
   inputPlaceholder: z.B. 175
   inputHelptext: Bitte eine Größe zwischen 155 und 205 cm angeben.
 bikes:
   visitButton: Besichtigung buchen
-  noBikesText: Leider keine Fahrräder in der gewählten Kategorie und Größe auf Lager.
+  noBikesText: Wir bauen um! Wir bauen um! Wir bauen um! Wir bauen um! Wir bauen
+    um! Wir bauen um!
   category: Kollektion
   size: Größe
   price: Preis
